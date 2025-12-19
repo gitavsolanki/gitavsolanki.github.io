@@ -1,0 +1,6 @@
+
+body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; margin: 40px; }
+h1 { font-size: 16px; text-align: center; text-decoration: underline; }
+.logo { margin-bottom: 20px; }
+.nav { margin-top: 30px; display: flex; justify-content: space-between; }
+button { font-family: Arial; font-size: 14px; padding: 8px 14px; }
