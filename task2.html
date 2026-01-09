@@ -29,11 +29,23 @@ body {
 h1 {
   font-size: 40px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .instructions p {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+.downloads {
+  margin: 30px 0;
+}
+
+.downloads a {
+  display: block;
+  margin-bottom: 15px;
+  color: #0070C0;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .upload {
@@ -42,8 +54,6 @@ h1 {
 
 .nav {
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
 }
 
 button {
@@ -67,11 +77,17 @@ button {
 <h1>Task 2 – Create a Flyer</h1>
 
 <div class="instructions">
-<p><strong>a.</strong> Download the text file and image provided.</p>
+<p><strong>a.</strong> Download the text file and image provided below.</p>
 
 <p><strong>b.</strong> Copy the text into a word processor.</p>
 
-<p><strong>c.</strong> Format the flyer so it is clear and easy to read.</p>
+<p><strong>c.</strong> Format the flyer so it is clear and easy to read:</p>
+<ul>
+  <li>Make the heading larger than the rest of the text</li>
+  <li>Insert bullet points</li>
+  <li>Use at least <strong>two different font types</strong></li>
+  <li>Change the <strong>text alignment</strong></li>
+</ul>
 
 <p><strong>d.</strong> Change the email address to  
 <b><i>volunteer@communityproject.org</i></b>  
@@ -82,6 +98,12 @@ and the date to
 <b><i>YourInitials_Task2</i></b>.</p>
 </div>
 
+<div class="downloads">
+<p><strong>Download files:</strong></p>
+<a href="task2-text.txt" download>Download text file</a>
+<a href="task2-image.png" download>Download image</a>
+</div>
+
 <div class="upload">
 <p><strong>Practice upload:</strong></p>
 <input type="file">
@@ -89,7 +111,6 @@ and the date to
 
 <div class="nav">
   <a href="task1.html"><button>Previous</button></a>
-  <a href="task3.html"><button>Next</button></a>
 </div>
 
 </div>
