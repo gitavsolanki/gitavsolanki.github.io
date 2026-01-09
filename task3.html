@@ -1,13 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<title>Task 3 – Send an Email</title>
+<meta charset="UTF-8">
+<title>Task 3 – Online Safety & Phishing (Practice)</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  background-color: #ffffff;
+  margin: 40px;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 900px;
+  margin: auto;
+  border: 4px solid #0070C0;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 40px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 20px;
+  background-color: #0070C0;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+</style>
+
+<script>
+function checkAnswers() {
+  let score = 0;
+
+  const answers = {
+    q1: "b",
+    q2: "c",
+    q3: "a",
+    q4: "b",
+    q5: "a",
+    q6: "c",
+    q7: "b",
+    q8: "a"
+  };
+
+  for (let q in answers) {
+    const selected = document.querySelector(
+      'input[name="' + q + '"]:checked'
+    );
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+
+  document.getElementById("result").innerText =
+    "You scored " + score + " out of 8. This is a practice task.";
+}
+</script>
 </head>
+
 <body>
-<div class="logo"><img src="logo.png" height="60"></div>
-<h1>Task 3 – Send an Email</h1>
-<p>a. Email your tutor.</p><p>b. Attach Task 2.</p><p>c. CC <b><i>charitymanager@email.com</i></b>.</p><p>d. Screenshot and save as <b><i>YourInitials_Task3</i></b>.</p><input type='file'><input type='file'>
-<div class='nav'><a href='task2.html'><button>Previous</button></a><a href='task4.html'><button>Next</button></a></div>
+
+<div class="page">
+
+<img src="logo.png" class="logo" alt="Enjoy Learning by Gita logo">
+
+<h1>Entry Level 3 Digital Skills – Practice</h1>
+<h2>Task 3 – Online Safety & Phishing</h2>
+
+<p>
+Select the correct answer for each question.<br>
+<strong>This is a practice task.</strong>
+</p>
+
+<div class="question">
+<strong>1. What is online safety?</strong><br>
+<input type="radio" name="q1" value="a"> Buying things online<br>
+<input type="radio" name="q1" value="b"> Staying safe when using the internet<br>
+<input type="radio" name="q1" value="c"> Using social media
+</div>
+
+<div class="question">
+<strong>2. What is phishing?</strong><br>
+<input type="radio" name="q2" value="a"> A computer game<br>
+<input type="radio" name="q2" value="b"> A type of virus<br>
+<input type="radio" name="q2" value="c"> A scam to steal personal information
+</div>
+
+<div class="question">
+<strong>3. What should you do if an email looks suspicious?</strong><br>
+<input type="radio" name="q3" value="a"> Delete or report it<br>
+<input type="radio" name="q3" value="b"> Reply to it<br>
+<input type="radio" name="q3" value="c"> Click all links
+</div>
+
+<div class="question">
+<strong>4. Which is a sign of a phishing email?</strong><br>
+<input type="radio" name="q4" value="a"> Correct spelling and grammar<br>
+<input type="radio" name="q4" value="b"> Urgent messages asking for information<br>
+<input type="radio" name="q4" value="c"> Emails from friends
+</div>
+
+<div class="question">
+<strong>5. What information should you keep private?</strong><br>
+<input type="radio" name="q5" value="a"> Passwords<br>
+<input type="radio" name="q5" value="b"> Favourite colour<br>
+<input type="radio" name="q5" value="c"> Hobbies
+</div>
+
+<div class="question">
+<strong>6. What should you do before clicking a link?</strong><br>
+<input type="radio" name="q6" value="a"> Click quickly<br>
+<input type="radio" name="q6" value="b"> Share it with friends<br>
+<input type="radio" name="q6" value="c"> Check it is safe
+</div>
+
+<div class="question">
+<strong>7. Who should you tell if you are worried about something online?</strong><br>
+<input type="radio" name="q7" value="a"> No one<br>
+<input type="radio" name="q7" value="b"> A trusted person or tutor<br>
+<input type="radio" name="q7" value="c"> Only people online
+</div>
+
+<div class="question">
+<strong>8. Why is it important to keep software updated?</strong><br>
+<input type="radio" name="q8" value="a"> To improve security<br>
+<input type="radio" name="q8" value="b"> To slow down devices<br>
+<input type="radio" name="q8" value="c"> To remove files
+</div>
+
+<button onclick="checkAnswers()">Check Answers</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
 </body>
 </html>
