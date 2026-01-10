@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Task 3 – Online Safety & Phishing (Practice)</title>
+<title>Task 3 – Sending an Email with an Attachment</title>
 
 <style>
 body {
@@ -29,65 +29,42 @@ body {
 h1 {
   font-size: 40px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
-h2 {
-  font-size: 26px;
-  text-align: center;
-  font-style: italic;
+.section {
   margin-bottom: 30px;
 }
 
-.question {
-  margin-bottom: 40px;
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 25px;
+}
+
+.upload {
+  margin-top: 30px;
+}
+
+.nav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
-  margin-top: 20px;
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #0070C0;
   color: #ffffff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
-
-.result {
-  margin-top: 20px;
-  font-weight: bold;
-}
 </style>
-
-<script>
-function checkAnswers() {
-  let score = 0;
-
-  const answers = {
-    q1: "b",
-    q2: "c",
-    q3: "a",
-    q4: "b",
-    q5: "a",
-    q6: "c",
-    q7: "b",
-    q8: "a"
-  };
-
-  for (let q in answers) {
-    const selected = document.querySelector(
-      'input[name="' + q + '"]:checked'
-    );
-    if (selected && selected.value === answers[q]) {
-      score++;
-    }
-  }
-
-  document.getElementById("result").innerText =
-    "You scored " + score + " out of 8. This is a practice task.";
-}
-</script>
 </head>
 
 <body>
@@ -96,73 +73,74 @@ function checkAnswers() {
 
 <img src="logo.png" class="logo" alt="Enjoy Learning by Gita logo">
 
-<h1>Entry Level 3 Digital Skills – Practice</h1>
-<h2>Task 3 – Online Safety & Phishing</h2>
+<h1>Task 3 – Sending an Email with an Attachment</h1>
+
+<div class="section">
+<h2>📧 Task</h2>
+<p>Send an email with an attachment.</p>
+</div>
+
+<div class="section">
+<h2>☐ What you need</h2>
+<ul>
+  <li>An email account (for example: Gmail or Outlook)</li>
+  <li>Your <strong>Task 1 screenshot</strong> saved in the <strong>Digital</strong> folder</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>☐ Steps to complete the task</h2>
+<ul>
+  <li>Open your email account</li>
+  <li>Click <strong>New email</strong> or <strong>Compose</strong></li>
+  <li>In the <strong>To</strong> box, type the email address given by your tutor  
+      (or your own email address for practice)</li>
+  <li>In the <strong>Subject</strong> box, type:<br>
+      <strong>Practice Task 3 – Your Name</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h2>☐ Write your message</h2>
+<p>Type the message below into the email:</p>
 
 <p>
-Select the correct answer for each question.<br>
-<strong>This is a practice task.</strong>
+Hello,<br><br>
+Please find my Task 1 screenshot attached.<br><br>
+Thank you.<br>
+Your name
 </p>
-
-<div class="question">
-<strong>1. What is online safety?</strong><br>
-<input type="radio" name="q1" value="a"> Buying things online<br>
-<input type="radio" name="q1" value="b"> Staying safe when using the internet<br>
-<input type="radio" name="q1" value="c"> Using social media
 </div>
 
-<div class="question">
-<strong>2. What is phishing?</strong><br>
-<input type="radio" name="q2" value="a"> A computer game<br>
-<input type="radio" name="q2" value="b"> A type of virus<br>
-<input type="radio" name="q2" value="c"> A scam to steal personal information
+<div class="section">
+<h2>☐ Attach your file</h2>
+<ul>
+  <li>Click the 📎 <strong>Attach</strong> (paperclip) icon</li>
+  <li>Open <strong>Documents → Digital</strong></li>
+  <li>Select your file:<br>
+      <strong>Task 1 – Your Name</strong></li>
+  <li>Click <strong>Open</strong></li>
+</ul>
 </div>
 
-<div class="question">
-<strong>3. What should you do if an email looks suspicious?</strong><br>
-<input type="radio" name="q3" value="a"> Delete or report it<br>
-<input type="radio" name="q3" value="b"> Reply to it<br>
-<input type="radio" name="q3" value="c"> Click all links
+<div class="section">
+<h2>☐ Send the email</h2>
+<ul>
+  <li>Check the subject line</li>
+  <li>Check the file is attached</li>
+  <li>Click <strong>Send</strong></li>
+</ul>
 </div>
 
-<div class="question">
-<strong>4. Which is a sign of a phishing email?</strong><br>
-<input type="radio" name="q4" value="a"> Correct spelling and grammar<br>
-<input type="radio" name="q4" value="b"> Urgent messages asking for information<br>
-<input type="radio" name="q4" value="c"> Emails from friends
+<div class="upload">
+<p><strong>Practice upload (optional):</strong></p>
+<input type="file">
 </div>
 
-<div class="question">
-<strong>5. What information should you keep private?</strong><br>
-<input type="radio" name="q5" value="a"> Passwords<br>
-<input type="radio" name="q5" value="b"> Favourite colour<br>
-<input type="radio" name="q5" value="c"> Hobbies
+<div class="nav">
+  <a href="task2.html"><button>Previous</button></a>
+  <a href="task4.html"><button>Next</button></a>
 </div>
-
-<div class="question">
-<strong>6. What should you do before clicking a link?</strong><br>
-<input type="radio" name="q6" value="a"> Click quickly<br>
-<input type="radio" name="q6" value="b"> Share it with friends<br>
-<input type="radio" name="q6" value="c"> Check it is safe
-</div>
-
-<div class="question">
-<strong>7. Who should you tell if you are worried about something online?</strong><br>
-<input type="radio" name="q7" value="a"> No one<br>
-<input type="radio" name="q7" value="b"> A trusted person or tutor<br>
-<input type="radio" name="q7" value="c"> Only people online
-</div>
-
-<div class="question">
-<strong>8. Why is it important to keep software updated?</strong><br>
-<input type="radio" name="q8" value="a"> To improve security<br>
-<input type="radio" name="q8" value="b"> To slow down devices<br>
-<input type="radio" name="q8" value="c"> To remove files
-</div>
-
-<button onclick="checkAnswers()">Check Answers</button>
-
-<div id="result" class="result"></div>
 
 </div>
 
