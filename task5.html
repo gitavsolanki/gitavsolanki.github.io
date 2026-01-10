@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Task 5 – Online Safety (Practice)</title>
+<title>Task 5 – Knowledge Check</title>
 
 <style>
 body {
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   background-color: #ffffff;
   margin: 40px;
   line-height: 1.5;
@@ -26,27 +26,24 @@ body {
   margin-bottom: 20px;
 }
 
-/* Headings */
 h1 {
-  font-size: 36px;
+  font-size: 40px;
   text-align: center;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 26px;
   text-align: center;
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-/* Questions */
 .question {
-  margin-bottom: 40px; /* double spacing between questions */
+  margin-bottom: 40px;
 }
 
 button {
-  margin-top: 20px;
   padding: 12px 24px;
   font-size: 18px;
   background-color: #0070C0;
@@ -59,6 +56,14 @@ button {
 .result {
   margin-top: 20px;
   font-weight: bold;
+}
+
+a.home {
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 18px;
+  color: #0070C0;
+  text-decoration: none;
 }
 </style>
 
@@ -87,7 +92,7 @@ function checkAnswers() {
   }
 
   document.getElementById("result").innerText =
-    "You scored " + score + " out of 8. This is a practice task.";
+    "You scored " + score + " out of 8. This is a practice knowledge check.";
 }
 </script>
 </head>
@@ -99,7 +104,7 @@ function checkAnswers() {
 <img src="logo.png" class="logo" alt="Enjoy Learning by Gita logo">
 
 <h1>Entry Level 3 Digital Skills – Practice</h1>
-<h2>Task 5 – Online Safety</h2>
+<h2>Task 5 – Knowledge Check</h2>
 
 <p>
 Select the correct answer for each question.<br>
@@ -165,6 +170,14 @@ Select the correct answer for each question.<br>
 <button onclick="checkAnswers()">Check Answers</button>
 
 <div id="result" class="result"></div>
+
+<div style="margin-top:40px;">
+  <a href="task4.html"><button>Previous</button></a>
+</div>
+
+<p>
+  <a href="index.html" class="home">🏠 Back to Home</a>
+</p>
 
 </div>
 
