@@ -2,76 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Digital Skills Practice – Start</title>
+<title>Full Practice Mock Test</title>
 
 <style>
 body {
-    font-family: Calibri, Arial, sans-serif;
-    font-size: 16px;
-    margin: 40px;
-    line-height: 1.5;
-    background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  background-color: #ffffff;
+  margin: 40px;
+  line-height: 1.5;
 }
 
-/* Page border inspired by logo */
-.page-border {
-    border: 4px solid #0070C0;
-    border-radius: 14px;
-    padding: 30px;
-    max-width: 900px;
-    margin: auto;
+.page {
+  max-width: 800px;
+  margin: auto;
+  border: 4px solid #0070C0;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
 }
 
-/* Headings */
-h1 {
-    font-size: 28px;
-    color: #333333;
-}
-
-/* Start button */
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #0070C0;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-/* Logo */
 .logo {
-    height: 60px;
-    margin-bottom: 20px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  font-size: 20px;
+  padding: 10px;
+  width: 240px;
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 20px;
+  background-color: #0070C0;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+  font-weight: bold;
 }
 </style>
+
+<script>
+function checkCode() {
+  const enteredCode = document.getElementById("code").value.trim();
+
+  if (enteredCode === "room22") {
+    window.location.href = "task1.html";
+  } else {
+    document.getElementById("error").innerText =
+      "Incorrect access code. Please try again.";
+  }
+}
+</script>
 </head>
 
 <body>
 
-<div class="page-border">
+<div class="page">
 
-    <img src="logo.png" alt="Logo" class="logo">
+<img src="logo.png" class="logo" alt="Enjoy Learning by Gita logo">
 
-    <h1>Entry Level 3 Digital Skills – Practice Mock</h1>
+<h1>Full Practice Mock Test</h1>
 
-    <p>This is a practice mock to help you prepare for your digital skills assessment.</p>
+<p>
+To start the full practice mock test, please enter the access code provided by your tutor.
+</p>
 
-    <p>
-        You will complete the tasks one at a time.<br>
-        Each page has a <strong>Back</strong> and <strong>Next</strong> button.
-    </p>
+<input type="password" id="code" placeholder="Enter access code">
 
-    <p>
-        <strong>This is practice only.</strong><br>
-        Files are not submitted.
-    </p>
+<br>
 
-    <a class="button" href="task1.html">Start Task 1</a>
+<button onclick="checkCode()">Start Mock Test</button>
+
+<div id="error" class="error"></div>
 
 </div>
 
 </body>
 </html>
-
