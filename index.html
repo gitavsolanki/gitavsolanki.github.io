@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Full Practice Mock Test</title>
+<title>Enjoy Learning by Gita</title>
 
 <style>
 body {
@@ -11,6 +11,7 @@ body {
   background-color: #ffffff;
   margin: 40px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .page {
@@ -18,57 +19,34 @@ body {
   margin: auto;
   border: 4px solid #0070C0;
   border-radius: 12px;
-  padding: 30px;
-  text-align: center;
+  padding: 40px;
 }
 
 .logo {
-  height: 60px;
-  margin-bottom: 20px;
+  height: 80px;
+  margin-bottom: 25px;
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
-input[type="password"] {
-  font-size: 20px;
-  padding: 10px;
-  width: 240px;
-  margin-top: 15px;
+p {
+  margin-bottom: 35px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px 28px;
+  padding: 14px 32px;
   font-size: 20px;
   background-color: #0070C0;
   color: #ffffff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.error {
-  color: red;
-  margin-top: 20px;
-  font-weight: bold;
+  margin: 15px;
 }
 </style>
-
-<script>
-function checkCode() {
-  const code = document.getElementById("code").value;
-
-  if (code === "room22") {
-    window.location.href = "task1.html";
-  } else {
-    document.getElementById("error").innerText =
-      "Incorrect access code. Please try again.";
-  }
-}
-</script>
 </head>
 
 <body>
@@ -77,19 +55,21 @@ function checkCode() {
 
 <img src="logo.png" class="logo" alt="Enjoy Learning by Gita logo">
 
-<h1>Full Practice Mock Test</h1>
+<h1>Welcome to Enjoy Learning by Gita</h1>
 
-<p>
-To start the full practice mock test, please enter the access code provided by your tutor.
-</p>
+<p>Please choose one of the options below.</p>
 
-<input type="password" id="code" placeholder="Enter access code">
+<!-- OPTION 1: PRACTICE TASKS (NO CODE) -->
+<a href="eds3.html">
+  <button>EDS3 Practice Tasks</button>
+</a>
 
-<br>
+<br><br>
 
-<button onclick="checkCode()">Start Mock Test</button>
-
-<div id="error" class="error"></div>
+<!-- OPTION 2: MOCK TEST (CODE REQUIRED ON NEXT PAGE) -->
+<a href="mock/">
+  <button>Start Mock Test</button>
+</a>
 
 </div>
 
