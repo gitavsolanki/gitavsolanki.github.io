@@ -15,7 +15,7 @@ body {
 }
 
 .page {
-  max-width: 800px;
+  max-width: 950px;
   margin: auto;
   border: 4px solid #0070C0;
   border-radius: 12px;
@@ -29,11 +29,16 @@ body {
 
 h1 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-p {
-  margin-bottom: 35px;
+.option {
+  margin-top: 35px;
+}
+
+.option p {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 button {
@@ -44,7 +49,7 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin: 15px;
+  width: 360px;
 }
 </style>
 </head>
@@ -59,17 +64,39 @@ button {
 
 <p>Please choose one of the options below.</p>
 
-<!-- OPTION 1: PRACTICE TASKS (NO CODE) -->
-<a href="eds3.html">
-  <button>EDS3 Practice Tasks</button>
-</a>
+<!-- OPTION 1 -->
+<div class="option">
+  <a href="eds3.html">
+    <button>EDS3 Practice Tasks</button>
+  </a>
+  <p>
+    Practise individual digital skills tasks.  
+    No access code required.
+  </p>
+</div>
 
-<br><br>
+<!-- OPTION 2 -->
+<div class="option">
+  <a href="mock/index.html">
+    <button>Start Mock Test 1</button>
+  </a>
+  <p>
+    Full practice mock assessment.  
+    Access code required.
+  </p>
+</div>
 
-<!-- OPTION 2: MOCK TEST (CODE REQUIRED ON NEXT PAGE) -->
-<a href="mock/">
-  <button>Start Mock Test</button>
-</a>
+<!-- OPTION 3 -->
+<div class="option">
+  <a href="mock2/index.html">
+    <button>Start Mock Test 2</button>
+  </a>
+  <p>
+    Full practice mock assessment.  
+    Complete all tasks in order from start to finish.  
+    Access code required.
+  </p>
+</div>
 
 </div>
 
