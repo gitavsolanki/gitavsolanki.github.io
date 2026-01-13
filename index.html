@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mock Test 2 – Essential Digital Skills</title>
+<title>Enjoy Learning by Gita</title>
 
 <style>
 body {
@@ -28,25 +28,12 @@ body {
 }
 
 h1 {
-  font-size: 36px;
-  margin-bottom: 25px;
-}
-
-h2 {
-  font-size: 26px;
-  margin-top: 35px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
 p {
-  margin-bottom: 20px;
-}
-
-input {
-  padding: 10px;
-  font-size: 18px;
-  width: 200px;
-  text-align: center;
+  margin-bottom: 30px;
 }
 
 button {
@@ -58,31 +45,9 @@ button {
   border-radius: 6px;
   cursor: pointer;
   margin: 10px;
-  width: 360px;
-}
-
-.hidden {
-  display: none;
-}
-
-.error {
-  color: red;
-  margin-top: 15px;
+  width: 320px;
 }
 </style>
-
-<script>
-function checkCode() {
-  var enteredCode = document.getElementById("codeInput").value;
-  if (enteredCode === "room22") {
-    document.getElementById("codeSection").style.display = "none";
-    document.getElementById("mockContent").style.display = "block";
-  } else {
-    document.getElementById("errorMessage").innerText = "Incorrect code. Please try again.";
-  }
-}
-</script>
-
 </head>
 
 <body>
@@ -91,46 +56,25 @@ function checkCode() {
 
 <img src="logo.png" class="logo" alt="Enjoy Learning by Gita logo">
 
-<h1>Mock Test 2</h1>
-
-<!-- CODE ENTRY SECTION -->
-<div id="codeSection">
+<h1>Welcome to Enjoy Learning by Gita</h1>
 
 <p>
-This mock test is protected by an access code.
-Please enter the code given by your tutor.
+This site supports adult learners developing essential digital skills.
 </p>
 
-<input type="password" id="codeInput" placeholder="Enter code">
+<a href="eds3.html">
+  <button>EDS3 Practice Tasks</button>
+</a>
 <br>
-<button onclick="checkCode()">Start Mock Test</button>
 
-<p id="errorMessage" class="error"></p>
+<a href="mock/index.html">
+  <button>Mock Test 1</button>
+</a>
+<br>
 
-</div>
-
-<!-- MOCK CONTENT (HIDDEN UNTIL CODE ENTERED) -->
-<div id="mockContent" class="hidden">
-
-<p>
-Complete each task in order.
-Your tutor will tell you when to start.
-</p>
-
-<h2>Mock Test Tasks</h2>
-
-<a href="task1.html"><button>Task 1 – File Management</button></a><br>
-<a href="task2.html"><button>Task 2 – Creating and Editing</button></a><br>
-<a href="task3.html"><button>Task 3 – Send an Email</button></a><br>
-<a href="task4.html"><button>Task 4 – Internet Searching</button></a><br>
-<a href="mcq.html"><button>Task 5 – Multiple Choice Questions</button></a>
-
-<br><br>
-
-<a href="../eds3.html"><button>Back to EDS3</button></a><br>
-<a href="../index.html"><button>Back to Home</button></a>
-
-</div>
+<a href="mock2/index.html">
+  <button>Mock Test 2</button>
+</a>
 
 </div>
 
