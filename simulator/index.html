@@ -1,56 +1,830 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Internet Simulator</title>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Opening Internet Programs</title>
+
 <style>
+
+/* PAGE */
+
 body{
-font-family:Arial,sans-serif;
-background:#f5f7fa;
-text-align:center;
-padding:50px;
+  margin:0;
+  background:#dbeafe;
+  font-family:Arial,sans-serif;
 }
 
-.box{
-background:white;
-max-width:700px;
-margin:auto;
-padding:40px;
-border-radius:15px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
+/* DESKTOP */
+
+.desktop-wrapper{
+  width:100%;
+  max-width:1200px;
+  height:650px;
+  margin:20px auto;
+  background:linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 20px 40px rgba(0,0,0,0.18);
 }
 
-input{
-width:80%;
-padding:12px;
-font-size:16px;
+/* LESSON PANEL */
+
+.lesson-box{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:250px;
+  background:white;
+  padding:18px;
+  border-radius:20px;
+  z-index:500;
 }
 
-button{
-padding:12px 20px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:8px;
-cursor:pointer;
+.lesson-box h2{
+  margin-top:0;
+  color:#1e3a8a;
+  font-size:20px;
+  line-height:1.3;
 }
+
+.lesson-text{
+  background:#dbeafe;
+  padding:14px;
+  border-radius:14px;
+  font-size:15px;
+  line-height:1.8;
+  color:#1e293b;
+}
+
+/* DESKTOP ICONS */
+
+.desktop-icons{
+  position:absolute;
+  top:160px;
+  left:28px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+/* ICON */
+
+.desktop-icon{
+  width:90px;
+  text-align:center;
+  cursor:pointer;
+  user-select:none;
+}
+
+.icon-box{
+  width:72px;
+  height:72px;
+  background:white;
+  border-radius:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  box-shadow:0 8px 16px rgba(0,0,0,0.2);
+  transition:0.2s;
+}
+
+.desktop-icon:hover .icon-box{
+  transform:scale(1.05);
+}
+
+.icon-label{
+  color:white;
+  margin-top:10px;
+  font-size:15px;
+  font-weight:bold;
+  line-height:1.4;
+}
+
+.icon-box img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+}
+
+/* START MENU */
+
+.start-menu{
+  position:absolute;
+  bottom:70px;
+  left:18px;
+  width:280px;
+  background:white;
+  border-radius:24px;
+  padding:18px;
+  display:none;
+  z-index:900;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.start-title{
+  font-size:24px;
+  color:#1e3a8a;
+  margin-bottom:14px;
+  font-weight:bold;
+}
+
+.search-box{
+  background:#f1f5f9;
+  padding:14px;
+  border-radius:14px;
+  color:#64748b;
+  margin-bottom:18px;
+  font-size:15px;
+}
+
+.start-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.start-app{
+  background:#eff6ff;
+  border-radius:18px;
+  padding:16px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.start-app:hover{
+  background:#dbeafe;
+  transform:translateY(-3px);
+}
+
+.start-app img{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  margin-bottom:8px;
+}
+
+.start-app-name{
+  font-size:16px;
+  color:#1e3a8a;
+  font-weight:bold;
+}
+
+/* BROWSER */
+
+.browser-window{
+  width:760px;
+  max-width:88%;
+  height:500px;
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform:translateX(-50%);
+  display:none;
+  z-index:700;
+  box-shadow:0 25px 50px rgba(0,0,0,0.35);
+}
+
+.browser-window.maximized{
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  transform:none;
+  border-radius:0;
+}
+
+/* TOP BAR */
+
+.browser-top{
+  background:#e2e8f0;
+  padding:10px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.browser-tab{
+  background:white;
+  padding:8px 14px;
+  border-radius:12px 12px 0 0;
+  font-size:15px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.browser-tab img{
+  width:20px;
+  height:20px;
+}
+
+/* WINDOW BUTTONS */
+
+.window-buttons{
+  display:flex;
+  align-items:center;
+}
+
+.window-btn{
+  width:40px;
+  height:30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.window-btn:hover{
+  background:#cbd5e1;
+}
+
+.close-btn:hover{
+  background:#ef4444;
+  color:white;
+}
+
+/* ADDRESS BAR */
+
+.address-wrapper{
+  background:#cbd5e1;
+  padding:10px;
+}
+
+.address-bar{
+  background:white;
+  border-radius:12px;
+  padding:12px 16px;
+  color:#64748b;
+  font-size:15px;
+}
+
+/* CONTENT */
+
+.browser-content{
+  height:390px;
+  overflow-y:auto;
+  padding:28px;
+  background:#f8fafc;
+}
+
+.google-logo{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.google-logo img{
+  width:220px;
+  max-width:90%;
+}
+
+.google-search{
+  max-width:520px;
+  margin:auto;
+  border:2px solid #cbd5e1;
+  border-radius:50px;
+  padding:18px;
+  text-align:center;
+  color:#64748b;
+  font-size:18px;
+  background:white;
+}
+
+.page-box{
+  background:white;
+  padding:24px;
+  border-radius:18px;
+  margin-top:28px;
+  font-size:18px;
+  line-height:1.8;
+  color:#1e293b;
+}
+
+/* TASKBAR */
+
+.taskbar{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:58px;
+  background:#0f172a;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 18px;
+  box-sizing:border-box;
+}
+
+.taskbar-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.start-button{
+  width:38px;
+  height:38px;
+  background:#2563eb;
+  border-radius:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.taskbar-search{
+  width:170px;
+  height:36px;
+  background:white;
+  border-radius:24px;
+  display:flex;
+  align-items:center;
+  padding-left:14px;
+  color:#64748b;
+  font-size:14px;
+}
+
+/* TASKBAR ICON */
+
+.taskbar-icon{
+  width:38px;
+  height:38px;
+  background:#1e293b;
+  border-radius:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.taskbar-icon img{
+  width:22px;
+  height:22px;
+}
+
+.taskbar-icon.active{
+  background:#2563eb;
+  box-shadow:0 0 10px rgba(59,130,246,0.7);
+}
+
+/* RIGHT */
+
+.taskbar-right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+  font-size:16px;
+}
+
+.notice{
+  background:#1e293b;
+  padding:6px 10px;
+  border-radius:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .lesson-box{
+    width:210px;
+  }
+
+  .browser-window{
+    width:95%;
+  }
+
+  .taskbar-search{
+    display:none;
+  }
+
+}
+
 </style>
-</head>
 
-<body>
 
-<div class="box">
 
-<h1>Internet Simulator</h1>
 
-<p>This is a test page.</p>
 
-<input type="text" placeholder="Search here">
+<div class="desktop-wrapper">
 
-<br><br>
+  <!-- LESSON -->
 
-<button>Search</button>
+  <div class="lesson-box">
+
+    <h2>
+      🌐 Browser Basics
+    </h2>
+
+    <div class="lesson-text">
+
+      🎯 Task 1 of 6
+      <br><br>
+
+      Open Google Chrome.
+      <br><br>
+
+      • Double click the desktop icon
+      <br>
+      • OR use the Start Menu
+
+    </div>
+
+  </div>
+
+  <!-- DESKTOP ICONS -->
+
+  <div class="desktop-icons">
+
+    <!-- CHROME -->
+
+    <div class="desktop-icon" ondblclick="openChrome()">
+
+      <div class="icon-box">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+
+      </div>
+
+      <div class="icon-label">
+
+        Google
+        <br>
+        Chrome
+
+      </div>
+
+    </div>
+
+    <!-- EMAIL -->
+
+    <div class="desktop-icon">
+
+      <div class="icon-box">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+
+      </div>
+
+      <div class="icon-label">
+
+        Email
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- START MENU -->
+
+  <div class="start-menu" id="startMenu">
+
+    <div class="start-title">
+
+      Start Menu
+
+    </div>
+
+    <div class="search-box">
+
+      🔍 Search programs
+
+    </div>
+
+    <div class="start-grid">
+
+      <!-- CHROME -->
+
+      <div class="start-app" onclick="openChrome()">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+
+        <div class="start-app-name">
+
+          Chrome
+
+        </div>
+
+      </div>
+
+      <!-- EMAIL -->
+
+      <div class="start-app">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+
+        <div class="start-app-name">
+
+          Email
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BROWSER -->
+
+  <div class="browser-window" id="browserWindow">
+
+    <!-- TOP -->
+
+    <div class="browser-top">
+
+      <div class="browser-tab">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+
+        Google Chrome
+
+      </div>
+
+      <!-- BUTTONS -->
+
+      <div class="window-buttons">
+
+        <!-- MINIMIZE -->
+
+        <div class="window-btn" onclick="minimizeBrowser()">
+
+          −
+
+        </div>
+
+        <!-- MAXIMIZE -->
+
+        <div class="window-btn" onclick="maximizeBrowser()">
+
+          □
+
+        </div>
+
+        <!-- CLOSE -->
+
+        <div class="window-btn close-btn" onclick="closeBrowser()">
+
+          ✕
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ADDRESS -->
+
+    <div class="address-wrapper">
+
+      <div class="address-bar">
+
+        🔒 https://www.google.com
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="browser-content">
+
+      <div class="google-logo">
+
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+
+      </div>
+
+      <div class="google-search">
+
+        🔍 Search Google or type a website
+
+      </div>
+
+      <div class="page-box">
+
+        ✅ Great job!
+        <br><br>
+
+        You opened an internet browser.
+
+      </div>
+
+      <div style="height:450px;"></div>
+
+      <div class="page-box">
+
+        🎉 Amazing!
+        <br><br>
+
+        You reached the bottom
+        of the webpage.
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TASKBAR -->
+
+  <div class="taskbar">
+
+    <!-- LEFT -->
+
+    <div class="taskbar-left">
+
+      <!-- START -->
+
+      <div class="start-button" onclick="toggleMenu()">
+
+        ⊞
+
+      </div>
+
+      <!-- SEARCH -->
+
+      <div class="taskbar-search">
+
+        🔍 Search
+
+      </div>
+
+      <!-- CHROME -->
+
+      <div class="taskbar-icon" id="chromeTaskbar" onclick="restoreBrowser()">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png">
+
+      </div>
+
+      <!-- EMAIL -->
+
+      <div class="taskbar-icon">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="taskbar-right">
+
+      <div class="notice">
+
+        🔔 3
+
+      </div>
+
+      <div>
+
+        📶 WiFi
+
+      </div>
+
+      <div>
+
+        🕒 10:30 AM
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
 
-</body>
-</html>
+<script>
+
+/* START MENU */
+
+function toggleMenu(){
+
+  const menu =
+    document.getElementById(
+      "startMenu"
+    );
+
+  if(menu.style.display === "block"){
+
+    menu.style.display = "none";
+
+  } else {
+
+    menu.style.display = "block";
+
+  }
+
+}
+
+/* OPEN */
+
+function openChrome(){
+
+  const browser =
+    document.getElementById(
+      "browserWindow"
+    );
+
+  browser.style.display = "block";
+
+  document
+  .getElementById(
+    "startMenu"
+  ).style.display = "none";
+
+  document
+  .getElementById(
+    "chromeTaskbar"
+  ).classList.add(
+    "active"
+  );
+
+}
+
+/* CLOSE */
+
+function closeBrowser(){
+
+  document
+  .getElementById(
+    "browserWindow"
+  ).style.display = "none";
+
+  document
+  .getElementById(
+    "chromeTaskbar"
+  ).classList.remove(
+    "active"
+  );
+
+}
+
+/* MINIMIZE */
+
+function minimizeBrowser(){
+
+  document
+  .getElementById(
+    "browserWindow"
+  ).style.display = "none";
+
+}
+
+/* RESTORE */
+
+function restoreBrowser(){
+
+  const browser =
+    document.getElementById(
+      "browserWindow"
+    );
+
+  if(
+    browser.style.display === "none"
+  ){
+
+    browser.style.display = "block";
+
+  } else {
+
+    browser.style.display = "none";
+
+  }
+
+}
+
+/* MAXIMIZE */
+
+function maximizeBrowser(){
+
+  document
+  .getElementById(
+    "browserWindow"
+  )
+  .classList.toggle(
+    "maximized"
+  );
+
+}
+
+</script>
