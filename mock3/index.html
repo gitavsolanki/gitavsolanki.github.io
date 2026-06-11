@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +15,6 @@ body{
     background:#ffffff;
 }
 
-/* Page Border */
-
 .page-border{
     border:4px solid #0070C0;
     border-radius:14px;
@@ -25,55 +24,84 @@ body{
     margin:auto;
 }
 
-/* Logo */
-
 .logo{
     height:140px;
     display:block;
-    margin-bottom:20px;
+    margin:0 auto 20px auto;
 }
 
-/* Headings */
-
 h1{
+    text-align:center;
     font-size:38px;
     margin-bottom:10px;
 }
 
 h2{
+    text-align:center;
     font-size:28px;
-    margin-top:25px;
+    color:#0070C0;
+    margin-top:10px;
 }
 
-/* Information Boxes */
-
-.info-box{
-    background:#f9f9f9;
-    border:1px solid #d9d9d9;
+.intro-box{
+    background:#eef6fd;
+    border-left:6px solid #0070C0;
     padding:20px;
     margin-top:25px;
     border-radius:6px;
 }
 
-/* Start Button */
+.two-column{
+    display:flex;
+    gap:20px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:300px;
+    background:#f9f9f9;
+    border:1px solid #d9d9d9;
+    border-radius:8px;
+    padding:20px;
+}
+
+.card h3{
+    margin-top:0;
+    color:#0070C0;
+}
+
+.resources{
+    margin-top:25px;
+    background:#f9f9f9;
+    border:1px solid #d9d9d9;
+    border-radius:8px;
+    padding:20px;
+}
+
+.resources h3{
+    margin-top:0;
+    color:#0070C0;
+}
 
 .start-button{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 24px;
+    display:block;
+    width:300px;
+    margin:35px auto 0 auto;
+    padding:18px;
+    text-align:center;
     background:#0070C0;
     color:white;
     text-decoration:none;
-    border-radius:6px;
+    border-radius:8px;
+    font-size:22px;
     font-weight:bold;
-    font-size:18px;
 }
 
 .start-button:hover{
     background:#005a99;
 }
-
-/* Lists */
 
 ul li,
 ol li{
@@ -81,7 +109,6 @@ ol li{
 }
 
 </style>
-
 </head>
 
 <body>
@@ -94,9 +121,14 @@ ol li{
 
 <h2>Theme Park Day Trip</h2>
 
+<div class="intro-box">
+
 <p>
 You and a group of friends would like to visit a theme park.
-You will need to:
+</p>
+
+<p>
+During this assessment you will:
 </p>
 
 <ul>
@@ -106,22 +138,43 @@ You will need to:
 <li>Complete a ticket purchase form</li>
 </ul>
 
-<div class="info-box">
+</div>
 
-<h2>Before the Assessment</h2>
+<div class="two-column">
+
+<div class="card">
+
+<h3>Before the Assessment</h3>
 
 <ol>
 <li>Create a folder called <strong>DAY TRIP</strong>.</li>
-<li>Download the resource files provided by your tutor.</li>
+<li>Download the resource files.</li>
 <li>Save all files into the DAY TRIP folder.</li>
 <li>Wait for your tutor to start the assessment.</li>
 </ol>
 
 </div>
 
-<div class="info-box">
+<div class="card">
 
-<h2>Resource Files</h2>
+<h3>Assessment Marks</h3>
+
+<ul>
+<li>Task 1 – 9 marks</li>
+<li>Task 2 – 13 marks</li>
+<li>Task 3 – 4 marks</li>
+<li>Task 4 – 4 marks</li>
+</ul>
+
+<p><strong>Total: 30 marks</strong></p>
+
+</div>
+
+</div>
+
+<div class="resources">
+
+<h3>Resource Files Required</h3>
 
 <ul>
 <li>📄 Friend Email</li>
@@ -132,28 +185,12 @@ You will need to:
 
 </div>
 
-<div class="info-box">
-
-<h2>Assessment Marks</h2>
-
-<ul>
-<li>Task 1 – 9 marks</li>
-<li>Task 2 – 13 marks</li>
-<li>Task 3 – 4 marks</li>
-<li>Task 4 – 4 marks</li>
-</ul>
-
-<p>
-<strong>Total: 30 marks</strong>
-</p>
-
-</div>
-
 <a href="task1.html" class="start-button">
-Start Assessment →
+START ASSESSMENT →
 </a>
 
 </div>
 
 </body>
 </html>
+```
