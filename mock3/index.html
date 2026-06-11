@@ -23,24 +23,36 @@ body{
     margin:auto;
 }
 
+/* HEADER */
+
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:15px;
+}
+
 .logo{
-    height:75px;
-    display:block;
-    margin:0 auto 2px auto;
+    height:80px;
+}
+
+.title-area{
+    text-align:left;
 }
 
 h1{
-    text-align:center;
     font-size:30px;
-    margin:5px 0;
+    margin:0;
 }
 
 h2{
-    text-align:center;
     font-size:22px;
     color:#0070C0;
-    margin:5px 0 15px 0;
+    margin:5px 0 0 0;
 }
+
+/* TOP SECTION */
 
 .two-column{
     display:flex;
@@ -69,6 +81,8 @@ h2{
     margin-bottom:6px;
 }
 
+/* BEFORE ASSESSMENT */
+
 .before-box{
     margin-top:15px;
     background:#eef6fd;
@@ -86,6 +100,8 @@ h2{
 .before-box li{
     margin-bottom:6px;
 }
+
+/* BUTTON */
 
 .start-button{
     display:block;
@@ -105,6 +121,8 @@ h2{
     background:#005a99;
 }
 
+/* LISTS */
+
 ul{
     margin-top:5px;
     margin-bottom:5px;
@@ -115,6 +133,25 @@ ol{
     margin-bottom:5px;
 }
 
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .title-area{
+        text-align:center;
+    }
+
+    .logo{
+        height:70px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -122,65 +159,73 @@ ol{
 
 <div class="page-border">
 
-<img src="LOGO.png" alt="Enjoy Learning by Gita" class="logo">
+<div class="header">
 
-<h1>Entry Level 3 Digital Skills – Mock Test 3</h1>
+    <img src="LOGO.png" alt="Enjoy Learning by Gita" class="logo">
 
-<h2>Theme Park Day Trip</h2>
+    <div class="title-area">
+        <h1>Entry Level 3 Digital Skills – Mock Test 3</h1>
+        <h2>Theme Park Day Trip</h2>
+    </div>
+
+</div>
 
 <div class="two-column">
 
-<div class="card">
+    <div class="card">
 
-<h3>During this Assessment</h3>
+        <h3>During this Assessment</h3>
 
-<p>
-✓ Search for information online<br>
-✓ Create an information sheet<br>
-✓ Send an email to friends<br>
-✓ Complete a ticket purchase form
-</p>
+        <p>
+        ✓ Search for information online<br>
+        ✓ Create an information sheet<br>
+        ✓ Send an email to friends<br>
+        ✓ Complete a ticket purchase form
+        </p>
 
-</div>
+    </div>
 
-<div class="card">
+    <div class="card">
 
-<h3>Assessment Marks</h3>
+        <h3>Assessment Marks</h3>
 
-<ul>
-<li>Task 1 – 9 marks</li>
-<li>Task 2 – 13 marks</li>
-<li>Task 3 – 4 marks</li>
-<li>Task 4 – 4 marks</li>
-</ul>
+        <ul>
+            <li>Task 1 – 9 marks</li>
+            <li>Task 2 – 13 marks</li>
+            <li>Task 3 – 4 marks</li>
+            <li>Task 4 – 4 marks</li>
+        </ul>
 
-<p><strong>Total: 30 marks</strong></p>
+        <p><strong>Total: 30 marks</strong></p>
 
-</div>
+    </div>
 
 </div>
 
 <div class="before-box">
 
-<h3>Before the Assessment</h3>
+    <h3>Before the Assessment</h3>
 
-<ol>
-<li>Create a folder called <strong>DAY TRIP</strong>.</li>
+    <ol>
 
-<li>Download:
-<ul>
-<li>📄 Friend Email</li>
-<li>📄 Theme Park Trip</li>
-<li>📄 Ticket Purchase Form</li>
-<li>💳 Payment Card Details</li>
-</ul>
-</li>
+        <li>Create a folder called <strong>DAY TRIP</strong>.</li>
 
-<li>Save all files into the DAY TRIP folder.</li>
+        <li>Download:
 
-<li>Wait for your tutor to start the assessment.</li>
+            <ul>
+                <li>📄 Friend Email</li>
+                <li>📄 Theme Park Trip</li>
+                <li>📄 Ticket Purchase Form</li>
+                <li>💳 Payment Card Details</li>
+            </ul>
 
-</ol>
+        </li>
+
+        <li>Save all files into the DAY TRIP folder.</li>
+
+        <li>Wait for your tutor to start the assessment.</li>
+
+    </ol>
 
 </div>
 
