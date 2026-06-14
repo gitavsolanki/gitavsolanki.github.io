@@ -1,205 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Mock Test 3 - Task 5A</title>
-
-<style>
-
-body{
-font-family:Calibri, Arial, sans-serif;
-font-size:18px;
-line-height:1.5;
-margin:10px;
-background:#ffffff;
-}
-
-.page-border{
-border:4px solid #0070C0;
-border-radius:14px;
-padding:20px;
-max-width:1200px;
-width:92%;
-margin:auto;
-}
-
-.header{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:20px;
-margin-bottom:15px;
-}
-
-.logo{
-height:80px;
-}
-
-.title-area{
-text-align:left;
-}
-
-h1{
-margin:0;
-font-size:30px;
-}
-
-h2{
-color:#0070C0;
-margin:5px 0 0 0;
-}
-
-.task-card{
-background:#f9f9f9;
-border:1px solid #d9d9d9;
-border-radius:8px;
-padding:20px;
-margin-top:15px;
-}
-
-.task-card h3{
-margin-top:0;
-color:#0070C0;
-}
-
-.question{
-margin-bottom:25px;
-}
-
-.nav-buttons{
-display:flex;
-justify-content:space-between;
-margin-top:25px;
-}
-
-.nav-button{
-background:#0070C0;
-color:white;
-text-decoration:none;
-padding:12px 20px;
-border-radius:8px;
-font-weight:bold;
-}
-
-.nav-button:hover{
-background:#005a99;
-}
-
-@media(max-width:768px){
-
-.header{
-flex-direction:column;
-text-align:center;
-}
-
-.title-area{
-text-align:center;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="page-border">
-
-<div class="header">
-
-<img src="LOGO.png" alt="Logo" class="logo">
-
-<div class="title-area">
-<h1>Mock Test 3</h1>
-<h2>Task 5 – Assessment Review Quiz (Questions 1–8)</h2>
-</div>
-
-</div>
-
-<div class="task-card">
-
-<h3>Instructions</h3>
+<h2>Task 5 – Assessment Review Quiz</h2>
 
 <p>
-Answer Questions 1 to 8.
-When you have finished, click <strong>Questions 9–15 →</strong>.
+Answer all 15 questions and click <strong>Submit Quiz</strong>.
 </p>
 
-</div>
+<h3>Questions</h3>
 
-<div class="task-card">
+<p><strong>1. Which folder is commonly used to store files?</strong></p>
+<label><input type="radio" name="q1" value="0"> Browser</label><br>
+<label><input type="radio" name="q1" value="1"> Documents</label><br>
+<label><input type="radio" name="q1" value="0"> Internet</label>
 
-<div class="question">
-<p><strong>1. Which folder is commonly used to store files and folders?</strong></p>
-<label><input type="radio" name="q1"> Internet</label><br>
-<label><input type="radio" name="q1"> Documents</label><br>
-<label><input type="radio" name="q1"> Browser</label>
-</div>
-
-<div class="question">
 <p><strong>2. What does Save As allow you to do?</strong></p>
-<label><input type="radio" name="q2"> Rename and save a copy</label><br>
-<label><input type="radio" name="q2"> Delete a file</label><br>
-<label><input type="radio" name="q2"> Print a file</label>
-</div>
+<label><input type="radio" name="q2" value="1"> Rename and save a copy</label><br>
+<label><input type="radio" name="q2" value="0"> Delete a file</label><br>
+<label><input type="radio" name="q2" value="0"> Print a file</label>
 
-<div class="question">
 <p><strong>3. Which is a suitable filename?</strong></p>
-<label><input type="radio" name="q3"> document123</label><br>
-<label><input type="radio" name="q3"> New Document</label><br>
-<label><input type="radio" name="q3"> Theme_Park_Research</label>
-</div>
+<label><input type="radio" name="q3" value="0"> New Document</label><br>
+<label><input type="radio" name="q3" value="1"> Theme_Park_Research</label><br>
+<label><input type="radio" name="q3" value="0"> Document1</label>
 
-<div class="question">
 <p><strong>4. What is a search engine used for?</strong></p>
-<label><input type="radio" name="q4"> Writing emails</label><br>
-<label><input type="radio" name="q4"> Finding information online</label><br>
-<label><input type="radio" name="q4"> Creating folders</label>
-</div>
+<label><input type="radio" name="q4" value="0"> Writing emails</label><br>
+<label><input type="radio" name="q4" value="1"> Finding information online</label><br>
+<label><input type="radio" name="q4" value="0"> Creating folders</label>
 
-<div class="question">
 <p><strong>5. Which search engine is commonly used?</strong></p>
-<label><input type="radio" name="q5"> Google</label><br>
-<label><input type="radio" name="q5"> Word</label><br>
-<label><input type="radio" name="q5"> Excel</label>
-</div>
+<label><input type="radio" name="q5" value="1"> Google</label><br>
+<label><input type="radio" name="q5" value="0"> Word</label><br>
+<label><input type="radio" name="q5" value="0"> Excel</label>
 
-<div class="question">
 <p><strong>6. What is a screenshot?</strong></p>
-<label><input type="radio" name="q6"> A photo of your screen</label><br>
-<label><input type="radio" name="q6"> A saved email</label><br>
-<label><input type="radio" name="q6"> A webpage link</label>
-</div>
+<label><input type="radio" name="q6" value="1"> A picture of your screen</label><br>
+<label><input type="radio" name="q6" value="0"> A website link</label><br>
+<label><input type="radio" name="q6" value="0"> A saved email</label>
 
-<div class="question">
 <p><strong>7. Which feature places text in the middle of a page?</strong></p>
-<label><input type="radio" name="q7"> Bold</label><br>
-<label><input type="radio" name="q7"> Centre Align</label><br>
-<label><input type="radio" name="q7"> Underline</label>
-</div>
+<label><input type="radio" name="q7" value="0"> Bold</label><br>
+<label><input type="radio" name="q7" value="1"> Centre Align</label><br>
+<label><input type="radio" name="q7" value="0"> Underline</label>
 
-<div class="question">
 <p><strong>8. Which feature adds dots before a list?</strong></p>
-<label><input type="radio" name="q8"> Bullets</label><br>
-<label><input type="radio" name="q8"> Borders</label><br>
-<label><input type="radio" name="q8"> Indent</label>
-</div>
+<label><input type="radio" name="q8" value="1"> Bullets</label><br>
+<label><input type="radio" name="q8" value="0"> Borders</label><br>
+<label><input type="radio" name="q8" value="0"> Indent</label>
 
-</div>
+<p><strong>9. What should you do before editing a downloaded file?</strong></p>
+<label><input type="radio" name="q9" value="1"> Save As with a new filename</label><br>
+<label><input type="radio" name="q9" value="0"> Delete it</label><br>
+<label><input type="radio" name="q9" value="0"> Print it</label>
 
-<div class="nav-buttons">
+<p><strong>10. What is the purpose of an email subject line?</strong></p>
+<label><input type="radio" name="q10" value="1"> Describe the email topic</label><br>
+<label><input type="radio" name="q10" value="0"> Store attachments</label><br>
+<label><input type="radio" name="q10" value="0"> Add contacts</label>
 
-<a href="task4.html" class="nav-button">
-← Previous Task
-</a>
+<p><strong>11. Which field contains the recipient's email address?</strong></p>
+<label><input type="radio" name="q11" value="1"> To</label><br>
+<label><input type="radio" name="q11" value="0"> Subject</label><br>
+<label><input type="radio" name="q11" value="0"> Attachment</label>
 
-<a href="task5B.html" class="nav-button">
-Questions 9–15 →
-</a>
+<p><strong>12. What should you do before sending an email?</strong></p>
+<label><input type="radio" name="q12" value="1"> Check the attachment</label><br>
+<label><input type="radio" name="q12" value="0"> Delete the subject</label><br>
+<label><input type="radio" name="q12" value="0"> Close the browser</label>
 
-</div>
+<p><strong>13. What is an online form used for?</strong></p>
+<label><input type="radio" name="q13" value="1"> Entering information electronically</label><br>
+<label><input type="radio" name="q13" value="0"> Playing games</label><br>
+<label><input type="radio" name="q13" value="0"> Sending text messages</label>
 
-</div>
+<p><strong>14. Which information should be entered carefully on a payment form?</strong></p>
+<label><input type="radio" name="q14" value="1"> Card details</label><br>
+<label><input type="radio" name="q14" value="0"> Browser history</label><br>
+<label><input type="radio" name="q14" value="0"> Desktop wallpaper</label>
 
-</body>
+<p><strong>15. Why should you check information before submitting a form?</strong></p>
+<label><input type="radio" name="q15" value="1"> To make sure it is correct</label><br>
+<label><input type="radio" name="q15" value="0"> To increase internet speed</label><br>
+<label><input type="radio" name="q15" value="0"> To change the website</label>
+
+<br><br>
+
+<button class="save-button" onclick="markQuiz()">
+Submit Quiz
+</button>
+
+<div id="result" class="success-message"></div>
+
+<hr>
+
+<h3>📸 Upload Quiz Result Screenshot</h3>
+
+<p>Take a screenshot of your score and upload it below.</p>
+
+<input type="file">
+
+<p style="color:green;font-weight:bold;">
+✓ Screenshot selected
+</p>
+
+<script>
+
+function markQuiz() {
+
+let score = 0;
+
+for(let i=1;i<=15;i++){
+
+let answer =
+document.querySelector('input[name="q'+i+'"]:checked');
+
+if(answer){
+score += Number(answer.value);
+}
+
+}
+
+let percentage = Math.round((score/15)*100);
+
+let feedback = "";
+
+if(score >= 13){
+feedback = "🎉 Excellent Work!";
+}
+else if(score >= 10){
+feedback = "👍 Good Work!";
+}
+else if(score >= 7){
+feedback = "🙂 Nearly There!";
+}
+else{
+feedback = "📚 More Practice Needed";
+}
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML =
+"<h3>Your Score: " + score + " / 15</h3>" +
+"<p>Percentage: " + percentage + "%</p>" +
+"<p><strong>" + feedback + "</strong></p>";
+
+}
+
+</script>
 </html>
