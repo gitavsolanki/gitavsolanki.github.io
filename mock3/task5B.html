@@ -1,1 +1,140 @@
+<!-- QUESTIONS 9–15 -->
+
+<div class="task-card">
+
+<h3>Questions 9 - 15</h3>
+
+<div class="question">
+<p><strong>9. What should you do before editing a downloaded file?</strong></p>
+<label><input type="radio" name="q9" value="1"> Save As with a new filename</label><br>
+<label><input type="radio" name="q9" value="0"> Delete it</label><br>
+<label><input type="radio" name="q9" value="0"> Print it</label>
+</div>
+
+<div class="question">
+<p><strong>10. What is the purpose of an email subject line?</strong></p>
+<label><input type="radio" name="q10" value="1"> Describe the email topic</label><br>
+<label><input type="radio" name="q10" value="0"> Store attachments</label><br>
+<label><input type="radio" name="q10" value="0"> Add contacts</label>
+</div>
+
+<div class="question">
+<p><strong>11. Which field contains the recipient's email address?</strong></p>
+<label><input type="radio" name="q11" value="1"> To</label><br>
+<label><input type="radio" name="q11" value="0"> Subject</label><br>
+<label><input type="radio" name="q11" value="0"> Attachment</label>
+</div>
+
+<div class="question">
+<p><strong>12. What should you do before sending an email?</strong></p>
+<label><input type="radio" name="q12" value="1"> Check the attachment is included</label><br>
+<label><input type="radio" name="q12" value="0"> Delete the subject</label><br>
+<label><input type="radio" name="q12" value="0"> Close the browser</label>
+</div>
+
+<div class="question">
+<p><strong>13. What is an online form used for?</strong></p>
+<label><input type="radio" name="q13" value="1"> Entering information electronically</label><br>
+<label><input type="radio" name="q13" value="0"> Playing games</label><br>
+<label><input type="radio" name="q13" value="0"> Sending text messages</label>
+</div>
+
+<div class="question">
+<p><strong>14. Which information should be entered carefully on a payment form?</strong></p>
+<label><input type="radio" name="q14" value="1"> Card details</label><br>
+<label><input type="radio" name="q14" value="0"> Browser history</label><br>
+<label><input type="radio" name="q14" value="0"> Desktop wallpaper</label>
+</div>
+
+<div class="question">
+<p><strong>15. Why should you check information before submitting a form?</strong></p>
+<label><input type="radio" name="q15" value="1"> To make sure it is correct</label><br>
+<label><input type="radio" name="q15" value="0"> To change the website</label><br>
+<label><input type="radio" name="q15" value="0"> To increase internet speed</label>
+</div>
+
+<button class="save-button" onclick="markQuiz()">
+Submit Quiz
+</button>
+
+<div id="result" class="success-message"></div>
+
+<hr>
+
+<h3>📸 Upload Quiz Result Screenshot</h3>
+
+<p>
+Take a screenshot of your score and upload it below.
+</p>
+
+<input type="file">
+
+<p style="color:green;font-weight:bold;">
+✓ Screenshot selected
+</p>
+
+<p>
+Remember to include this screenshot when emailing your evidence to your tutor.
+</p>
+
+</div>
+
+<script>
+
+function markQuiz() {
+
+let score = 0;
+
+for(let i=9;i<=15;i++){
+
+let answer =
+document.querySelector('input[name="q'+i+'"]:checked');
+
+if(answer){
+score += Number(answer.value);
+}
+
+}
+
+let percentage =
+Math.round((score/7)*100);
+
+let feedback = "";
+
+if(score >= 6){
+feedback = "PASS - Excellent Work!";
+}
+else if(score >= 4){
+feedback = "Good Work!";
+}
+else{
+feedback = "Needs More Practice";
+}
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML =
+"<h3>Your Score: "
++ score +
+" / 7</h3><p>Percentage: "
++ percentage +
+"%</p><p><strong>"
++ feedback +
+"</strong></p>";
+
+}
+
+</script>
+
+<div class="nav-buttons">
+
+<a href="task5A.html" class="nav-button">
+← Questions 1–8
+</a>
+
+<a href="submit.html" class="nav-button">
+Submit Work →
+</a>
+
+</div>
 
