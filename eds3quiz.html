@@ -1,1 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDS Entry Level Revision Quiz</title>
 
+<style>
+body{
+    font-family:Arial, sans-serif;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+    background:#f4f6f8;
+}
+
+h1{
+    background:#003057;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+}
+
+.question{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+
+.feedback{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.correct{
+    color:green;
+}
+
+.incorrect{
+    color:red;
+}
+
+button{
+    background:#003057;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#005a9c;
+}
+
+#result{
+    margin-top:20px;
+    padding:20px;
+    background:white;
+    border-radius:8px;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<h1>EDS Entry Level Revision Quiz</h1>
+
+<form id="quizForm">
+
+<div class="question">
+<p>1. Which software would you use to create a monthly budget?</p>
+<input type="radio" name="q1" value="A"> Email<br>
+<input type="radio" name="q1" value="B"> Spreadsheet<br>
+<input type="radio" name="q1" value="C"> Presentation<br>
+<div id="f1" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>2. An application icon does not respond. Why?</p>
+<input type="radio" name="q2" value="A"> Link corrupted<br>
+<input type="radio" name="q2" value="B"> Headphones plugged in<br>
+<input type="radio" name="q2" value="C"> HTTPS checked<br>
+<div id="f2" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>3. Why should you avoid clicking links from unknown emails?</p>
+<input type="radio" name="q3" value="A"> It may be phishing<br>
+<input type="radio" name="q3" value="B"> Faster internet<br>
+<input type="radio" name="q3" value="C"> Better graphics<br>
+<div id="f3" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>4. Which software is best for creating a poster?</p>
+<input type="radio" name="q4" value="A"> Desktop Publishing<br>
+<input type="radio" name="q4" value="B"> Spreadsheet<br>
+<input type="radio" name="q4" value="C"> Email<br>
+<div id="f4" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>5. Which tool helps you share information with others?</p>
+<input type="radio" name="q5" value="A"> Verification Check<br>
+<input type="radio" name="q5" value="B"> Bulletin Board<br>
+<input type="radio" name="q5" value="C"> Web Browsing<br>
+<div id="f5" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>6. Why might an app ask for your personal details?</p>
+<input type="radio" name="q6" value="A"> Check sound level<br>
+<input type="radio" name="q6" value="B"> Streamline your experience<br>
+<input type="radio" name="q6" value="C"> Add your printer<br>
+<div id="f6" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>7. Which software could be used to create a party invitation?</p>
+<input type="radio" name="q7" value="A"> Presentation Software<br>
+<input type="radio" name="q7" value="B"> Antivirus Software<br>
+<input type="radio" name="q7" value="C"> Web Browser<br>
+<div id="f7" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>8. Which software is best for calculations?</p>
+<input type="radio" name="q8" value="A"> Spreadsheet<br>
+<input type="radio" name="q8" value="B"> Paint<br>
+<input type="radio" name="q8" value="C"> Music Player<br>
+<div id="f8" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>9. Which is a secure way to access a device?</p>
+<input type="radio" name="q9" value="A"> Fingerprint Recognition<br>
+<input type="radio" name="q9" value="B"> Sharing Passwords<br>
+<input type="radio" name="q9" value="C"> Leaving Device Unlocked<br>
+<div id="f9" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>10. Which is a physical stress caused by computer use?</p>
+<input type="radio" name="q10" value="A"> Eye Strain<br>
+<input type="radio" name="q10" value="B"> Faster Internet<br>
+<input type="radio" name="q10" value="C"> More Storage<br>
+<div id="f10" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>11. Which is a security risk?</p>
+<input type="radio" name="q11" value="A"> Public WiFi<br>
+<input type="radio" name="q11" value="B"> Software Updates<br>
+<input type="radio" name="q11" value="C"> MFA<br>
+<div id="f11" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>12. Why is using your mother's name as a password a bad idea?</p>
+<input type="radio" name="q12" value="A"> Easy to guess<br>
+<input type="radio" name="q12" value="B"> Improves security<br>
+<input type="radio" name="q12" value="C"> Encrypted<br>
+<div id="f12" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>13. How can you reduce headaches when using a computer?</p>
+<input type="radio" name="q13" value="A"> Take regular breaks<br>
+<input type="radio" name="q13" value="B"> Sit closer<br>
+<input type="radio" name="q13" value="C"> Increase brightness<br>
+<div id="f13" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>14. How can you reduce wrist pain?</p>
+<input type="radio" name="q14" value="A"> Wrist support<br>
+<input type="radio" name="q14" value="B"> Increase volume<br>
+<input type="radio" name="q14" value="C"> Turn off WiFi<br>
+<div id="f14" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>15. Which is a valid online payment method?</p>
+<input type="radio" name="q15" value="A"> PayPal<br>
+<input type="radio" name="q15" value="B"> Webcam<br>
+<input type="radio" name="q15" value="C"> Printer<br>
+<div id="f15" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>16. What is a risk of sharing your phone number online?</p>
+<input type="radio" name="q16" value="A"> Phone scams<br>
+<input type="radio" name="q16" value="B"> Better graphics<br>
+<input type="radio" name="q16" value="C"> Faster downloads<br>
+<div id="f16" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>17. Which is a feature of a strong password?</p>
+<input type="radio" name="q17" value="A"> Uppercase, lowercase, numbers and symbols<br>
+<input type="radio" name="q17" value="B"> First name only<br>
+<input type="radio" name="q17" value="C"> Birthday only<br>
+<div id="f17" class="feedback"></div>
+</div>
+
+<div class="question">
+<p>18. What should you do before clicking a link?</p>
+<input type="radio" name="q18" value="A"> Check sender is trusted<br>
+<input type="radio" name="q18" value="B"> Click immediately<br>
+<input type="radio" name="q18" value="C"> Forward to everyone<br>
+<div id="f18" class="feedback"></div>
+</div>
+
+<button type="button" onclick="checkQuiz()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+<script>
+
+const answers = {
+q1:"B", q2:"A", q3:"A", q4:"A", q5:"B", q6:"B",
+q7:"A", q8:"A", q9:"A", q10:"A", q11:"A", q12:"A",
+q13:"A", q14:"A", q15:"A", q16:"A", q17:"A", q18:"A"
+};
+
+function checkQuiz(){
+
+let score=0;
+
+for(let i=1;i<=18;i++){
+
+let q="q"+i;
+let selected=document.querySelector(`input[name="${q}"]:checked`);
+let feedback=document.getElementById("f"+i);
+
+if(selected){
+
+if(selected.value===answers[q]){
+score++;
+feedback.innerHTML="✓ Correct";
+feedback.className="feedback correct";
+}
+else{
+feedback.innerHTML="✗ Incorrect";
+feedback.className="feedback incorrect";
+}
+
+}
+}
+let result=document.getElementById("result");
+
+if(score>=15){
+result.innerHTML=`Score: ${score}/18<br><br>🎉 Excellent! You are assessment ready.`;
+}
+else{
+result.innerHTML=`Score: ${score}/18<br><br>Keep practising and try again.`;
+}
+}
+
+</script>
+
+</body>
+</html>
