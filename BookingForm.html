@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>BOOKING FORM</title>
+	<style>
+		label {font-weight:700;display:inline-block;width:10rem;}
+	
+		body,
+		td {
+			font-family: Arial, sans-serif;
+			line-height: 2em;
+		}
+		body {
+			padding: 40px;
+			padding-bottom:10px;
+			max-width: 800px;
+			margin: auto;
+			border-radius: 5px;
+			border: 1px solid #c0c0c0;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			min-height: 500px;
+			font-size:1rem;
+		}
+		h1 {
+			padding: 10px;
+			background-color: #003057;
+			color: #fff;
+			font-size: 1.5rem;
+			border-radius: 5px;
+			text-align: center;
+		}
+		h2 {
+			padding: 10px;
+			background-color: #d2db0e;
+			color: #003057;
+			font-size: 1.2rem;
+			border-radius: 5px;
+			text-align: center;
+		}
+		input[type="text"],input[type="password"] {
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 10px;
+			border: 1px solid #007fa3;
+			border-radius: 5px;
+			width: 100%;
+		}
+
+		input[type="button"],.uploadButton {
+			border: 3px solid #fff;
+			border-radius: 5px;
+			padding: 10px;
+			cursor: pointer;
+			outline: #003057 solid 2px;
+			background-color:#d2db0e;
+			display: block;
+			margin: 2rem auto;
+			font-size:0.9rem;
+			font-weight: bold;
+			color: #003057
+		}
+		.uploadButton {display:inline-block}
+		input[type="button"]:hover:not(input:focus,select:focus) {
+			-webkit-filter: brightness(90%);
+			-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			}
+		
+		input[type="button"].forward:hover:not(input:focus,select:focus) {
+			-webkit-filter: brightness(90%);
+			-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			transition: all 1s ease;
+			
+		}
+		
+		input:focus,select:focus,.uploadButton:focus{
+			outline:none;
+			box-shadow: 0 0 0 3px hsla(220, 100%, 50%, 80%);
+			}
+			
+		input[type="button"].forward {
+			background-color:#007FA3;color:#FFF;
+			display: block;
+			}
+			
+		footer {
+			font-size: 0.7rem;
+			margin-top: 3rem;
+			
+		}
+		
+		header img {
+			height: 6rem;
+			}
+
+		select {
+			padding: 10px;
+			border: 2px solid #007fa3;
+			border-radius: 5px;
+			display: inline-block;
+			box-sizing: border-box;
+		}
+		div.s {
+			max-width: 800px;
+			border: 10px solid #d4eae4;
+			padding: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		span.fV {
+			display: none;
+		}
+
+		div.e {
+			border: 10px solid #d4eae4;
+			padding: 20px;
+		}
+		div.e span {
+			font-size: 36px;
+		}
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#m {
+			background-color: #eaeaea;
+			padding: 5px;
+		}
+
+		.datePicker th,
+		.datePicker td {
+			text-align: center;
+		}
+		.datePicker {
+			width: 100%;
+		}
+		.datePicker a {
+			text-decoration: none;
+			color: #000;
+		}
+		.datePicker td a:hover {
+			background-color: #d4eae4;
+			cursor: pointer;
+			border-radius: 5px;
+			display: block;
+		}
+		.datePicker_header {
+			background-color: #007fa3;
+			color: #fff;
+			padding: 5px;
+			text-align: center;
+			border-radius: 3px;
+			margin-top: 5px;
+		}
+		.datePicker_header span {
+			width: 200px;
+			text-align: center;
+			display: inline-block;
+		}
+		.datePicker_header input {
+			border-radius: 15px;
+			width: 30px;
+			height: 30px;
+			background-color: white;
+		}
+		.datePicker_header input:hover {
+			background-color: #eaeaea;
+		}
+		.deleteAttachment {
+			float: right;
+		}
+		#captcha_challenge {
+			width: 300px;
+		}
+
+		.hidden {
+			display: none;
+		}
+	.mergeFieldTitle {display:inline-block;width:30%;font-weight:bold}
+	.mergeField {display:inline-block;width:60%}
+	
+	
+	
+	
+	.caps{text-transform:uppercase}
+	.bold {font-weight:600}
+	
+	#captcha_tickbox {width:50px;height:50px;accent-color:#6F856C}
+
+	#captcha_text {font-weight:bold;font-size:1.3rem;padding-left:5px}
+	.hiddenpassword{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMThweCIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiA0LjVDNyA0LjUgMi43MyA3LjYxIDEgMTJjMS43MyA0LjM5IDYgNy41IDExIDcuNXM5LjI3LTMuMTEgMTEtNy41Yy0xLjczLTQuMzktNi03LjUtMTEtNy41ek0xMiAxN2MtMi43NiAwLTUtMi4yNC01LTVzMi4yNC01IDUtNSA1IDIuMjQgNSA1LTIuMjQgNS01IDV6bTAtOGMtMS42NiAwLTMgMS4zNC0zIDNzMS4zNCAzIDMgMyAzLTEuMzQgMy0zLTEuMzQtMy0zLTN6Ii8+PC9zdmc+") no-repeat;}
+.visiblepassword{background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMThweCIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0iTTAgMGgyNHYyNEgwem0wIDBoMjR2MjRIMHptMCAwaDI0djI0SDB6bTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiA3YzIuNzYgMCA1IDIuMjQgNSA1IDAgLjY1LS4xMyAxLjI2LS4zNiAxLjgzbDIuOTIgMi45MmMxLjUxLTEuMjYgMi43LTIuODkgMy40My00Ljc1LTEuNzMtNC4zOS02LTcuNS0xMS03LjUtMS40IDAtMi43NC4yNS0zLjk4LjdsMi4xNiAyLjE2QzEwLjc0IDcuMTMgMTEuMzUgNyAxMiA3ek0yIDQuMjdsMi4yOCAyLjI4LjQ2LjQ2QzMuMDggOC4zIDEuNzggMTAuMDIgMSAxMmMxLjczIDQuMzkgNiA3LjUgMTEgNy41IDEuNTUgMCAzLjAzLS4zIDQuMzgtLjg0bC40Mi40MkwxOS43MyAyMiAyMSAyMC43MyAzLjI3IDMgMiA0LjI3ek03LjUzIDkuOGwxLjU1IDEuNTVjLS4wNS4yMS0uMDguNDMtLjA4LjY1IDAgMS42NiAxLjM0IDMgMyAzIC4yMiAwIC40NC0uMDMuNjUtLjA4bDEuNTUgMS41NWMtLjY3LjMzLTEuNDEuNTMtMi4yLjUzLTIuNzYgMC01LTIuMjQtNS01IDAtLjc5LjItMS41My41My0yLjJ6bTQuMzEtLjc4bDMuMTUgMy4xNS4wMi0uMTZjMC0xLjY2LTEuMzQtMy0zLTNsLS4xNy4wMXoiLz48L3N2Zz4=") no-repeat}
+.passwordreveal {height:20px;width:20px;border:0px;cursor:pointer}
+
+.captchaBox{border:1px solid #000;border-radius:5px;padding:10px;background:url(data:image/png;base64,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);background-position: right top ;background-repeat: no-repeat;}
+.upload{display:none}
+	
+	</style>
+	<script>
+	
+	function focusOnUpload(e){
+	var code = e.which;
+		if ((code === 13) || (code === 32)) {
+			document.getElementById("upload1").click();
+		}
+	}
+
+		function widgets_removeAll() {
+			var widgets = document.querySelectorAll(".Widget");
+			for (var widget = 0; widget < widgets.length; widget++) {
+				widgets[widget].remove();
+			}
+		}
+
+		function widget_calendar_loadCurrentMonth() {
+			m = new Date().getMonth();
+			y = new Date().getFullYear();
+		}
+
+		function widget_calendar_loadDate(field) {
+			date = field.value.split("/");
+			if (date.length == 3 && date[1] >= 0 && date[1] <= 11 && date[0] >= 0 && date[0] <= 31 && date[2].length >= 2 && date[2].length <= 4) {
+				m = date[1] - 1;
+				y = parseInt(date[2].length == 2 ? "20" + date[2] : date[2]);
+			} else widget_calendar_loadCurrentMonth();
+		}
+
+		function widget_calendar_monthShift(action) {
+			m = m + action;
+			if (m > 11) {
+				m = 0;
+				y = y + 1;
+			}
+			if (m < 0) {
+				m = 11;
+				y = y - 1;
+			}
+			widget_calendar_show(currentField);
+		}
+
+		function widget_calendar_yearShift(action) {
+			y = y + action;
+			widget_calendar_show(currentField);
+		}
+
+		function widget_calendar_setDate(field, d, m, y) {
+			if (d < 10) d = 0 + d;
+			if (m < 10) m = 0 + m;
+			field.value = d + "/" + m + "/" + y;
+			widgets_removeAll();
+		}
+
+		function widget_calendar_show(field) {
+			widgets_removeAll();
+			currentField = field;
+			elem = document.createElement("div");
+			elem.id = field.name + "_Widget";
+			elem.className = "Widget";
+			o =
+				'<div class=datePicker_header><input type=button value=- onclick="widget_calendar_monthShift(-1)" title="Previous Month" class="calendarButton"> ' +
+				["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][m] +
+				' <input type=button value=+ onclick="widget_calendar_monthShift(+1)" title="Next Month" class="calendarButton"> <input type=button value=- onclick="widget_calendar_yearShift(-1)" title="Previous Year" class="calendarButton"> ' +
+				y +
+				' <input type=button value=+ onclick="widget_calendar_yearShift(+1)" title="Next Year" class="calendarButton"></span></div><table class=datePicker><tr><th>Mon<th>Tues<th>Wed<th>Thur<th>Fri<th>Sat<th>Sun</tr>';
+			if (new Date(y, m, 1).getDay() != 1) {
+				o += "<tr>";
+				if (new Date(y, m, 1).getDay() == 0) b = 6;
+				else b = new Date(y, m, 1).getDay() - 1;
+				for (var e = 1; e <= b; e++) {
+					o += "<td></td>";
+				}
+			}
+			for (var d = 1; d <= new Date(y, m + 1, 0).getDate(); d++) {
+				if (new Date(y, m, d).getDay() == 1) o += "<tr>";
+				o += "<Td><a href=\"javascript:widget_calendar_setDate(currentField,'" + d + "','" + (m + 1) + "','" + y + "',)\">" + d + "</a></td>";
+			}
+			elem.innerHTML = o + "</table>";
+			field.parentElement.appendChild(elem);
+		}
+
+		function widget_attachments_remove(field, attachmentNumber) {
+			data = document.getElementById(field + "_fV").textContent;
+			storedData = JSON.parse(data);
+			dataArchive = [];
+			for (var i = 0, len = storedData.length; i < len; ++i) {
+				if (i != attachmentNumber) dataArchive.push({ file: storedData[i]["file"], name: storedData[i]["name"] });
+			}
+			document.getElementById(field + "_fV").textContent = JSON.stringify(dataArchive);
+			widget_attachments_showList(field);
+		}
+
+		function widget_attachments_download(field, attachmentNumber) {
+			data = document.getElementById(field + "_fV").textContent;
+			storedData = JSON.parse(data);
+			fetch(storedData[attachmentNumber]["file"])
+				.then((res) => {
+					return res.blob();
+				})
+				.then((data) => {
+					var a = document.createElement("a");
+					a.href = window.URL.createObjectURL(data);
+					a.download = storedData[attachmentNumber]["name"];
+					a.click();
+				});
+		}
+
+		function widget_attachments_showList(field) {
+			if (document.getElementById(field + "_Widget")) document.getElementById(field + "_Widget").remove();
+			elem = document.createElement("div");
+			elem.id = field + "_Widget";
+			elem.innerHTML = "";
+			var data = document.getElementById(field + "_fV").textContent;
+			try {
+				JSON.parse(data);
+			} catch (e) {
+				data = "{}";
+			}
+			storedData = JSON.parse(data);
+			list = document.createElement("ul");
+			list.setAttribute("class", "attachments");
+			for (var i = 0, len = storedData.length; i < len; ++i) {
+				var li = document.createElement("li");
+				li.setAttribute("class", "file");
+				li.innerHTML =
+					"<a href=\"javascript:widget_attachments_download('" + field + "','" + i + "')\">" + storedData[i]["name"] + "</a> <a href=\"javascript:widget_attachments_remove('" + field + "','" + i + "')\" class=deleteAttachment>Remove</a>";
+				list.appendChild(li);
+			}
+			elem.appendChild(list);
+			document.getElementById(field).after(elem);
+		}
+
+		function widget_attachments_add(field) {
+			var data = document.getElementById(field.name + "_fV").textContent;
+			try {
+				JSON.parse(data);
+			} catch (e) {
+				data = "{}";
+			}
+			dataArchive = [];
+			storedData = JSON.parse(data);
+			for (var i = 0, len = storedData.length; i < len; ++i) {
+				dataArchive.push({ file: storedData[i]["file"], name: storedData[i]["name"] });
+			}
+			var file = field.files[0];
+			var reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = function () {
+				dataArchive.push({ file: reader.result, name: file.name });
+				document.getElementById(field.name + "_fV").textContent = JSON.stringify(dataArchive);
+				widget_attachments_showList(field.name);
+			};
+			field.value = "";
+		}
+
+		function parseForm(method = "save") {
+			if (window.URL === undefined && window.webkitURL === undefined) {
+				document.getElementById("m").innerHTML = "The browser does not support the assesssment. Please use a more modern browser, and/or ensure emulation is IE10 or above.";
+				return;
+			}
+			var e = document.querySelectorAll("input,select");
+			for (var i = 0; i < e.length; i++) {
+				if (e[i].className == "fV") return;
+				fV = document.getElementById(e[i].name + "_fV");
+				if (e[i].classList.contains("datePicker")) {
+					e[i].addEventListener("focus", (event) => {
+						widget_calendar_loadCurrentMonth();
+						widget_calendar_loadDate(event.target);
+						widget_calendar_show(event.target);
+					});
+				}
+				if (e[i].type == "file") {
+					e[i].onchange = (event) => {
+						widget_attachments_add(event.target);
+					};
+				}
+				if (fV === null) {
+					elem = document.createElement("span");
+					elem.id = e[i].name + "_fV";
+					elem.className = "fV";
+					elem.textContent = "";
+					e[i].parentNode.insertBefore(elem, e[i]);
+				} else {
+					if (e[i].type == "text" || e[i].type == "select-one") {
+						if (method == "load") {
+							e[i].value = fV.textContent;
+
+						} else {
+							fV.textContent = e[i].value;
+						}
+					} else if (e[i].type == "checkbox" || e[i].type == "radio") {
+						if (method == "load") {
+							fieldValues = fV.textContent.split(",");
+							var fieldGroup = document.getElementsByName(e[i].name);
+							for (var x = 0; x < fieldGroup.length; x++) {
+								if (fieldValues.indexOf(fieldGroup[x].value) > -1) {
+									fieldGroup[x].checked = true;
+								} else {
+									fieldGroup[x].checked = false;
+								}
+							}
+						} else {
+							var fieldGroup = document.getElementsByName(e[i].name);
+							var fieldValues = [];
+							for (var x = 0; x < fieldGroup.length; x++) {
+								if (fieldGroup[x].checked) {
+									fieldValues.push(fieldGroup[x].value);
+								}
+							}
+							fV.textContent = fieldValues.join(",");
+						}
+					}
+				}
+			}
+		}
+
+		function save() {
+			parseForm();
+			widgets_removeAll();
+			var c = document.getElementById("name_first").value + "_" + document.getElementById("name_last").value + "_Completed.html";
+			var o = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+			var blob = new Blob([o], { type: "text/html;charset=utf-8;" });
+			var link = document.createElement("a");
+			if (link.download !== undefined) {
+				var url = URL.createObjectURL(blob);
+				link.setAttribute("href", url);
+				link.setAttribute("download", c);
+				link.style.visibility = "hidden";
+				document.body.appendChild(link);
+				link.click();
+				document.body.removeChild(link);
+			}
+		}
+
+		window.onload = function () {
+			parseForm("load");
+			document.getElementById("examinationLoadFailure").style.display = "none";
+			sections = document.querySelectorAll("section");
+			for (const section of sections) {
+				section.classList.add("hidden");}
+			document.getElementById("CandidateDetailsScreen").classList.remove("hidden");
+			document.addEventListener(
+				"click",
+				function (event) {
+					if (!document.activeElement.classList.contains("WidgetButton") && !event.target.closest(".Widget")) {
+						widgets_removeAll();
+					}
+				},
+				false
+			);
+			const inputs = document.querySelectorAll('input,select')
+			for (const input of inputs){
+				input.addEventListener('change', (e) => {  
+					widget_mergeFields();});}
+		};
+		function nextOfType(currentElement, targetType) {
+			 nextElement = currentElement.nextElementSibling;
+			while (nextElement) {
+				if (nextElement.matches(targetType)) return nextElement;
+				nextElement = nextElement.nextElementSibling;
+			}
+		};
+
+		 function prevOfType(currentElement, targetType) {
+			 previousElement = currentElement.previousElementSibling;
+			while (previousElement) {
+				if (previousElement.matches(targetType)) return previousElement;
+				previousElement = previousElement.previousElementSibling;
+			}
+		};
+
+		function screen(current, direction) {
+			sections = document.querySelectorAll("section");
+			for (const section of sections) {
+				section.classList.add("hidden");
+			}
+			currentscreen = current.closest("section");
+			if (direction == "next") nextOfType(currentscreen, "section").classList.remove("hidden");
+			else if (direction == "prev") prevOfType(currentscreen, "section").classList.remove("hidden");
+		}
+
+function repeatValuesLater(copyvalue,copyclassname){
+	var occurences = document.getElementsByClassName(copyclassname);
+	for (var i = 0; i < occurences.length; i++) {
+	  occurences[i].innerHTML=copyvalue;
+	}}
+
+	function fieldChange(field){
+		if(field.id=="Time"||field.id=="Day"||field.id=="Access") repeatValuesLater(field.value,field.id);
+
+			if(field.value=="Electricity") {repeatValuesLater("£ 20","cost");repeatValuesLater("£ 20","repeatamounttopay");}
+			else if(field.value=="Tap") {repeatValuesLater("£ 25","cost");repeatValuesLater("£ 25","repeatamounttopay");}
+			else if(field.value=="Toilets") {repeatValuesLater("£ 30","cost");repeatValuesLater("£ 30","repeatamounttopay");}
+			else if(field.value=="" && field.id=="Access" ) {repeatValuesLater("£ 0","cost");repeatValuesLater("£ 0","repeatamounttopay");}
+			
+			
+	}
+
+	function widget_mergeFields(){
+		fields = document.querySelectorAll(".mergeField");
+			for (const field of fields) {
+			field.innerHTML=document.getElementById(field.getAttribute('data-fieldname')).value
+			}
+	}
+
+	</script>
+
+</head>
+<body>
+
+<header>
+	<img alt="Pearson Logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjQuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxvZ28iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA5MDIuMDEgNDA3Ljk5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA5MDIuMDEgNDA3Ljk5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzNEMzkzNTt9Cgkuc3Qxe2ZpbGw6IzAwN0ZBMzt9Cgkuc3Qye2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxnIGlkPSJYTUxJRF8yNTFfIj4KCTxwYXRoIGlkPSJYTUxJRF8yNjVfIiBjbGFzcz0ic3QwIiBkPSJNNTQwLjE2LDI0OC4xOGMtMC4yNy0wLjY5LTAuOTktMS4wOS0xLjY5LTAuOTJsLTAuMjIsMC4wNmMtMi4xLDAuNDYtMy43MiwwLjMzLTQuODUtMC40NAoJCWMtMS42MS0xLjA5LTIuMzktMy41NC0yLjM5LTcuNXYtMzUuOGMwLTEzLjk4LTguMzQtMjEuMDctMjQuNzktMjEuMDdjLTE0LjczLDAtMjYuMjcsNi45Ny0yNi4yNywxNS44N2MwLDQuNTgsMi43OSw3Ljg5LDYuOTEsOC4zOAoJCWMyLjY5LDAuMzIsNS4yNi0wLjg5LDcuMTItMi44NmMzLjYyLTMuODIsMy4xNS04LjM3LTEuMjQtMTMuMjVjMi42LTIuNzIsNy4yLTQuMzMsMTIuNDQtNC4zM2M4LjU1LDAsMTIuMiw1LjA3LDEyLjIsMTYuOTZ2OS4wNQoJCWMtMi4wMSwwLjYyLTMuODgsMS4yMS03LjMxLDIuMDFjLTYuOTIsMS42My0xNi40MiwzLjc5LTIzLjU5LDcuNzVjLTUuOTEsMy4yNC04LjkxLDguMzYtOC45MSwxNS4yMWMwLDcuNDYsNC45LDE2LjE3LDE4LjcsMTYuMTcKCQljNy43MywwLDE0LjY1LTMuNjcsMjEuNzYtMTEuNTNjMC42MSw4LjE3LDMuNzEsMTEuMjMsMTEuMjIsMTEuMjNjMy42MSwwLDYuNS0wLjg0LDkuOTQtMi41CgkJQzU0MC4xLDI1MC4yMiw1NDAuNTUsMjQ5LjE0LDU0MC4xNiwyNDguMTh6IE01MTcuMzcsMjM3LjI0Yy0xLjY4LDIuMzMtNy4xNiw5LjI5LTEzLjk4LDkuMjljLTkuMjIsMC0xMS4xNi02LjQ4LTExLjE2LTExLjkKCQljMC04LjkzLDYuODQtMTMuMDYsMjUuMTQtMTcuNThWMjM3LjI0eiIvPgoJPHBhdGggaWQ9IlhNTElEXzI2Ml8iIGNsYXNzPSJzdDAiIGQ9Ik02OTQuMjEsMjUzLjc3Yy0xOS41NSwwLTM0LjI5LTE1LjMyLTM0LjI5LTM1LjYzYzAtMTkuODksMTUuMzktMzYuMDgsMzQuMjktMzYuMDgKCQljMTkuMTUsMCwzNC4xNSwxNS41OSwzNC4xNSwzNS40OEM3MjguMzYsMjM5LjkyLDcxMC42MywyNTMuNzcsNjk0LjIxLDI1My43N3ogTTY5My40NywxODUuODhjLTguNDUsMC0xOC4xNCwzLjYzLTE4LjE0LDMxLjk2CgkJYzAsMjEuNiw2LjM3LDMyLjExLDE5LjQ4LDMyLjExYzEyLjU1LDAsMTguMTQtOS45LDE4LjE0LTMyLjExQzcxMi45NSwxOTYuMzMsNzA2LjU3LDE4NS44OCw2OTMuNDcsMTg1Ljg4eiIvPgoJPHBhdGggaWQ9IlhNTElEXzI1OF8iIGNsYXNzPSJzdDAiIGQ9Ik0zOTEuOTcsMTgzLjM0YzAsMTYuNDgtNC4wNiwyNS41Ni0yNC44MywyNS41NmgtMTEuMDF2LTQ5Ljc5aDExLjQ2CgkJQzM4OS4wNywxNTkuMTEsMzkxLjk3LDE3MS4zNiwzOTEuOTcsMTgzLjM0eiBNMzU2LjEzLDIzOS4zOHYtMjUuOWg5Ljk3YzE0Ljg4LDAsMjYuMi0zLjE1LDMzLjY0LTkuMzYKCQljNy43OC02LjQ5LDkuNDItMTQuNzIsOS40Mi0yMC40OGMwLTIzLjY4LTIyLjg1LTI4LjY1LTQyLjAyLTI4LjY1bDAuMDgsMGgtMzguODhjLTAuODgsMC0xLjYsMC43Mi0xLjYsMS42djAuMTFsMC0wLjAzCgkJYzAsMC44MSwwLjUsMS41NCwxLjI2LDEuODJjMy40NiwxLjI3LDEyLjg3LTAuNTIsMTIuODcsOS41N2wwLDcxLjMyYzAsNS4xOS0yLjMsOC44NS0xMi44Miw5Ljg0Yy0wLjgzLDAuMDgtMS40NiwwLjc2LTEuNDYsMS41OQoJCXYwLjI0YzAsMC44OCwwLjcyLDEuNiwxLjYsMS42aDQxLjU0YzAuODgsMCwxLjYtMC43MiwxLjYtMS42di0wLjIyYzAtMC44My0wLjY1LTEuNTItMS40OS0xLjU5Yy0xMS40Mi0wLjkxLTEzLjcyLTQuNDUtMTMuNzItOS44NwoJCXYtMjUuODQiLz4KCTxwYXRoIGlkPSJYTUxJRF8yNTVfIiBjbGFzcz0ic3QwIiBkPSJNNDQwLjYsMTgyLjAyYy0xOC4wOCwwLTMyLjc5LDE2LjM3LTMyLjc5LDM2LjVjMCwyMC4zNywxMy43OSwzNS4xNiwzMi43OSwzNS4xNgoJCWMxNS45NywwLDIzLjc0LTkuNTQsMjguMTktMTYuNzFjMC40NC0wLjcxLDAuMjUtMS42NC0wLjQ0LTIuMTNsLTAuMjEtMC4xNWMtMC42OS0wLjQ5LTEuNjUtMC4zNS0yLjE4LDAuMzIKCQljLTUuODcsNy4zNi0xMS4wMSwxMS42Mi0xOS44OCwxMS42MmMtMTEuMjIsMC0yMy4yMi03LjczLTIzLjIyLTI5LjQ0di0wLjE2Yy0wLjAyLTAuOTYsMC0yLjI3LDAuMDQtMy41aDQ1LjkyCgkJYzAuMTMsMCwwLjIzLTAuMSwwLjI0LTAuMjJsMC4wMy0wLjM3YzAuNjUtOC45LTEuODctMTYuOS03LjA5LTIyLjUxQzQ1Ni45LDE4NC45Miw0NDkuNDksMTgyLjAyLDQ0MC42LDE4Mi4wMnogTTQyMy4xNiwyMDguOTUKCQljMS41Mi0xNC44NSw3LjMxLTIyLjk4LDE2LjQxLTIyLjk4YzQuNTUsMCw3LjkzLDEuMjYsMTAuMzIsMy44NWMzLjI4LDMuNTYsNC42NywxMCw0LjEyLDE5LjEzTDQyMy4xNiwyMDguOTV6Ii8+Cgk8cGF0aCBpZD0iWE1MSURfMjU0XyIgY2xhc3M9InN0MCIgZD0iTTYzMC45NCwyMDkuNzVjMCwwLTAuMDEsMC0wLjAxLDBjLTEyLjU2LTMuNTItMTcuNDUtNy4wOS0xNy40NS0xMi43MgoJCWMwLTYuNDEsNS4wOS0xMS4wNywxMi4xLTExLjA3YzguMjUsMCwxMS43OCwzLjk0LDIwLjQ5LDE4LjVsMC4xMiwwLjE5YzAuMDQsMC4wNywwLjEyLDAuMTIsMC4yMSwwLjEyaDEuMTkKCQljMC44OCwwLDEuNi0wLjcyLDEuNi0xLjZ2LTIwLjkyYzAtMC4xMy0wLjExLTAuMjQtMC4yNC0wLjI0aC0xLjU4Yy0wLjQ4LDAtMC45MywwLjIxLTEuMjMsMC41OGwtMi43OCwzLjM4CgkJYy0zLjUxLTEuOTQtOS4yMi0zLjk3LTE0Ljk2LTMuOTdjLTE0LjQyLDAtMjQuNSw4LjkxLTI0LjUsMjEuNjhjMCwxMS45OCw3Ljk0LDE2LjQ3LDIxLjY2LDIwLjE3YzEzLjMzLDMuNjUsMTguMDUsNy40NCwxOC4wNSwxNC41CgkJYzAsNy44NC03LjYsMTEuMzYtMTIuOTksMTEuMzZjLTEwLjAzLDAtMTQuMjgtMy43My0yMy44OS0yMS4wMWwtMC4xMS0wLjIxYy0wLjA0LTAuMDgtMC4xMi0wLjEyLTAuMjEtMC4xMmgtMS4yCgkJYy0wLjg4LDAtMS42LDAuNzItMS42LDEuNnYyMy40NGMwLDAuMTMsMC4xMSwwLjI0LDAuMjQsMC4yNGgxLjYzYzAuNDIsMCwwLjgzLTAuMTcsMS4xMy0wLjQ3bDQuNC00LjQKCQljNS4xNSwzLjE5LDEyLjg0LDQuODYsMTcuODQsNC44NmM3LjUsMCwxMy42Ny0yLjM4LDE3Ljg0LTYuODdjMy43Mi00LjAxLDUuNzYtOS42OSw1Ljc2LTE1Ljk5CgkJQzY1Mi40NCwyMTkuODksNjQ2LjYxLDIxNC4xOSw2MzAuOTQsMjA5Ljc1eiIvPgoJPHBhdGggaWQ9IlhNTElEXzI1M18iIGNsYXNzPSJzdDAiIGQ9Ik01NTQuOTUsMjQ0LjIyYzAsMy42MS0wLjkyLDQuOC02LjY3LDUuMTZjLTAuODMsMC4wNS0xLjQ5LDAuNzUtMS40OSwxLjU5CgkJYzAsMC44OCwwLjcxLDEuNTksMS41OSwxLjU5aDI4LjQyYzAuODYsMCwxLjU3LTAuNywxLjU3LTEuNTdjMC0wLjg1LTAuNjYtMS41NS0xLjUxLTEuNTljLTYuNTgtMC4zMi04LjI4LTEuMzgtOC4yOC01LjE5bDAtNDEuNjcKCQljNC42OC03Ljc4LDguMDQtMTEuODUsMTMuNzEtMTMuMDhjLTAuMjgsMC45OC0wLjQ2LDIuMTYtMC40NiwzLjEyYzAsNS4wNiwzLjU0LDguNiw4LjYsOC42YzQuOTcsMCw4LjQ1LTMuNTMsOC40NS04LjYKCQljMC00Ljc5LTIuOTktMTAuMzgtMTEuNDItMTAuMzhjLTYuOTEsMC0xMy41MSwzLjk2LTE5LjE4LDEzLjQ0di0xMC43MmMwLTEuMDktMC45LTEuOTctMS45OS0xLjk0bC0xNy45MSwwLjQ4CgkJYy0wLjg3LDAuMDItMS41NSwwLjcyLTEuNTUsMS41OXYwLjIzYzAsMC43OSwwLjU3LDEuNDYsMS4zMywxLjU2YzUuOTcsMC44NSw2Ljc5LDMuNjksNi43OSw2LjYzTDU1NC45NSwyNDQuMjJ6Ii8+Cgk8cGF0aCBpZD0iWE1MSURfMjUyXyIgY2xhc3M9InN0MCIgZD0iTTc1MS40OCwxODIuOTNjMC40MSwwLDAuODEsMC4xNiwxLjExLDAuNDVjMC4zMSwwLjMsMC40OCwwLjcxLDAuNDksMS4xNGwwLjA2LDExLjg5CgkJYzAsMCw1LjgzLTEzLjk0LDI0Ljc2LTEzLjk0aDAuMTdjMTEuOCwwLDE4LjU3LDcuNTIsMTguNTcsMjAuNjR2NDEuMDRjMCwzLjYyLDAuOTIsNC44LDYuNjcsNS4xNmMwLjg0LDAuMDUsMS40OSwwLjc1LDEuNDksMS41OQoJCWMwLDAuODgtMC43MSwxLjU5LTEuNTksMS41OWgtMjUuNTNjLTAuODgsMC0xLjYtMC43Mi0xLjYtMS42YzAtMC44NSwwLjY0LTEuNTUsMS40Ni0xLjYyYzQuNjQtMC40LDUuMzgtMS41Nyw1LjM4LTUuMTN2LTM3LjA0CgkJYzAtMTIuMjMtMy40OC0xNi45OS0xMi40LTE2Ljk5Yy02LjAzLDAtMTAuOTcsNS4yNi0xNC4wNSw5LjY4YzAsMC0xLjU3LDEuOTctMy4yOCw1LjY5bDAuMTksMzguNjZjMCwzLjU2LDAuNzIsNC43Myw1LjIzLDUuMTMKCQljMC44MSwwLjA3LDEuNDUsMC43NywxLjQ1LDEuNTljMCwwLjkyLTAuNzIsMS42My0xLjU5LDEuNjNoLTI1LjM3Yy0wLjg4LDAtMS41OS0wLjcxLTEuNTktMS41OWMwLTAuODQsMC42Ni0xLjU0LDEuNDktMS41OQoJCWM1Ljc1LTAuMzYsNi42Ny0xLjU1LDYuNjctNS4xNnYtNTAuNjZjMC0yLjk2LTAuODMtNS44MS02LjgzLTYuNjZjLTAuNzYtMC4xMS0xLjMzLTAuNzgtMS4zMy0xLjU3di0wLjIzCgkJYzAtMC44NywwLjY4LTEuNTcsMS41NS0xLjZMNzUxLjQ4LDE4Mi45M3oiLz4KPC9nPgo8ZyBpZD0iWE1MSURfMjQ2XyI+Cgk8cGF0aCBpZD0iWE1MSURfMjUwXyIgY2xhc3M9InN0MSIgZD0iTTI0OS42MywxMTEuNjFjNDUsMjUuNjQsNTUuNDcsODMuMTMsMjQuMTYsMTQxLjI5Yy0yNy41Miw1MS4xMy04Ny42LDcyLjk2LTEzMi4zNyw0Ni45MwoJCWMtNDQuNzgtMjYuMDMtNTMuNTItOTguNjYtMzQuMjctMTQwLjQ1QzEzNS4xLDk4LjY5LDE5OS45Miw4My4yOCwyNDkuNjMsMTExLjYxIi8+Cgk8cGF0aCBpZD0iWE1MSURfMjQ3XyIgY2xhc3M9InN0MiIgZD0iTTI0OC41OSwxNTUuNzJjOC44MSw5LjQsMTEuNTUsMjMuNjcsMTAuMDIsMzUuMzhjLTEuNzUsMTMuMzUtOS44NCwyNS43LTIzLjI5LDMzLjg4CgkJYy0xMC42Nyw2LjQ5LTI0LjY5LDkuMDgtMzguNDgsOS4yMWMtMC4xMSwyLjE5LTAuNTUsOS43Mi0wLjc3LDEwLjkxYy0wLjMyLDEuNzYtMC45NCwyLjcxLTEuNjksMy42OWMtMS40OCwxLjkzLTQuMDUsMy4xOC02LjYsMy45CgkJYy0yLjAzLDAuNTgtNC4wNCwwLjgzLTUuNDYsMC44M2MtMC4yNCwwLTAuNDgtMC4wMS0wLjcxLTAuMDRjLTEuNS0wLjE3LTMuMTYtMC44Ny00LjE5LTIuMDJjLTEuMDMtMS4xNS0xLjYxLTIuNi0xLjc1LTQuMjUKCQlsLTAuMTEtMS40OWMtMC4yOS0xLjI4LTEuODktNjYuMTMtMS41OC02NC45OGMwLjIzLTcuNzcsMTIuNzgtOS4xMywxOS41OC03Ljc1YzYuODIsMS4zNyw1LjA5LDkuNjYsNC45MSwxOS44NQoJCWMwLDAtMC4zMiwxMy40LTAuOTUsMjcuNTVjOC42OC0wLjM0LDE1LjU4LTIuODEsMjIuMDQtNi4wMmMxMy4wNC02LjQ2LDE5Ljk0LTE2LjM4LDE5Ljk0LTMwLjk4YzAtMTQuNi0xNC4yMi0zMC45Ni00MC40NC0zMC45NgoJCWMtMjYuMjMsMC0zNy40OCw2LjYyLTUwLjE4LDE3LjEyYy0yLjg2LDIuMzctNS4wNyw0Ljc2LTcuMTUsNi4zM2MtMi4wOSwxLjU3LTcuNjIsMS44MS05LjExLTEuODdjLTEuNzktNC40MywxLjU1LTkuMzgsMy41Mi0xMS43NwoJCWMzLjA4LTMuNzUsMTAuNjktMTEuMzEsMTkuMTItMTUuNzFjOS42Ni01LjA0LDIxLjQ3LTEwLjQ3LDM3LjkyLTEwLjg4YzE0Ljg4LTAuMzgsMzguMzgsMC44Myw1NS4zLDE5Ljk0IE0xOTEuNzEsMjYzLjA5CgkJYy0xLjM3LTEuMDctMi45MS0xLjgtNC40Ni0yLjExYy0wLjUzLTAuMS0xLjA3LTAuMTYtMS42MS0wLjE2Yy0yLjkzLDAtNS44LDEuNjEtNy42Nyw0LjMyYy0xLjU3LDIuMjUtMi4yMSw0LjkzLTEuNzksNy41NAoJCWMwLjI2LDEuNjYsMC44OSwzLjEsMS44LDQuMTdjMS4wMywxLjIxLDIuNjEsMi4xNCw0LjU2LDIuN2MxLjEzLDAuMzEsMi4yOSwwLjQ4LDMuNDUsMC40OGgwYzIuNTMsMCw0LjgtMC43Niw2LjU2LTIuMTkKCQljMi4wNS0xLjY3LDMuMTctNC4wNiwzLjE1LTYuNzFDMTk1LjY4LDI2OC4wMywxOTQuMTksMjY1LjAyLDE5MS43MSwyNjMuMDkiLz4KPC9nPgo8L3N2Zz4K">
+</header>
+					
+<main>
+
+	<section class="hidden" id="CandidateDetailsScreen">
+		<h1>Essential Digital Skills Entry Level</h1>
+		<h2>Task 4</h2>
+		<h2>Learner Details</h2>
+		<p>Please enter your personal details.</p>
+		<p><label for="name_first">First Name</label> <input type="text" name="name_first" id="name_first" value=""></p>
+		<p><label for="name_last">Last Name</label> <input type="text" name="name_last" id="name_last" value=""></p>
+		<input type="button" value="Begin Task" onclick="screen(this,'next')" class="forward">
+	</section>
+
+	<section class="hidden">
+		<h2>BOOKING FORM</h2>
+		<p><label for="Time">Time</label> <select name="Time" id="Time" onchange="fieldChange(this)"><option value=""></option><option value="Morning">Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option><option value="All day">All day</option></select></p>
+		<p><label for="Day">Day</label> <select name="Day" id="Day" onchange="fieldChange(this)"><option value=""></option><option value="Monday">Monday</option><option value="Tuesday">Tuesday</option><option value="Wednesday">Wednesday</option><option value="Thursday">Thursday</option><option value="Friday">Friday</option><option value="Saturday">Saturday</option></select></p>
+		<p><label for="Access">Access</label> <select name="Access" id="Access" onchange="fieldChange(this)"><option value=""></option><option value="Electricity">Electricity</option><option value="Tap">Tap</option><option value="Toilets">Toilets</option></select></p>
+		<p><label for="cost">Advertisement Cost</label><span class="cost" id="cost">£ 0</span></p>
+		<fieldset><legend>Pay with</legend> 
+		<label for="creditcard">Credit Card</label> <input type=radio name=paywith value="Credit Card" id=creditcard><br>
+		<label for="DebitCard">Debit Card</label> <input type=radio name=paywith value="Debit Card" id=DebitCard><br>
+		<label for="OnlineService">Online Service</label> <input type=radio name=paywith value="Online Service" id=OnlineService></fieldset>
+		<p><input type="button" value="Next Screen" onclick="screen(this,'next')" class="forward"> <input type="button" value="Previous" onclick="screen(this,'prev')"></p>
+	</section>
+	
+
+	<section class="hidden">
+		<h2>Payment Details</h2>
+		<p><label for="CardNumber">Card Number</label> <input type="text" name="CardNumber" id="CardNumber" value=""></p>
+		<p><label for="ExpiryDate">Expiry Date</label> <input type="text" name="ExpiryDate" id="ExpiryDate" value=""></p>
+		<p><label for="CVV">CVV</label> <input type="text" name="CVV" id="CVV" value=""></p>
+		<p><input type="checkbox" name="itemorservice" id="itemorservice" value=""> <label for="itemorservice" style="width:50%">Paying for an item or service</label> </p>
+		<p><input type="button" value="Make payment" onclick="screen(this,'next')" class="forward"> <input type="button" value="Previous Screen" onclick="screen(this,'prev')"></p>
+	</section>
+	
+
+	<section class="hidden">
+		<h2>Review your information</h2>
+		<p><label for="repeattime">Time:</label> <span class="Time" id="repeattime"></span></p>
+		<p><label for="repeatday">Day:</label> <span class="Day" id="repeatday"></span></p>
+		<p><label for="repeataccess">Access:</label> <span class="Access" id="repeataccess"></span></p>
+		<p><label for="repeatamounttopay">Amount to pay:</label> <span class="repeatamounttopay" id="repeatamounttopay">£ 0</span></p>		
+		<p><input type="button" onclick="screen(this,'next')" value="Confirm Order" class="forward"> <input type="button" value="Previous" onclick="screen(this,'prev')"></p>
+	</section>
+
+
+	<section class="hidden">
+		<h2>CAPTCHA</h2>
+		<div class=captchaBox>
+			<p><input type=checkbox id=captcha_tickbox name=captcha_tickbox style="vertical-align:middle;"> <label for=captcha_tickbox  id=captcha_text>I'm not a robot</label> </p>
+		</div>
+		<p><input type="button" onclick="save()" value="Pay now and save" class="forward"> <input type="button" value="Previous" onclick="screen(this,'prev')"></p>
+	</section>
+
+</main>
+
+
+<div class="e" id="examinationLoadFailure" style="display: none;">
+	<p><strong><span>Oh dear!</span></strong></p>
+	<p>Something isn't quite right with your computer/device settings so we can't start the assessment for you just yet.</p>
+	<p>Not to worry, please contact your invigilator and they will help you get started.</p>
+	<p><strong>Information for Invigilator</strong></p>
+	<p id="m">
+		<noscript>The assessment is being accessed using a browser where Javascript is either not supported or else has been disabled.</noscript>
+	</p>
+</div>
+
+
+
+<footer>
+		<p>D76918 © 2023 Pearson Education Ltd. <strong>Set 10</strong></p>
+</footer>
+
+</body></html>
