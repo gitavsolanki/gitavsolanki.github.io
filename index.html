@@ -15,17 +15,22 @@
     header {
       background: #23395d;
       color: white;
-      padding: 50px 20px;
+      padding: 55px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.4em;
+      font-size: 2.5em;
     }
     header h2 {
       margin-top: 10px;
       font-weight: normal;
       font-size: 1.2em;
+    }
+    header p {
+      max-width: 800px;
+      margin: 18px auto 0;
+      font-size: 1.05em;
     }
     .container {
       max-width: 1100px;
@@ -41,7 +46,7 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
     .card {
@@ -53,6 +58,17 @@
     .card h3 {
       margin-top: 0;
       color: #23395d;
+      font-size: 1.35em;
+    }
+    .badge {
+      display: inline-block;
+      background: #e8eef7;
+      color: #23395d;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
     .button {
       display: inline-block;
@@ -66,6 +82,13 @@
     }
     .button:hover {
       background: #1a2b47;
+    }
+    .button.secondary {
+      background: #4f678c;
+      margin-left: 6px;
+    }
+    ul {
+      padding-left: 20px;
     }
     footer {
       text-align: center;
@@ -82,7 +105,10 @@
 <header>
   <h1>Gita Vij-Solanki</h1>
   <h2>Learning Designer | Digital Learning Specialist | Curriculum Developer</h2>
-  <p>Creating accessible, engaging and interactive digital learning experiences.</p>
+  <p>
+    Creating accessible, engaging and interactive digital learning experiences through instructional design,
+    assessment design, quality assurance and modern learning technologies.
+  </p>
 </header>
 
 <div class="container">
@@ -100,25 +126,34 @@
   <section class="cards">
 
     <div class="card">
-      <h3>📊 Learning Design Projects</h3>
+      <span class="badge">Featured</span>
+      <h3>🎓 Learning Design Portfolio</h3>
       <p>
-        Interactive e-learning, storyboards and digital course development using
-        Articulate Rise, AI-assisted design and multimedia learning.
+        Designing engaging digital learning experiences from qualification specification
+        through to storyboard, AI-assisted development, interactive learning and assessment.
       </p>
-      <a class="button" href="https://share.eu.articulate.com/fkFMmgoCFfTsJKTiskSw8" target="_blank">
-        View Rise Course
-      </a>
+      <ul>
+        <li>NCFE Level 3 Digital Support – Module 1: Understanding Data</li>
+        <li>Excel for Beginners – Articulate Rise Course</li>
+        <li>PowerPoint Essentials – In Development</li>
+      </ul>
+      <a class="button" href="learning-design.html">View Learning Design Portfolio</a>
     </div>
 
     <div class="card">
-      <h3>✅ Assessment & Quality Assurance</h3>
+      <span class="badge">Quality Evidence</span>
+      <h3>✅ Assessment Design & Quality Assurance</h3>
       <p>
         Interactive mock assessments, tutor guidance and learner preparation resources
-        designed to support assessment readiness and consistent delivery.
+        designed to support assessment readiness, standardisation and consistent delivery.
       </p>
-      <a class="button" href="mock3/" target="_blank">
-        View Mock Assessment
-      </a>
+      <ul>
+        <li>Mock Assessment 1</li>
+        <li>Mock Assessment 2</li>
+        <li>Mock Assessment 3</li>
+        <li>Tutor mark schemes and guidance</li>
+      </ul>
+      <a class="button" href="mock3/" target="_blank">View Mock Assessment</a>
     </div>
 
     <div class="card">
@@ -127,9 +162,7 @@
         HTML-based learning activities, online forms and digital skills simulations
         designed to support independent learner practice.
       </p>
-      <a class="button" href="simulator/" target="_blank">
-        Launch Activities
-      </a>
+      <a class="button" href="simulator/" target="_blank">Launch Activities</a>
     </div>
 
     <div class="card">
@@ -138,19 +171,26 @@
         My wider teaching website includes learner resources, digital skills guides,
         videos and accessible learning materials.
       </p>
-      <a class="button" href="https://enjoylearningbygita.com" target="_blank">
-        Visit Website
-      </a>
+      <a class="button" href="https://enjoylearningbygita.com" target="_blank">Visit Website</a>
     </div>
 
   </section>
 
   <section class="intro" style="margin-top:30px;">
+    <h2>My Learning Design Process</h2>
+    <p>
+      I begin by analysing the qualification specification or learner need, then develop learning outcomes,
+      a storyboard, interactive content, assessment activities and tutor resources. I use AI-assisted tools,
+      Articulate Rise, GitHub Pages, video and accessible design principles to create engaging digital learning.
+    </p>
+  </section>
+
+  <section class="intro">
     <h2>Key Skills Demonstrated</h2>
     <p>
-      Learning Design • Curriculum Development • Articulate Rise • GitHub Pages •
-      AI-assisted Content Creation • Assessment Design • Quality Assurance •
-      Accessibility • Instructional Videos • Digital Skills Teaching
+      Learning Design • Curriculum Development • Instructional Design • Articulate Rise • GitHub Pages •
+      AI-assisted Content Creation • Assessment Design • Quality Assurance • Accessibility •
+      Storyboarding • Instructional Videos • Digital Skills Teaching
     </p>
   </section>
 
@@ -161,4 +201,4 @@
 </footer>
 
 </body>
-</html></html>
+</html></html></html>
