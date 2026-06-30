@@ -1,1 +1,143 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment Companion Workbook</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef3f8;margin:0;padding:20px}
+.container{max-width:1000px;margin:auto;background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+h1{text-align:center;color:#003057}
+.section{border:1px solid #d9d9d9;border-radius:10px;padding:18px;margin:20px 0}
+h2{color:#003057;border-bottom:2px solid #003057;padding-bottom:5px}
+label{display:block;margin:6px 0}
+input[type=text],textarea{width:100%;padding:8px;margin:6px 0 12px;border:1px solid #bbb;border-radius:6px;box-sizing:border-box}
+.progress{background:#ddd;border-radius:20px;overflow:hidden;height:24px;margin:20px 0}
+.bar{background:#1e88e5;height:24px;width:0%;color:#fff;text-align:center;line-height:24px;font-weight:bold}
+button{background:#003057;color:#fff;border:none;padding:12px 18px;border-radius:6px;cursor:pointer;margin-right:10px}
+button:hover{background:#005a9c}
+#complete{font-size:20px;font-weight:bold;color:green;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Essential Digital Skills Entry Level 3<br>Assessment Companion Workbook</h1>
+
+<label>Name:<input type="text"></label>
+<label>Date:<input type="text"></label>
+<label>Assessment Theme:<input type="text"></label>
+<label>Past Paper:<input type="text"></label>
+
+<div class="progress"><div class="bar" id="bar">0%</div></div>
+
+<div class="section">
+<h2>Understanding the Assessment</h2>
+<label>What is today's assessment about?<input type="text"></label>
+<label>What is the folder called?<input type="text"></label>
+<label><input type="checkbox" class="tick"> USB</label>
+<label><input type="checkbox" class="tick"> Documents</label>
+<label><input type="checkbox" class="tick"> Desktop</label>
+<label><input type="checkbox" class="tick"> Downloads</label>
+<textarea rows="4" placeholder="Write the file names you can see..."></textarea>
+</div>
+
+<div class="section">
+<h2>Task 1 – Internet Search</h2>
+<label>What are you searching for?<input type="text"></label>
+<label><input class="tick" type="checkbox"> Name</label>
+<label><input class="tick" type="checkbox"> Address</label>
+<label><input class="tick" type="checkbox"> Telephone</label>
+<label><input class="tick" type="checkbox"> Website</label>
+<label><input class="tick" type="checkbox"> Opening Times</label>
+<label><input class="tick" type="checkbox"> Email</label>
+<label><input class="tick" type="checkbox"> Image</label>
+<label><input class="tick" type="checkbox"> Screenshot</label>
+<label>Filename:<input type="text"></label>
+<label><input class="tick" type="checkbox"> Saved in correct folder</label>
+</div>
+
+<div class="section">
+<h2>Task 2 – Editing the Document</h2>
+<label>File to open:<input type="text"></label>
+<label><input class="tick" type="checkbox"> Correct mistakes</label>
+<label><input class="tick" type="checkbox"> Change text</label>
+<label><input class="tick" type="checkbox"> Insert image</label>
+<label><input class="tick" type="checkbox"> Apply formatting</label>
+<label><input class="tick" type="checkbox"> Page border</label>
+<label><input class="tick" type="checkbox"> Save document</label>
+</div>
+
+<div class="section">
+<h2>Task 3 – Email</h2>
+<label><input class="tick" type="checkbox"> Create Contact 1</label>
+<label><input class="tick" type="checkbox"> Create Contact 2</label>
+<label>Who are you emailing?<input type="text"></label>
+<label>Document attached:<input type="text"></label>
+<label><input class="tick" type="checkbox"> Email sent</label>
+<label><input class="tick" type="checkbox"> Screenshot of Sent Items</label>
+</div>
+
+<div class="section">
+<h2>Task 4 – Online Form</h2>
+<label>Where is the form?<input type="text"></label>
+<label><input class="tick" type="checkbox"> Complete every question</label>
+<label><input class="tick" type="checkbox"> Check answers</label>
+<label><input class="tick" type="checkbox"> Submit form</label>
+</div>
+
+<div class="section">
+<h2>Knowledge Questions</h2>
+<label><input class="tick" type="checkbox"> Read every question</label>
+<label><input class="tick" type="checkbox"> Read every answer</label>
+<label><input class="tick" type="checkbox"> Eliminate incorrect answers</label>
+<label><input class="tick" type="checkbox"> Choose the best answer</label>
+<textarea rows="3" placeholder="Questions I found difficult..."></textarea>
+</div>
+
+<div class="section">
+<h2>Observation Tasks</h2>
+<label>App installed:<input type="text"></label>
+<label>Accessibility setting:<input type="text"></label>
+<label>Second setting:<input type="text"></label>
+<label>Video call app:<input type="text"></label>
+<label><input class="tick" type="checkbox"> Video call lasted at least 30 seconds</label>
+</div>
+
+<div class="section">
+<h2>Final Checklist & Reflection</h2>
+<label><input class="tick" type="checkbox"> Folder created</label>
+<label><input class="tick" type="checkbox"> All files saved</label>
+<label><input class="tick" type="checkbox"> Correct filenames</label>
+<label><input class="tick" type="checkbox"> Email sent</label>
+<label><input class="tick" type="checkbox"> Online form completed</label>
+<label><input class="tick" type="checkbox"> Multiple-choice questions completed</label>
+<label>What did I find easy?<textarea rows="2"></textarea></label>
+<label>What did I find difficult?<textarea rows="2"></textarea></label>
+<label>What will I improve next time?<textarea rows="2"></textarea></label>
+</div>
+
+<button onclick="window.print()">🖨 Print</button>
+<button onclick="location.reload()">🔄 Reset</button>
+
+<div id="complete"></div>
+
+</div>
+
+<script>
+const boxes=document.querySelectorAll('.tick');
+function update(){
+ let total=boxes.length;
+ let done=[...boxes].filter(b=>b.checked).length;
+ let pct=Math.round(done/total*100);
+ let bar=document.getElementById('bar');
+ bar.style.width=pct+'%';
+ bar.textContent=pct+'%';
+ document.getElementById('complete').innerHTML=(pct===100)?
+ '🏆 Excellent! You are ready for your assessment.':'';
+}
+boxes.forEach(b=>b.addEventListener('change',update));
+</script>
+</body>
+</html>
+
