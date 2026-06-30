@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearson Entry Level 3 - Set 1 Revision Quiz</title>
+<style>
+body{font-family:Arial,sans-serif;background:#eef3f8;margin:0;padding:20px}
+.container{max-width:900px;margin:auto;background:#fff;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+h1{color:#003057;text-align:center}
+p.intro{text-align:center;color:#555}
+.question{border:1px solid #ddd;border-radius:8px;padding:15px;margin:18px 0}
+.feedback{margin-top:10px;font-weight:bold}
+.correct{color:#0b7d15}
+.incorrect{color:#c00000}
+button{background:#003057;color:#fff;border:none;padding:12px 18px;border-radius:6px;cursor:pointer;margin-right:10px}
+button:hover{background:#005a9c}
+#result{margin-top:25px;padding:18px;background:#eef6ff;border-left:6px solid #003057}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Pearson Entry Level 3 – Set 1 Revision Quiz</h1>
+<p class="intro">Answer all 6 questions then click <strong>Submit Quiz</strong> to receive your score and feedback.</p>
 
+<form id="quiz">
+<div class="question">
+<p><strong>1.</strong> Identify one type of software.</p>
+<label><input type="radio" name="q1" value="A"> Mouse</label><br>
+<label><input type="radio" name="q1" value="B"> Word Processing</label><br>
+<label><input type="radio" name="q1" value="C"> Headphones</label>
+<div id="f1" class="feedback"></div>
+</div>
+
+<div class="question">
+<p><strong>2.</strong> You try to play music on your laptop, but there is no sound. What is the most likely reason?</p>
+<label><input type="radio" name="q2" value="A"> HTTPS checked</label><br>
+<label><input type="radio" name="q2" value="B"> Volume muted</label><br>
+<label><input type="radio" name="q2" value="C"> Mouse unplugged</label>
+<div id="f2" class="feedback"></div>
+</div>
+
+<div class="question">
+<p><strong>3.</strong> Which of these is personal information that may be stored online?</p>
+<label><input type="radio" name="q3" value="A"> Your postcode</label><br>
+<label><input type="radio" name="q3" value="B"> Screen size</label><br>
+<label><input type="radio" name="q3" value="C"> Printer model</label>
+<div id="f3" class="feedback"></div>
+</div>
+
+<div class="question">
+<p><strong>4.</strong> Apple Pay is one way to pay online. Which is another?</p>
+<label><input type="radio" name="q4" value="A"> Debit Card</label><br>
+<label><input type="radio" name="q4" value="B"> Mouse</label><br>
+<label><input type="radio" name="q4" value="C"> Monitor</label>
+<div id="f4" class="feedback"></div>
+</div>
+
+<div class="question">
+<p><strong>5.</strong> Why are passwords shown as ******** ?</p>
+<label><input type="radio" name="q5" value="A"> To stop other people seeing your password</label><br>
+<label><input type="radio" name="q5" value="B"> To improve WiFi speed</label><br>
+<label><input type="radio" name="q5" value="C"> To save battery power</label>
+<div id="f5" class="feedback"></div>
+</div>
+
+<div class="question">
+<p><strong>6.</strong> How can Sabeena reduce the risk of wrist pain when using a laptop?</p>
+<label><input type="radio" name="q6" value="A"> Use wrist support and good posture</label><br>
+<label><input type="radio" name="q6" value="B"> Increase screen brightness</label><br>
+<label><input type="radio" name="q6" value="C"> Turn off WiFi</label>
+<div id="f6" class="feedback"></div>
+</div>
+
+<button type="button" onclick="checkQuiz()">Submit Quiz</button>
+<button type="button" onclick="location.reload()">Try Again</button>
+</form>
+
+<div id="result"></div>
+</div>
+
+<script>
+const answers={q1:"B",q2:"B",q3:"A",q4:"A",q5:"A",q6:"A"};
+const explain={
+q1:"Word processing software is used to create, edit and format documents.",
+q2:"If the volume is muted, you will not hear any sound from your laptop.",
+q3:"Personal information includes your postcode, phone number, email address and date of birth.",
+q4:"A debit card is another recognised way to pay online. PayPal and digital wallets are also common.",
+q5:"Passwords are hidden to stop other people seeing them and to help protect your account.",
+q6:"Good posture, wrist support and regular breaks help reduce wrist pain."
+};
+function checkQuiz(){
+let score=0;
+for(let i=1;i<=6;i++){
+ const q="q"+i;
+ const sel=document.querySelector('input[name="'+q+'"]:checked');
+ const fb=document.getElementById("f"+i);
+ if(!sel){fb.className="feedback incorrect";fb.innerHTML="⚠ Please select an answer.";continue;}
+ const correctText=document.querySelector('input[name="'+q+'"][value="'+answers[q]+'"]').parentNode.textContent.trim();
+ if(sel.value===answers[q]){
+   score++;
+   fb.className="feedback correct";
+   fb.innerHTML="✅ Correct!<br>"+explain[q];
+ }else{
+   fb.className="feedback incorrect";
+   fb.innerHTML="❌ Incorrect.<br><strong>Correct answer:</strong> "+correctText+"<br>"+explain[q];
+ }
+}
+let msg="";
+if(score===6) msg="🏆 Excellent! You are ready for Set 1.";
+else if(score>=5) msg="🌟 Very good! You are nearly assessment ready.";
+else if(score>=4) msg="👍 Good work. Review the feedback and try again.";
+else msg="📚 Keep practising. Read the explanations and have another go.";
+document.getElementById("result").innerHTML="<h2>Your Score: "+score+"/6</h2><p>"+msg+"</p>";
+window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
