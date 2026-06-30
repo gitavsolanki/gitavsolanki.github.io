@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paper 2 Revision Quiz</title>
+<style>
+body{font-family:Arial;background:#eef3f8;padding:20px}
+.container{max-width:900px;margin:auto;background:#fff;padding:25px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+h1{color:#003057} .question{border:1px solid #ddd;border-radius:8px;padding:15px;margin:18px 0}
+.feedback{margin-top:8px;font-weight:bold}.correct{color:green}.incorrect{color:#c00000}
+button{background:#003057;color:#fff;padding:12px 18px;border:none;border-radius:6px}
+</style></head><body><div class="container">
+<h1>Paper 2 Revision Quiz</h1>
+<p>Answer all six questions then click <b>Submit Quiz</b>.</p>
+
+<div class="question">
+<p><b>1.</b> Identify one type of hardware.</p>
+<label><input type="radio" name="q1" value="A"> Word processing</label><br>
+<label><input type="radio" name="q1" value="B"> Keyboard</label><br>
+<label><input type="radio" name="q1" value="C"> Email application</label>
+<div id="f1" class="feedback"></div></div>
+
+<div class="question">
+<p><b>2.</b> You try to open an application from your desktop, but the icon does not respond. Why?</p>
+<label><input type="radio" name="q2" value="A"> Headphones are plugged in</label><br>
+<label><input type="radio" name="q2" value="B"> HTTPS checked</label><br>
+<label><input type="radio" name="q2" value="C"> Application has been deleted</label>
+<div id="f2" class="feedback"></div></div>
+
+<div class="question">
+<p><b>3.</b> Why should you not add your date of birth to a social media profile?</p>
+<label><input type="radio" name="q3" value="A"> It is personal information that could be misused</label><br>
+<label><input type="radio" name="q3" value="B"> It makes WiFi faster</label><br>
+<label><input type="radio" name="q3" value="C"> It improves battery life</label>
+<div id="f3" class="feedback"></div></div>
+
+<div class="question">
+<p><b>4.</b> Why does your bank ask for the last four digits and CVV of your debit card?</p>
+<label><input type="radio" name="q4" value="A"> To verify your identity</label><br>
+<label><input type="radio" name="q4" value="B"> To increase screen brightness</label><br>
+<label><input type="radio" name="q4" value="C"> To improve internet speed</label>
+<div id="f4" class="feedback"></div></div>
+
+<div class="question">
+<p><b>5.</b> Why should your friend not use the name of their favourite football team as a password?</p>
+<label><input type="radio" name="q5" value="A"> It is easy to guess</label><br>
+<label><input type="radio" name="q5" value="B"> It makes the password stronger</label><br>
+<label><input type="radio" name="q5" value="C"> It encrypts files</label>
+<div id="f5" class="feedback"></div></div>
+
+<div class="question">
+<p><b>6.</b> Bahzad gets headaches from working online. What could help?</p>
+<label><input type="radio" name="q6" value="A"> Take regular breaks and adjust the screen</label><br>
+<label><input type="radio" name="q6" value="B"> Turn off WiFi</label><br>
+<label><input type="radio" name="q6" value="C"> Increase speaker volume</label>
+<div id="f6" class="feedback"></div></div>
+
+<button onclick="checkQuiz()">Submit Quiz</button>
+<button onclick="location.reload()">Try Again</button>
+<div id="result"></div>
+</div>
+<script>
+const ans={q1:'B',q2:'C',q3:'A',q4:'A',q5:'A',q6:'A'};
+const exp={
+q1:'A keyboard is hardware because it is a physical device.',
+q2:'If the application has been deleted, the desktop shortcut will not work.',
+q3:'Your date of birth is personal information that could be used for identity fraud or security questions.',
+q4:'Banks use these details to help verify your identity and keep your account secure.',
+q5:'A favourite football team is easy for someone else to guess.',
+q6:'Regular breaks and reducing screen strain can help prevent headaches.'
+};
+function checkQuiz(){
+let s=0;
+for(let i=1;i<=6;i++){
+let q='q'+i;
+let sel=document.querySelector('input[name="'+q+'"]:checked');
+let fb=document.getElementById('f'+i);
+if(!sel){fb.className='feedback incorrect';fb.innerHTML='⚠ Please select an answer.';continue;}
+let correct=document.querySelector('input[name="'+q+'"][value="'+ans[q]+'"]').parentNode.textContent.trim();
+if(sel.value===ans[q]){s++;fb.className='feedback correct';fb.innerHTML='✅ Correct!<br>'+exp[q];}
+else{fb.className='feedback incorrect';fb.innerHTML='❌ Incorrect.<br><b>Correct answer:</b> '+correct+'<br>'+exp[q];}
+}
+let msg=s==6?'🏆 Excellent!':s>=5?'🌟 Very Good!':s>=4?'👍 Good work.':'📚 Keep practising.';
+document.getElementById('result').innerHTML='<h2>Score: '+s+'/6</h2><p>'+msg+'</p>';
+}
+</script></body></html>
