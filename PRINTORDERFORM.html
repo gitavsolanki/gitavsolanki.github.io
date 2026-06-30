@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>NEWSONE.biz</title>
+	<style>
+	body,td{font-family:Arial,sans-serif;line-height:1.5em;}
+	h1 {padding:10px;background-color:#003057;color:#FFF;}
+	h2 {padding:10px;background-color:#D2DB0E;color:#003057;}
+	form{display:none}
+	input[type=text] {width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; padding:10px;border:1px solid #007FA3;border-radius:5px;width:100%;}
+	input[type=button] {background-color:#DFE1E1;color:#000;border:1px solid  #000;border-radius:5px;padding:5px}
+	input[type=button].forwards {background-color:#007FA3;color:#FFF;}
+	
+	select{padding:10px;border:1px solid #007FA3;border-radius:5px;display:inline-block;box-sizing: border-box;}
+	table.c{width:100%;border-collapse:collapse}
+	table.c td,th{border:1px solid #c0c0c0;padding:5px}
+	table.v td{border:5px solid #FFF;width:33%;text-align:left;vertical-align:top}
+	table.v td:hover{background: rgba(100, 100, 100, 0.5);cursor:pointer}
+	table.v tr{height:33%}
+	div.s{max-width:800px;border:10px solid #D4EAE4;;padding:20px;margin-left:auto;margin-right:auto;}
+	div.fV{display:none}
+	div.b{max-width:840px;margin-left:auto;margin-right:auto;font-size:small}
+	div.e{border:10px solid #D4EAE4;padding:20px;}
+	div.e span{font-size:36px}
+	*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+	#m {background-color:#eaeaea;padding:5px}
+	.logo{height:90px;background:url("data:image/png;base64,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") 10px center no-repeat #FFF}
+
+	</style>
+
+	
+<script>
+
+function d(id){
+	return document.getElementById(id).value}
+
+function p(id){
+	return document.getElementById(id).type}
+
+function h(id,v){
+	document.getElementById(id).innerHTML=v}
+
+function w(id,v){
+	document.getElementById(id).value=v}
+
+function e(){
+	r();
+	var c=d("firstName")+"_"+d("lastName")+"_Completed.html";
+	var o="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
+	var blob = new Blob([o], { type: 'text/html;charset=utf-8;' });
+	if(window.navigator.msSaveBlob) { //Internet Explorer (must be 10 or above)
+		var blob = new Blob([o], { type: 'text/html;charset=utf-8;' });
+		window.navigator.msSaveBlob(blob, c);}
+	else{ //Other Browsers
+		var link = document.createElement("a");
+		if (link.download !== undefined) {
+			var url = URL.createObjectURL(blob);
+			link.setAttribute("href", url);
+			link.setAttribute("download", c);
+			link.style.visibility = 'hidden';
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);}}}
+
+function r() {
+	var e = document.querySelectorAll("input.f"); //Must be (IE9 or Above)
+	for (var i = 0; i < e.length; i++) {
+		V=e[i].value;
+		if(e[i].type=="checkbox"||e[i].type=="radio") {
+			if(e[i].checked==true)V="checked";
+			else V="";}
+		h(""+e[i].id+"_V",V);}
+	e = document.querySelectorAll("select.f");
+	for (i = 0; i < e.length; i++) {
+		h(""+e[i].id+"_V",e[i].value);}}
+
+function l() {
+	if (window.URL === undefined && window.webkitURL === undefined) {
+		document.getElementById("m").innerHTML="The browser does not support the assesssment. Please use a more modern browser, and/or ensure emulation is IE10 or above.";}
+	else{
+		s(1);
+		document.getElementById("e").style.display="none";
+		document.getElementById("a").style.display="block";
+		var e = document.querySelectorAll("div.fV");
+		for (var i = 0; i < e.length; i++) {
+			b=(e[i].id).substring(0, e[i].id.length-2);
+			if(p(b)=="text") w(b,e[i].textContent);
+			if(p(b)=="checkbox"||p(b)=="radio") {
+				if(e[i].textContent=="checked") document.getElementById(b).checked=true;
+				else document.getElementById(b).checked=false;}
+			if(p(b)=="select-one") {
+				if(e[i].textContent!="") w(b,e[i].textContent);}}}}
+
+function t(which){
+	if(document.getElementById(which).checked==true)document.getElementById(which).checked=false;
+	else document.getElementById(which).checked=true;}
+	
+function s(n){
+	for(i=1;i<=5;i++){
+		document.getElementById("s"+i).style.display=((n!=i)?"none":"block");}}
+
+function c(field,output){
+	document.getElementById(output).innerHTML=field.value;}
+	
+//Task Specific
+var advertisementSize = {"-":0,"A1":1.95, "A2":1.95, "A3":1.95};
+
+function lookupAdvertisementSize(field,output){
+		document.getElementById(output).value="£ "+advertisementSize[field.value];
+		c(document.getElementById(output),output);}
+
+function calculatePayTotal(dest){
+		size=advertisementSize[document.getElementById("posterSize").value];
+		weeks=document.getElementById("numberRequired").value;
+		if(size=="-"||weeks=="-") document.getElementById(dest).value="£ 0";
+		else document.getElementById(dest).value="£ "+eval(weeks*size);
+		c(document.getElementById(dest),"amountToPayRepeat1");
+		c(document.getElementById(dest),"amountToPayRepeat2");}
+		
+
+</SCRIPT>
+</Head>
+<body>
+
+<form id="a">
+	<div id="s1" class="s">
+		<div class="logo"></div>
+		<h1>Essential Digital Skills Entry Level</h1>
+		<h2>Task 4</h2>
+		<p>Please enter your personal details.</p>
+		<table class="c" width=100%>
+			<tr>
+				<td width=33%>
+					<label for="firstName">First Name</label>
+				</td>
+				<td width=66%>
+					<input type="text" id="firstName" autocomplete="off" class="f">
+					<div id="firstName_V" class="fV"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="lastName">Last Name</label>
+				</td>
+				<td>
+					<input type="text" id="lastName" autocomplete="off" class="f">
+					<div id="lastName_V" class="fV"></div>
+				</td>
+			</tr>
+		</table><br>
+		<input type="button" value="Begin Task" onclick="s(2)">
+	</div>
+	<div id="s2" class="s">
+		<h1>SPOTON PRINTING.BIZ</h1>
+		<h1>Poster Printing</h1>
+		<table class="c">
+			<tr>
+				<td style="width:200px">
+					<label for="posterSize">Size:</label>
+				</td>
+				<td>
+					<select id="posterSize" class="f" onchange="lookupAdvertisementSize(this,'posterPrice');calculatePayTotal('payTotal');">
+						<option value="-">-
+						<option value="A1">A1
+						<option value="A2">A2
+						<option value="A3">A3
+					</select>
+					<div id="posterSize_V" class="fV"></div>
+				</td>
+			</tr>
+		</table><br>
+		<table class="c">
+			<tr>
+				<td style="width:200px">
+					<label for="numberRequired">Number required:</label>
+				</td>
+				<td>
+					<select id="numberRequired" class="f" onchange="calculatePayTotal('payTotal');">
+						<option value="-">-
+						<option value="20">20
+						<option value="50">50
+						<option value="100">100
+					</select>
+					<div id="numberRequired_V" class="fV"></div>
+				</td>
+			</tr>
+		</table><br>
+		<table class="c">
+			<tr>
+				<td style="width:200px">
+					<label for="posterPrice">Price per poster:</label>
+				</td>
+				<td>
+					<input type="text" id="posterPrice" autocomplete="off" maxlength="16" class="f" READONLY>
+					<div id="posterPrice_V" class="fV">£ 0</div>
+				</td>
+			</tr>
+		</table><br>
+		<table class="c">
+			<tr>
+				<td style="width:200px">
+					<label for="payTotal">Total to pay:</label>
+				</td>
+				<td>
+					<input type="text" id="payTotal" autocomplete="off" maxlength="16" class="f" READONLY>
+					<div id="payTotal_V" class="fV">£ 0</div>
+				</td>
+			</tr>
+		</table><br>
+		<input type="button" value="Previous" onclick="s(1);">
+		<input type="button" value="Go to payment screen" onclick="s(3);" class="forwards">
+	</div>
+	<div id="s3" class="s">
+		<h1>Payment screen</h1>
+		<table class="c">
+			<tr>
+				<td>
+					<label for="username">Username</label>
+				</td>
+				<td colspan="4">
+					<input type="text" id="username" autocomplete="off" class="f">
+					<div id="username_V" class="fV"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="password">Password</label>
+				</td>
+				<td colspan="4">
+					<input type="text" id="password" autocomplete="off" class="f">
+					<div id="password_V" class="fV"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="rememberMe">Remember me</label>
+				</td>
+				<td colspan="4">
+					<input type="checkbox" id="rememberMe" class="f">
+					<div id="rememberMe_V" class="fV"></div>
+				</td>
+			</tr>
+		</table><br>
+		<input type="button" value="Previous" onclick="s(2);">
+		<input type="button" value="Log in" onclick="s(4);" class="forwards">
+	</div>
+	<div id="s4" class="s">
+		<H1>Send and Request</H1>
+		<table class="c">
+			<tr>
+				<td>
+					<label for="recipientEmail">Recipient email</label>
+				</td>
+				<td colspan="4">
+					<input type="text" id="recipientEmail" autocomplete="off" class="f" onchange='c(this,"recipientEmailRepeat1")'>
+					<div id="recipientEmail_V" class="fV"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="sendingToFriend">Sending to a friend</label>
+				</td>
+				<td>
+					<input type="radio" id="sendingToFriend" autocomplete="off" class="f" name=sendAndRequest value="Sending to a friend" onchange="c(this,'actionRepeat1')">
+					<div id="sendingToFriend_V" class="fV"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="itemOrService">Paying for an item or service</label>
+				</td>
+				<td>
+					<input type="radio" id="itemOrService" autocomplete="off" class="f" name=sendAndRequest value="Paying for an item or service" onchange="c(this,'actionRepeat1')">
+					<div id="itemOrService_V" class="fV"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="amountToPayRepeat1">Amount to pay</label>
+				</td>
+				<td>
+					<span id="amountToPayRepeat1">£0</span>
+				</td>
+			</tr>
+		</table><br>
+		<input type="button" value="Previous" onclick="s(3);">
+		<input type="button" value="Continue" onclick="s(5);" class="forwards">	
+	</div>
+	<div id="s5" class="s">
+		<h1>Review your information</h1>
+		<table class="c">
+			<tr>
+				<td>
+					<label for="recipientEmailRepeat1">Recipient email</label>
+				</td>
+				<td>
+					<span id="recipientEmailRepeat1"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="actionRepeat1">Action</label>
+				</td>
+				<td>
+					<span id="actionRepeat1"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="amountToPayRepeat2">Amount to pay</label>
+				</td>
+				<td>
+					<span id="amountToPayRepeat2">£0</span>
+				</td>
+			</tr>
+		</table><br>
+		<input type="button" value="Previous" onclick="s(4);">
+		<input type="button" value="Send money now and save" onclick="e();" class="forwards">
+	</div>
+	<div class="b">
+		<p>D71419 &copy; 2021 Pearson Education Ltd. <strong>Set 2</strong></p>
+	</div>
+</form>
+<div class="e" id="e">
+	<p><strong><span>Oh dear!</span></strong></p>
+	<p>Something isn't quite right with your computer/device settings so we can't start the assessment for you just yet.</p>
+	<p>Not to worry, please contact your invigilator and they will help you get started.</p>
+	<p><strong>Information for Invigilator</strong></p>
+	<p id="m">
+		<noscript>The assessment is being accessed using a browser where Javascript is either not supported or else has been disabled.</noscript>
+	</p>
+</div>
+<script>
+l();
+</script>
+</body>
+
+</html>
