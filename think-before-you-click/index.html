@@ -140,6 +140,51 @@ main{margin-top:20px}
 .sim-caption{font-size:12px;color:#52657A;text-align:center;margin-top:12px!important}
 @media(max-width:760px){.mail-layout{grid-template-columns:1fr}.mail-sidebar{display:none}.mail-shell{display:block}.mail-message{padding:16px}}
 @media(max-width:430px){.mail-choice{width:100%}.mail-toolbar{gap:10px;flex-wrap:wrap}}
+
+/* Screens 4 and 5 */
+.scenario-banner{background:#E5F2F5;border:1px solid #C9E3E8;border-radius:14px;padding:17px 20px;margin:20px 0;display:flex;gap:14px;align-items:center}
+.scenario-banner svg{width:64px;height:64px;flex-shrink:0}
+#screen-4 .email{max-width:780px}
+#screen-4 .email .subject{font-size:21px;font-weight:700;color:var(--navy)}
+#screen-4 .email .sender-line{border-bottom:1px solid var(--border);padding-bottom:14px}
+#screen-4 .answer{margin-bottom:11px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.step{border:1px solid var(--border);border-radius:12px;background:white;overflow:hidden}
+.step h3{margin:0;font-size:16px}
+.step-toggle{width:100%;border:0;border-radius:0;background:#fff;color:var(--navy);text-align:left;padding:15px;display:flex;align-items:center;gap:9px;justify-content:space-between}
+.step-toggle[aria-expanded=true]{background:#E7F3F4}
+.step-detail{padding:0 15px 15px;font-size:14px}
+.step-detail p{margin:10px 0 0}
+.step-count{display:inline-flex;align-items:center;justify-content:center;background:#087F8C;color:white;width:29px;height:29px;border-radius:50%;flex-shrink:0}
+.step-done{font-size:12px;color:#087F8C;font-weight:700}
+.assessment-top{background:#E7F3F4;border-radius:12px;padding:16px;margin:16px 0}
+.assessment-top p{margin:5px 0}
+.question-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:23px;margin:18px 0}
+.question-card h2{font-size:22px;margin:6px 0 12px}
+.question-card .question-label{font-size:13px;font-weight:700;color:#087F8C;letter-spacing:.05em;text-transform:uppercase}
+.question-card .answer{font-weight:400}
+.question-nav{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+.question-jump{padding:8px 14px;border:2px solid #B8C8D5;background:white;color:var(--navy)}
+.question-jump[aria-current=step]{border-color:#087F8C;background:#E7F3F4}
+.question-jump.answered::after{content:' ✓';color:#087F8C}
+.review-item{border:1px solid var(--border);border-radius:10px;padding:14px;background:white;margin:10px 0}
+.review-item h3{margin:0 0 6px;color:var(--navy);font-size:16px}
+.review-item p{margin:4px 0}
+.review-item button{padding:6px 12px;margin-top:7px}
+.score-number{font-size:44px;font-weight:800;color:#087F8C;line-height:1.2}
+.result-panel{background:white;border:1px solid var(--border);border-radius:14px;padding:22px;margin:18px 0}
+.result-panel h2{margin:0 0 10px}
+.result-panel details{border-top:1px solid var(--border);padding:13px 0}
+.result-panel summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.result-panel details p{margin:9px 0 0}
+.objective-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.objective{background:#F4F7FB;border-radius:10px;padding:12px;font-size:14px}
+.completion{text-align:center;background:#E7F3F4;border:1px solid #B9DBD9;border-radius:16px;padding:30px 18px;margin-top:20px}
+.completion svg{width:88px;height:88px}
+.completion h2{font-size:27px}
+.status-text{font-weight:700;color:#087F8C}
+@media(max-width:650px){.steps,.objective-grid{grid-template-columns:1fr}.question-card{padding:16px}}
+
 </style>
 </head>
 <body>
@@ -333,8 +378,65 @@ main{margin-top:20px}
 <button class="secondary" id="back-2" type="button">← Back to Screen 2</button>
 <button class="primary" id="continue-3" type="button" disabled>Continue to Screen 4 →</button>
 </div>
-<p id="screen-4-note" class="email-note" hidden>Screen 4 — What Would You Do? — will be added in our next development session.</p>
+
 </section>
+
+<!-- SCREEN 4 -->
+<section id="screen-4" aria-labelledby="heading-4" hidden>
+<h1 id="heading-4" tabindex="-1">What Would You Do?</h1>
+<p class="intro">A message appears to be from your manager. Read it carefully and decide how you would respond.</p>
+<div class="scenario-banner">
+<svg viewBox="0 0 70 70" aria-hidden="true"><rect x="8" y="17" width="54" height="39" rx="6" fill="#087F8C"/><path d="M10 21l25 18 25-18" stroke="white" stroke-width="4" fill="none"/><circle cx="55" cy="14" r="12" fill="#D97732"/><text x="51" y="20" fill="white" font-size="17" font-weight="bold">!</text></svg>
+<div><strong>Workplace scenario</strong><div>This is a training simulation. No real emails, purchases or payments are involved.</div></div>
+</div>
+<div class="email" aria-label="Simulated gift-card phishing email">
+<div class="email-heading">✉ Inbox — New message</div>
+<p class="sender-line"><strong>From:</strong> Sarah, Your Manager<br><span class="email-address">sarah.manager@office-requests.example</span><br><strong>To:</strong> You</p>
+<p class="subject">Subject: Quick confidential favour</p>
+<p>Hi,</p>
+<p>I'm tied up in meetings and need you to buy <strong>£200 in gift cards</strong> for an urgent staff reward.</p>
+<p>Please email me the gift card codes as soon as possible. <strong>Keep this confidential</strong> until I've confirmed everything. I can't take calls right now.</p>
+<p>Thanks,<br>Sarah</p>
+</div>
+<form id="scenario-form">
+<fieldset><legend>What is the safest response?</legend>
+<label class="answer"><input type="radio" name="scenario-answer" value="A"><span><strong>A.</strong> Buy the gift cards immediately because the request appears to be from my manager.</span></label>
+<label class="answer"><input type="radio" name="scenario-answer" value="B"><span><strong>B.</strong> Verify the request independently using a trusted contact method and report the suspicious message.</span></label>
+<label class="answer"><input type="radio" name="scenario-answer" value="C"><span><strong>C.</strong> Reply to the email to ask Sarah whether the request is genuine.</span></label>
+</fieldset><div class="actions"><button class="primary" type="submit">Check Answer</button></div>
+</form>
+<div class="feedback hidden" id="scenario-feedback" role="status" aria-live="polite"><h2 id="scenario-feedback-title" tabindex="-1"></h2><p id="scenario-feedback-body"></p></div>
+<div class="actions hidden" id="scenario-actions"><button type="button" class="secondary" id="scenario-retry">Try Another Answer</button><button type="button" class="primary" id="scenario-learn">Explore How to Report →</button></div>
+<section id="reporting-guide" hidden aria-labelledby="reporting-heading">
+<h2 id="reporting-heading" tabindex="-1">How to Respond and Report</h2>
+<p>Every organisation has its own reporting process. Explore all three steps to learn what to do when you receive a suspicious message.</p>
+<div class="actions"><button class="secondary" type="button" id="steps-reveal">Reveal All</button><button class="secondary" type="button" id="steps-hide">Hide All</button></div>
+<p class="counter" id="steps-counter" aria-live="polite">0 of 3 steps explored</p>
+<div class="steps">
+<article class="step"><h3><button type="button" class="step-toggle" data-step="stop" aria-expanded="false" aria-controls="step-stop"><span class="step-count">1</span><span>Stop</span><span class="step-done" data-step-done="stop"></span><span aria-hidden="true" class="step-symbol">＋</span></button></h3><div class="step-detail" id="step-stop" hidden><p>Do not click suspicious links, open unexpected attachments, reply to the message or share passwords, codes or payment details.</p></div></article>
+<article class="step"><h3><button type="button" class="step-toggle" data-step="report" aria-expanded="false" aria-controls="step-report"><span class="step-count">2</span><span>Report</span><span class="step-done" data-step-done="report"></span><span aria-hidden="true" class="step-symbol">＋</span></button></h3><div class="step-detail" id="step-report" hidden><p>Use your employer's approved phishing-report button, dedicated reporting email address or IT/security team. Follow your workplace procedure.</p></div></article>
+<article class="step"><h3><button type="button" class="step-toggle" data-step="follow" aria-expanded="false" aria-controls="step-follow"><span class="step-count">3</span><span>Follow Guidance</span><span class="step-done" data-step-done="follow"></span><span aria-hidden="true" class="step-symbol">＋</span></button></h3><div class="step-detail" id="step-follow" hidden><p>Follow instructions from IT/security. If you already clicked, shared credentials or sent money, report it immediately so they can help contain the risk.</p></div></article>
+</div>
+<p class="reminder">Stop. Verify independently. Report using the approved channel.</p>
+</section>
+<div class="actions"><button type="button" class="secondary" id="back-3">← Back to Screen 3</button><button type="button" class="primary" id="continue-4" disabled>Continue to Final Knowledge Check →</button></div>
+</section>
+
+<!-- SCREEN 5 -->
+<section id="screen-5" aria-labelledby="heading-5" hidden>
+<h1 id="heading-5" tabindex="-1">Final Knowledge Check</h1>
+<p class="intro">Apply what you've learned about phishing, safer decisions and reporting suspicious messages.</p>
+<div class="assessment-top"><strong>Five questions · Approximately 3–4 minutes</strong><p>Answer all five questions, review your choices, then submit. You need at least <strong>4 out of 5</strong> and must answer the <strong>reporting question (Question 5)</strong> correctly to pass.</p><p>You'll receive feedback after submission, not while answering.</p></div>
+<div id="assessment-active">
+<nav class="question-nav" id="question-nav" aria-label="Jump to assessment question"></nav>
+<div id="question-area" class="question-card" aria-live="polite"></div>
+<div class="actions" id="question-actions"><button class="secondary" type="button" id="question-prev">← Previous</button><button class="primary" type="button" id="question-next">Next →</button><button class="secondary" type="button" id="question-review">Review Answers</button></div>
+<div id="assessment-review" hidden><h2 tabindex="-1" id="review-heading">Review Your Answers</h2><p id="review-count"></p><div id="review-list"></div><div class="actions"><button class="primary" type="button" id="assessment-submit" disabled>Submit Knowledge Check</button><button class="secondary" type="button" id="review-return">← Back to Questions</button></div></div>
+</div>
+<div id="assessment-results" hidden aria-live="polite"></div>
+<div class="actions"><button class="secondary" type="button" id="back-4">← Back to Screen 4</button></div>
+</section>
+
 </main>
 
 <footer>Think Before You Click · Cybersecurity Awareness</footer>
@@ -398,6 +500,8 @@ function showScreen(number){
  document.getElementById('screen-1').hidden=number!==1;
  document.getElementById('screen-2').hidden=number!==2;
  document.getElementById('screen-3').hidden=number!==3;
+ document.getElementById('screen-4').hidden=number!==4;
+ document.getElementById('screen-5').hidden=number!==5;
  document.getElementById('screen-number').textContent=String(number).padStart(2,'0')+' / 05';
  document.getElementById('progress-fill').style.width=(number*20)+'%';
  document.getElementById('course-progress').setAttribute('aria-valuenow',String(number));
@@ -491,12 +595,190 @@ document.getElementById('mail-hint-button').addEventListener('click',()=>{
  document.getElementById('mail-hint-button').textContent=hint.hidden?'Need a Hint?':'Hide Hint';
 });
 
-document.getElementById('continue-3').addEventListener('click',()=>{
- const note=document.getElementById('screen-4-note');
- note.hidden=false;
- note.setAttribute('tabindex','-1');
- note.focus();
+document.getElementById('continue-3').addEventListener('click',()=>showScreen(4));
+
+// Screen 4: gift-card impersonation scenario and reporting guide.
+const scenarioForm=document.getElementById('scenario-form');
+const scenarioFeedback=document.getElementById('scenario-feedback');
+const scenarioActions=document.getElementById('scenario-actions');
+const scenarioReplies={
+ A:['Not the safest choice','A familiar name is not proof that a request is genuine. Buying gift cards and sharing the codes could send money to a criminal. Verify independently and report the suspicious request.'],
+ B:['Correct — verify independently and report','Use an established telephone number, work chat or other trusted channel to contact your manager. Do not rely on the reply address in the suspicious email. Report it through your employer’s approved procedure.'],
+ C:['Replying to the same email is not enough','If the sender is an impostor, replying could simply reach the attacker. Contact your manager independently using details you already trust, and report the message.']
+};
+scenarioForm.addEventListener('submit',event=>{
+ event.preventDefault();
+ const chosen=scenarioForm.querySelector('input[name="scenario-answer"]:checked');
+ if(!chosen){const first=scenarioForm.querySelector('input[name="scenario-answer"]');first.setCustomValidity('Choose one response.');first.reportValidity();first.setCustomValidity('');return;}
+ const [title,body]=scenarioReplies[chosen.value];
+ document.getElementById('scenario-feedback-title').textContent=title;
+ document.getElementById('scenario-feedback-body').textContent=body;
+ scenarioFeedback.classList.toggle('warning',chosen.value!=='B');
+ scenarioFeedback.classList.remove('hidden');
+ scenarioActions.classList.remove('hidden');
+ scenarioForm.classList.add('hidden');
+ document.getElementById('scenario-feedback-title').focus();
 });
+document.getElementById('scenario-retry').addEventListener('click',()=>{
+ scenarioForm.reset();scenarioForm.classList.remove('hidden');scenarioFeedback.classList.add('hidden');scenarioActions.classList.add('hidden');scenarioForm.querySelector('input').focus();
+});
+document.getElementById('scenario-learn').addEventListener('click',()=>{
+ document.getElementById('reporting-guide').hidden=false;
+ document.getElementById('reporting-heading').focus();
+});
+const reportingExplored=new Set();
+const stepButtons=[...document.querySelectorAll('.step-toggle')];
+function expandStep(button,expanded){
+ button.setAttribute('aria-expanded',String(expanded));
+ document.getElementById(button.getAttribute('aria-controls')).hidden=!expanded;
+ button.querySelector('.step-symbol').textContent=expanded?'−':'＋';
+ if(expanded)reportingExplored.add(button.dataset.step);
+ document.querySelectorAll('[data-step-done]').forEach(el=>{el.textContent=reportingExplored.has(el.dataset.stepDone)?'✓ Explored':'';});
+ document.getElementById('steps-counter').textContent=reportingExplored.size+' of 3 steps explored';
+ document.getElementById('continue-4').disabled=reportingExplored.size!==3;
+}
+stepButtons.forEach(button=>button.addEventListener('click',()=>expandStep(button,button.getAttribute('aria-expanded')!=='true')));
+document.getElementById('steps-reveal').addEventListener('click',()=>stepButtons.forEach(button=>expandStep(button,true)));
+document.getElementById('steps-hide').addEventListener('click',()=>stepButtons.forEach(button=>expandStep(button,false)));
+document.getElementById('back-3').addEventListener('click',()=>showScreen(3));
+document.getElementById('continue-4').addEventListener('click',()=>showScreen(5));
+document.getElementById('back-4').addEventListener('click',()=>showScreen(4));
+
+// Screen 5: final knowledge check, deferred feedback, review, score and retry.
+const questions=[
+ {objective:'LO1 · Recognise phishing',title:'Which THREE features of this email are warning signs?',prompt:'An unexpected email says your account needs urgent verification. Select exactly three warning signs.',multi:true,options:[['A','The sender uses an unfamiliar domain'],['B','The email includes a greeting'],['C','It says you must act within 20 minutes'],['D','The message has a subject line'],['E','It asks you to click a link and enter your password']],correct:['A','C','E'],why:'An unfamiliar sender domain, pressure to act quickly and an unexpected request for credentials are all warning signs. A greeting or subject line alone is not suspicious.'},
+ {objective:'LO1 · Recognise phishing',title:'An unexpected HR attachment asks you to enable macros. What should you do?',prompt:'The document claims to contain updated employee benefits information.',options:[['A','Enable macros so the document works'],['B','Do not enable macros; verify the request through a trusted channel and report it'],['C','Forward it to colleagues so they can check it']],correct:['B'],why:'Malicious macros can run harmful code. Do not enable them in an unexpected file. Verify independently and report according to workplace procedure.'},
+ {objective:'LO2 · Respond safely',title:'You receive an unexpected Microsoft 365 password warning. What next?',prompt:'An email from support@m365-account-check.example says your password expires today and includes an Update Password link.',options:[['A','Click Update Password immediately'],['B','Use your normal trusted Microsoft 365 sign-in route to check and report the suspicious email'],['C','Reply with your current password to confirm your identity']],correct:['B'],why:'An urgent password warning and unexpected link may be a phishing attempt. Go directly to a trusted sign-in route, and report the suspicious message.'},
+ {objective:'LO2 · Respond safely',title:'A supplier asks for new bank details. What is safest?',prompt:'An unexpected message from finance@payment-update.example says the next invoice must go to a new bank account and asks you not to telephone.',options:[['A','Update the bank details because the invoice is urgent'],['B','Verify using established supplier or finance contacts, follow the approved payment-change process and report the suspicious request'],['C','Reply to the email asking if the bank details are correct']],correct:['B'],why:'Payment diversion is a common fraud tactic. Verify changes independently using trusted contact details and established finance procedures.'},
+ {objective:'LO3 · Report suspicious activity',title:'How should you report a suspicious sign-in request?',prompt:'An unfamiliar website asks for your work password. You have not entered anything or clicked its links.',options:[['A','Ignore it; reporting is only needed if you lose money'],['B','Use your employer-approved phishing or security reporting method'],['C','Send your password to IT in an email so they can investigate']],correct:['B'],why:'Report suspicious requests using your employer-approved method, even if you have not clicked or shared information. Never email your password.'}
+];
+let currentQuestion=0;
+let answers=Array.from({length:questions.length},()=>[]);
+let originalAttempt=null;
+let reportRetryUsed=false;
+let attemptCount=0;
+const questionArea=document.getElementById('question-area');
+const questionNav=document.getElementById('question-nav');
+const reviewPanel=document.getElementById('assessment-review');
+const resultsPanel=document.getElementById('assessment-results');
+const questionActions=document.getElementById('question-actions');
+const assessmentActive=document.getElementById('assessment-active');
+function isAnswered(i){return questions[i].multi?answers[i].length===3:answers[i].length===1;}
+function correctAnswer(i){return answers[i].length===questions[i].correct.length&&questions[i].correct.every(x=>answers[i].includes(x));}
+function makeElement(tag,cls,text){const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;}
+function updateQuestionNav(){
+ questionNav.replaceChildren();
+ questions.forEach((q,i)=>{
+  const b=makeElement('button','question-jump'+(isAnswered(i)?' answered':''),'Q'+(i+1));
+  b.type='button';b.setAttribute('aria-label','Question '+(i+1)+(isAnswered(i)?', answered':', not answered'));
+  if(i===currentQuestion)b.setAttribute('aria-current','step');
+  b.addEventListener('click',()=>showQuestion(i));questionNav.append(b);
+ });
+}
+function showQuestion(i){
+ currentQuestion=i;reviewPanel.hidden=true;questionArea.hidden=false;questionActions.hidden=false;
+ const q=questions[i];questionArea.replaceChildren();
+ questionArea.append(makeElement('div','question-label',`Question ${i+1} of 5 · ${q.objective}`));
+ const heading=makeElement('h2','',q.title);heading.tabIndex=-1;questionArea.append(heading);
+ questionArea.append(makeElement('p','',q.prompt));
+ if(q.multi)questionArea.append(makeElement('p','status-text','Select exactly THREE answers.'));
+ const fieldset=document.createElement('fieldset');const legend=makeElement('legend','',q.multi?'Choose three options':'Choose one option');fieldset.append(legend);
+ q.options.forEach(([key,label])=>{
+  const wrapper=makeElement('label','answer');
+  const input=document.createElement('input');input.type=q.multi?'checkbox':'radio';input.name='assessment-q'+i;input.value=key;input.checked=answers[i].includes(key);
+  input.addEventListener('change',()=>{
+   if(q.multi){if(input.checked&&!answers[i].includes(key))answers[i].push(key);if(!input.checked)answers[i]=answers[i].filter(x=>x!==key);}
+   else answers[i]=[key];
+   updateQuestionNav();
+   if(q.multi)count.textContent=`${answers[i].length} of 3 selected`;
+  });
+  const span=makeElement('span','',`${key}. ${label}`);wrapper.append(input,span);fieldset.append(wrapper);
+ });
+ questionArea.append(fieldset);
+ const count=makeElement('p','counter',q.multi?`${answers[i].length} of 3 selected`:'You can return to this question at any time.');questionArea.append(count);
+ document.getElementById('question-prev').disabled=i===0;
+ document.getElementById('question-next').hidden=i===4;
+ updateQuestionNav();heading.focus();
+}
+document.getElementById('question-prev').addEventListener('click',()=>showQuestion(Math.max(0,currentQuestion-1)));
+document.getElementById('question-next').addEventListener('click',()=>showQuestion(Math.min(4,currentQuestion+1)));
+function showReview(){
+ questionArea.hidden=true;questionActions.hidden=true;reviewPanel.hidden=false;
+ const list=document.getElementById('review-list');list.replaceChildren();
+ questions.forEach((q,i)=>{
+  const item=makeElement('div','review-item');item.append(makeElement('h3','',`Question ${i+1}: ${q.title}`));
+  const chosen=q.options.filter(([key])=>answers[i].includes(key)).map(([key,label])=>`${key}. ${label}`);
+  item.append(makeElement('p','',chosen.length?chosen.join(' · '):'Not answered yet'));
+  const edit=makeElement('button','secondary','Edit answer');edit.type='button';edit.addEventListener('click',()=>showQuestion(i));item.append(edit);list.append(item);
+ });
+ const n=questions.filter((_,i)=>isAnswered(i)).length;
+ document.getElementById('review-count').textContent=`${n} of 5 questions answered. You may edit any response before submitting.`;
+ document.getElementById('assessment-submit').disabled=n!==5;
+ document.getElementById('review-heading').focus();
+}
+document.getElementById('question-review').addEventListener('click',showReview);
+document.getElementById('review-return').addEventListener('click',()=>showQuestion(currentQuestion));
+function objectiveSummary(){
+ const items=[['LO1 · Recognise phishing',[0,1]],['LO2 · Respond safely',[2,3]],['LO3 · Report suspicious activity',[4]]];
+ const grid=makeElement('div','objective-grid');
+ items.forEach(([name,ids])=>{const item=makeElement('div','objective');item.append(makeElement('strong','',name));item.append(makeElement('p','',`${ids.filter(i=>correctAnswer(i)).length} / ${ids.length} correct`));grid.append(item);});
+ return grid;
+}
+function resultDetails(){
+ const box=makeElement('div','result-panel');box.append(makeElement('h2','','Question-by-question feedback'));
+ questions.forEach((q,i)=>{
+  const details=document.createElement('details');const summary=makeElement('summary','',`Question ${i+1}: ${correctAnswer(i)?'Correct':'Needs review'}`);details.append(summary);
+  const picked=q.options.filter(([key])=>answers[i].includes(key)).map(([key,label])=>`${key}. ${label}`).join('; ');
+  const right=q.options.filter(([key])=>q.correct.includes(key)).map(([key,label])=>`${key}. ${label}`).join('; ');
+  details.append(makeElement('p','',`Your answer: ${picked||'No answer'}`));
+  details.append(makeElement('p','',`Correct answer: ${right}`));
+  details.append(makeElement('p','',q.why));box.append(details);
+ });return box;
+}
+function renderResults(){
+ const score=questions.filter((_,i)=>correctAnswer(i)).length;
+ const passed=score>=4&&correctAnswer(4);
+ assessmentActive.hidden=true;resultsPanel.hidden=false;resultsPanel.replaceChildren();
+ const summary=makeElement('div','result-panel');
+ summary.append(makeElement('div','score-number',`${score} / 5`));
+ summary.append(makeElement('h2','',passed?'Assessment passed':'Further practice needed'));
+ summary.append(makeElement('p','',passed?'You have met the pass standard: at least 4 out of 5, including the reporting question.':score===4&&!correctAnswer(4)?'You scored 4 out of 5, but the reporting question must also be correct. Review reporting and retry Question 5 below.':'You need at least 4 correct answers, including Question 5. Review the feedback and retake the assessment.'));
+ summary.append(makeElement('p','',`Attempt ${attemptCount}${originalAttempt!==null?` · Original score: ${originalAttempt}/5`:''}`));
+ summary.append(objectiveSummary());resultsPanel.append(summary,resultDetails());
+ if(passed){
+  const complete=makeElement('section','completion');
+  complete.innerHTML='<svg viewBox="0 0 100 100" role="img" aria-label="Mission complete shield"><path d="M50 5L87 19v28c0 23-15 39-37 48C28 86 13 70 13 47V19Z" fill="#087F8C" stroke="#14263D" stroke-width="4"/><path d="M30 49l14 14 27-30" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  complete.append(makeElement('h2','','Mission Complete! You’re ready to Think Before You Click.'));
+  complete.append(makeElement('p','','Stop. Check. Report suspicious messages using your organisation’s approved procedure.'));
+  complete.append(makeElement('p','','You have completed this awareness activity. This is not an accredited qualification.'));
+  resultsPanel.append(complete);
+ }else if(score===4&&!correctAnswer(4)){
+  const retry=makeElement('div','result-panel');retry.append(makeElement('h2','','Reporting refresher'));
+  retry.append(makeElement('p','','If you encounter a suspicious website or email, use your employer’s approved security-reporting channel. Report promptly even if you did not click or share any information. Never send your password by email.'));
+  retry.append(makeElement('p','','Now retry the reporting question. Your other four answers will stay as they were.'));
+  const form=document.createElement('form');const fs=document.createElement('fieldset');fs.append(makeElement('legend','','Question 5: How should you report a suspicious sign-in request?'));
+  questions[4].options.forEach(([key,label])=>{const row=makeElement('label','answer');const inp=document.createElement('input');inp.type='radio';inp.name='report-retry';inp.value=key;row.append(inp,makeElement('span','',`${key}. ${label}`));fs.append(row);});
+  form.append(fs);const submit=makeElement('button','primary','Submit reporting retry');submit.type='submit';form.append(submit);
+  form.addEventListener('submit',event=>{event.preventDefault();const checked=form.querySelector('input:checked');if(!checked){const first=form.querySelector('input');first.setCustomValidity('Choose an answer.');first.reportValidity();first.setCustomValidity('');return;}
+   if(originalAttempt===null)originalAttempt=score;
+   reportRetryUsed=true;answers[4]=[checked.value];attemptCount++;
+   if(correctAnswer(4))renderResults();else{const p=document.getElementById('retry-error');if(p)p.textContent='Not quite. Use your employer-approved security-reporting method. Try again.';}
+  });
+  retry.append(form);const err=makeElement('p','status-text','');err.id='retry-error';err.setAttribute('role','status');retry.append(err);resultsPanel.append(retry);
+ }else{
+  const retry=makeElement('button','primary','Retake All Five Questions');retry.type='button';retry.addEventListener('click',()=>{
+   answers=Array.from({length:questions.length},()=>[]);currentQuestion=0;originalAttempt=null;reportRetryUsed=false;
+   assessmentActive.hidden=false;resultsPanel.hidden=true;showQuestion(0);
+  });resultsPanel.append(retry);
+ }
+ resultsPanel.setAttribute('tabindex','-1');resultsPanel.focus();
+}
+document.getElementById('assessment-submit').addEventListener('click',()=>{
+ if(!questions.every((_,i)=>isAnswered(i)))return;
+ attemptCount++;renderResults();
+});
+showQuestion(0);
+
 </script>
 </body>
 </html>
