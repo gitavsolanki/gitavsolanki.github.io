@@ -60,6 +60,37 @@ footer{text-align:center;color:#52657A;font-size:13px;padding:20px}
 main{margin-top:20px}
 .cards{grid-template-columns:1fr}
 }
+
+/* Screen 2: illustrated, compact interactive cards */
+#screen-2 .intro{max-width:700px}
+.phishing-hero{display:flex;align-items:center;gap:20px;background:#E5F2F5;border:1px solid #C9E3E8;border-radius:16px;padding:18px 22px;margin:22px 0}
+.phishing-hero svg{width:130px;height:105px;flex-shrink:0}
+.phishing-hero p{margin:0}
+.explore-panel{background:#E9F1F8;border-radius:16px;padding:18px;margin-top:20px}
+.explore-header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.explore-header h2{font-size:20px;margin:0}
+.explore-header .counter{font-size:14px;margin:0}
+.explore-track{height:9px;background:#CBDCE7;border-radius:12px;overflow:hidden;margin:14px 0 18px}
+.explore-fill{height:100%;width:0;background:#087F8C;transition:width .2s}
+#screen-2 .cards{gap:14px}
+#screen-2 .card{border-radius:13px;box-shadow:0 2px 7px #14263D12}
+#screen-2 .card h2{font-size:inherit;margin:0}
+#screen-2 .card-toggle{padding:14px;min-height:116px;gap:14px}
+.card-art{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:98px;height:86px;border-radius:14px;background:#E6F0FC}
+.card-art svg{width:67px;height:67px}
+.card-art.urgent{background:#FFF0DF}
+.card-art.links{background:#E3F5FA}
+.card-art.attachments{background:#F0E9FC}
+.card-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.card-title{font-size:18px;line-height:1.25;font-weight:700}
+.card-subtitle{font-size:13px;line-height:1.4;font-weight:400;color:#45596B}
+.card-explored{font-size:12px;font-weight:700;color:#087F8C;min-height:17px}
+.card-plus{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:30px;height:30px;border:2px solid #C7D9E6;border-radius:50%;font-size:23px;line-height:1}
+#screen-2 .card-detail{padding:0 16px 18px}
+#screen-2 .card-toggle:hover{background:#F0F8FA}
+#screen-2 .card-toggle[aria-expanded=true]{background:#E7F3F4}
+@media(max-width:680px){.phishing-hero{flex-direction:column;align-items:flex-start}.phishing-hero svg{width:110px;height:90px}#screen-2 .cards{grid-template-columns:1fr}}
+@media(max-width:380px){.card-art{width:70px;height:70px}.card-art svg{width:52px;height:52px}.card-title{font-size:16px}}
 </style>
 </head>
 <body>
@@ -129,18 +160,27 @@ main{margin-top:20px}
 <section id="screen-2" aria-labelledby="heading-2" hidden>
 <h1 id="heading-2" tabindex="-1">What Is Phishing?</h1>
 <p class="intro"><strong>Phishing</strong> is when someone pretends to be a trustworthy person or organisation to trick you into sharing information, clicking a harmful link or opening a dangerous file.</p>
-<p>Explore the four common warning signs below. Select each card to see an explanation and workplace example.</p>
+<div class="phishing-hero">
+<svg viewBox="0 0 150 120" role="img" aria-label="Illustration of a suspicious email on a laptop">
+<rect x="13" y="7" width="124" height="88" rx="9" fill="#14263D"/><rect x="20" y="14" width="110" height="73" rx="3" fill="white"/>
+<rect x="26" y="21" width="98" height="19" rx="3" fill="#B73730"/><text x="32" y="34" fill="white" font-size="11" font-weight="bold">! Suspicious Email</text>
+<path d="M32 50h77M32 60h64M32 70h55" stroke="#AEC6D6" stroke-width="5" stroke-linecap="round"/>
+<path d="M4 96h142l-12 13H16Z" fill="#40566B"/><path d="M92 52l42 10-19 15-9-8Z" fill="#F4B400" stroke="#D97732" stroke-width="2"/>
+</svg>
+<p><strong>Look beyond the sender's name.</strong> A message can appear official while asking you to do something unsafe. Explore the four warning signs below.</p>
+</div>
 
 <div class="actions">
 <button class="secondary" id="reveal-all" type="button">Reveal All</button>
 <button class="secondary" id="hide-all" type="button">Hide All</button>
 </div>
-<p class="counter" id="explore-counter" aria-live="polite">0 of 4 warning signs explored</p>
-
+<div class="explore-panel">
+<div class="explore-header"><h2>Explore the warning signs</h2><p class="counter" id="explore-counter" aria-live="polite">0 of 4 warning signs explored</p></div>
+<div class="explore-track" aria-hidden="true"><div class="explore-fill" id="explore-fill"></div></div>
 <div class="cards">
 <article class="card">
 <h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-sender" data-card="sender">
-<span>✉ Fake Senders</span><span aria-hidden="true">＋</span>
+<span class="card-art sender"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="8" y="19" width="58" height="40" rx="6" fill="white" stroke="#14263D" stroke-width="4"/><path d="M10 23l27 20 27-20" fill="none" stroke="#14263D" stroke-width="4"/><circle cx="61" cy="56" r="15" fill="#D7473C"/><path d="M61 48v10" stroke="white" stroke-width="4" stroke-linecap="round"/><circle cx="61" cy="63" r="2" fill="white"/></svg></span><span class="card-copy"><span class="card-title">Fake Senders</span><span class="card-subtitle">Emails that look like they are from a trusted source.</span><span class="card-explored" data-explored="sender"></span></span><span class="card-plus" aria-hidden="true">＋</span>
 </button></h2>
 <div class="card-detail" id="detail-sender" hidden>
 <p>Attackers may use familiar names or addresses that resemble a genuine organisation.</p>
@@ -150,7 +190,7 @@ main{margin-top:20px}
 
 <article class="card">
 <h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-urgent" data-card="urgent">
-<span>⏰ Urgent Requests</span><span aria-hidden="true">＋</span>
+<span class="card-art urgent"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="43" r="26" fill="white" stroke="#C33D31" stroke-width="5"/><path d="M40 25v19l11 8" fill="none" stroke="#C33D31" stroke-width="5" stroke-linecap="round"/><path d="M32 9h16M19 15l-7 7M61 15l7 7" stroke="#C33D31" stroke-width="5" stroke-linecap="round"/><circle cx="40" cy="43" r="3" fill="#C33D31"/></svg></span><span class="card-copy"><span class="card-title">Urgent Requests</span><span class="card-subtitle">Messages that pressure you to act quickly.</span><span class="card-explored" data-explored="urgent"></span></span><span class="card-plus" aria-hidden="true">＋</span>
 </button></h2>
 <div class="card-detail" id="detail-urgent" hidden>
 <p>Phishing messages may create fear or urgency so that you act before checking.</p>
@@ -160,7 +200,7 @@ main{margin-top:20px}
 
 <article class="card">
 <h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-links" data-card="links">
-<span>🔗 Suspicious Links</span><span aria-hidden="true">＋</span>
+<span class="card-art links"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="4" y="21" width="72" height="36" rx="18" fill="white" stroke="#14263D" stroke-width="3"/><text x="13" y="44" font-size="17" font-weight="bold" fill="#14263D">https://</text><path d="M56 48l8 22 5-9 9-2Z" fill="#14263D" stroke="white" stroke-width="2"/></svg></span><span class="card-copy"><span class="card-title">Suspicious Links</span><span class="card-subtitle">Links that may lead to fake websites.</span><span class="card-explored" data-explored="links"></span></span><span class="card-plus" aria-hidden="true">＋</span>
 </button></h2>
 <div class="card-detail" id="detail-links" hidden>
 <p>Unexpected links can take you to imitation websites designed to collect passwords or other details.</p>
@@ -170,13 +210,14 @@ main{margin-top:20px}
 
 <article class="card">
 <h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-attachments" data-card="attachments">
-<span>📎 Unexpected Attachments</span><span aria-hidden="true">＋</span>
+<span class="card-art attachments"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M18 7h31l13 13v48H18Z" fill="white" stroke="#14263D" stroke-width="3"/><path d="M49 7v14h13" fill="none" stroke="#14263D" stroke-width="3"/><path d="M27 33h25M27 41h18" stroke="#AEC6D6" stroke-width="4"/><rect x="10" y="51" width="37" height="19" rx="4" fill="#C33D31"/><text x="16" y="65" fill="white" font-size="13" font-weight="bold">.doc</text><path d="M60 43l17 29H43Z" fill="#D7473C"/><text x="57" y="67" fill="white" font-size="20" font-weight="bold">!</text></svg></span><span class="card-copy"><span class="card-title">Unexpected Attachments</span><span class="card-subtitle">Files that could contain harmful content.</span><span class="card-explored" data-explored="attachments"></span></span><span class="card-plus" aria-hidden="true">＋</span>
 </button></h2>
 <div class="card-detail" id="detail-attachments" hidden>
 <p>Unexpected attachments may contain harmful content. Check with the sender using a trusted method before opening them.</p>
 <p><strong>Workplace example:</strong> A document claiming to be from HR asks you to enable macros.</p>
 </div>
 </article>
+</div>
 </div>
 
 <div class="note">
@@ -267,9 +308,11 @@ const toggles=[...document.querySelectorAll('.card-toggle')];
 function setExpanded(toggle,expanded){
  toggle.setAttribute('aria-expanded',String(expanded));
  document.getElementById(toggle.getAttribute('aria-controls')).hidden=!expanded;
- toggle.querySelector('[aria-hidden]').textContent=expanded?'−':'＋';
+ toggle.querySelector('.card-plus').textContent=expanded?'−':'＋';
 
  if(expanded) explored.add(toggle.dataset.card);
+ document.querySelectorAll('[data-explored]').forEach(label=>{label.textContent=explored.has(label.dataset.explored)?'✓ Explored':'';});
+ document.getElementById('explore-fill').style.width=(explored.size*25)+'%';
 
  document.getElementById('explore-counter').textContent=
   explored.size+' of 4 warning signs explored';
@@ -298,4 +341,3 @@ document.getElementById('continue-2').addEventListener('click',()=>{
 </script>
 </body>
 </html>
-
