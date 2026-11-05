@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -91,6 +90,56 @@ main{margin-top:20px}
 #screen-2 .card-toggle[aria-expanded=true]{background:#E7F3F4}
 @media(max-width:680px){.phishing-hero{flex-direction:column;align-items:flex-start}.phishing-hero svg{width:110px;height:90px}#screen-2 .cards{grid-template-columns:1fr}}
 @media(max-width:380px){.card-art{width:70px;height:70px}.card-art svg{width:52px;height:52px}.card-title{font-size:16px}}
+
+/* Screen 3: two familiar email interfaces, one accessible activity */
+#screen-3 .intro{max-width:740px}
+.mail-choices{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.mail-choice{display:flex;align-items:center;gap:9px;background:white;color:var(--navy);border:2px solid #C6D5E1;min-width:190px}
+.mail-choice[aria-pressed="true"]{border-color:var(--teal);background:#E7F3F4}
+.mail-choice .mail-mark{font-weight:800;font-size:22px}
+.mail-choice[data-provider="outlook"] .mail-mark{color:#1268B3}
+.mail-choice[data-provider="gmail"] .mail-mark{color:#B3261E}
+.mail-layout{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:16px;align-items:start}
+.mail-client{background:white;border:1px solid #CAD7E3;border-radius:13px;overflow:hidden;min-width:0;box-shadow:0 3px 14px #14263D12}
+.mail-top{padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:700}
+.mail-client.outlook .mail-top{background:#0866B8;color:white}
+.mail-client.gmail .mail-top{background:#F4F7FB;color:#26384B;border-bottom:1px solid #D8E1EB}
+.mail-toolbar{display:flex;gap:18px;padding:11px 16px;border-bottom:1px solid #E0E6ED;font-size:13px;color:#43546A}
+.mail-shell{display:grid;grid-template-columns:125px minmax(0,1fr)}
+.mail-sidebar{background:#F1F5FA;border-right:1px solid #D8E1EB;padding:15px 9px;font-size:13px}
+.mail-client.gmail .mail-sidebar{background:#FFF}
+.mail-sidebar div{padding:7px;border-radius:6px}
+.mail-sidebar .selected{background:#DDECF9;font-weight:700}
+.mail-client.gmail .mail-sidebar .selected{background:#FCE8E6}
+.mail-message{padding:18px;min-width:0}
+.mail-message h2{font-size:20px;line-height:1.3;margin:0 0 16px}
+.mail-sender{border-bottom:1px solid #E1E7EF;padding-bottom:14px;margin-bottom:18px}
+.mail-sender-name{font-weight:700}
+.mail-sender-address{font-size:13px;overflow-wrap:anywhere}
+.mail-message p{margin:0 0 14px}
+.clue-button{font:inherit;text-align:left;border:1px dashed transparent;border-radius:6px;padding:3px 5px;margin:-3px -5px;background:transparent;color:inherit;font-weight:inherit;max-width:100%;overflow-wrap:anywhere}
+.clue-button:hover,.clue-button:focus-visible{background:#E9F4F5;border-color:#087F8C}
+.clue-button.found{background:#DDF3ED;border:1px solid #087F8C}
+.clue-urgent{font-weight:700}
+.clue-login{display:block;margin:12px auto 6px;background:#0969B9;color:white;border:2px solid #0969B9;padding:11px 18px;text-align:center}
+.clue-login:hover,.clue-login:focus-visible{background:#07528F;color:white}
+.clue-login.found{background:#DDF3ED;color:#14263D;border-color:#087F8C}
+.mail-client.gmail .clue-login{background:#1A73E8;border-color:#1A73E8}
+.mail-client.gmail .clue-login.found{background:#DDF3ED;border-color:#087F8C}
+.mail-aside{background:#FFF;border:1px solid #D8E1EB;border-radius:13px;padding:16px}
+.mail-aside h2{font-size:17px;margin:0 0 8px}
+.mail-counter{font-weight:700;color:var(--teal)}
+.mail-track{height:8px;background:#D8E4EE;border-radius:10px;overflow:hidden;margin:12px 0}
+.mail-fill{height:100%;width:0;background:#087F8C;transition:width .2s}
+.clue-status{display:flex;gap:8px;align-items:center;font-size:13px;border:1px solid #D8E1EB;border-radius:8px;padding:10px;margin-top:8px}
+.clue-status.found{background:#E7F3F4;border-color:#087F8C}
+.mail-feedback{margin-top:16px;background:#E7F3F4;border-left:5px solid #087F8C;border-radius:9px;padding:15px}
+.mail-feedback h2{font-size:17px;margin:0 0 6px}
+.mail-feedback p{margin:0}
+.mail-hint{margin-top:14px;padding:13px;background:#FFF4E8;border-left:4px solid var(--amber);border-radius:8px}
+.sim-caption{font-size:12px;color:#52657A;text-align:center;margin-top:12px!important}
+@media(max-width:760px){.mail-layout{grid-template-columns:1fr}.mail-sidebar{display:none}.mail-shell{display:block}.mail-message{padding:16px}}
+@media(max-width:430px){.mail-choice{width:100%}.mail-toolbar{gap:10px;flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -228,7 +277,63 @@ main{margin-top:20px}
 <button class="secondary" id="back-1" type="button">← Back to Screen 1</button>
 <button class="primary" id="continue-2" type="button" disabled>Continue to Screen 3 →</button>
 </div>
-<p id="screen-3-note" class="email-note" hidden>Screen 3 — Spot the Warning Signs — will be added in our next development session.</p>
+
+</section>
+
+<!-- SCREEN 3 -->
+<section id="screen-3" aria-labelledby="heading-3" hidden>
+<h1 id="heading-3" tabindex="-1">Spot the Warning Signs</h1>
+<p class="intro">You've received an email at work. Can you identify <strong>three warning signs</strong> that it might be phishing?</p>
+<p><strong>Choose your email interface.</strong> You only need to complete the activity once.</p>
+<div class="mail-choices" role="group" aria-label="Choose an email interface">
+<button class="mail-choice" data-provider="outlook" type="button" aria-pressed="true"><span class="mail-mark" aria-hidden="true">▣</span> Outlook / Hotmail <span class="mail-choice-check" aria-hidden="true">✓</span></button>
+<button class="mail-choice" data-provider="gmail" type="button" aria-pressed="false"><span class="mail-mark" aria-hidden="true">M</span> Gmail <span class="mail-choice-check" aria-hidden="true"></span></button>
+</div>
+<div class="mail-layout">
+<div>
+<div id="mail-client" class="mail-client outlook" aria-label="Simulated email interface">
+<div class="mail-top"><span id="mail-provider-title">Outlook / Hotmail — Inbox</span><span aria-hidden="true">⌕ &nbsp; ⚙</span></div>
+<div class="mail-toolbar" aria-hidden="true"><span>↶ Reply</span><span>↶ Reply all</span><span>➜ Forward</span><span>⋯ More</span></div>
+<div class="mail-shell">
+<div class="mail-sidebar" aria-hidden="true"><div class="selected">▣ Inbox</div><div>Drafts</div><div>Sent</div><div>Deleted</div><div>Junk</div></div>
+<article class="mail-message" aria-label="Suspicious email">
+<h2>Your Account Has Been Suspended</h2>
+<div class="mail-sender">
+<div class="mail-sender-name">IT Support Team <span style="font-weight:400;font-size:12px;color:#52657A">· Today, 10:24</span></div>
+<div class="mail-sender-address">From: <button class="clue-button" data-clue="sender" type="button" aria-label="Inspect sender address: support at company-login-check dot example">support@company-login-check.example</button></div>
+<div style="font-size:12px;color:#52657A">To: You</div>
+</div>
+<p>Dear Employee,</p>
+<p>Your work account has been temporarily suspended due to a security update.</p>
+<p><button class="clue-button clue-urgent" data-clue="urgent" type="button">You must verify your account within 30 minutes or you may lose access permanently.</button></p>
+<p>To keep your account active, please use the button below and enter your work username and password.</p>
+<button class="clue-button clue-login" data-clue="login" type="button" aria-label="Inspect suspicious Verify Your Account button">Verify Your Account</button>
+<p class="sim-caption">Training simulation — the verification button cannot open a website.</p>
+<p>Thank you,<br>IT Support Team</p>
+</article>
+</div>
+</div>
+<div id="mail-feedback" class="mail-feedback" aria-live="polite" aria-atomic="true" hidden>
+<h2 id="mail-feedback-title"></h2>
+<p id="mail-feedback-body"></p>
+</div>
+</div>
+<aside class="mail-aside" aria-label="Activity progress">
+<h2>Warning signs found</h2>
+<div id="mail-counter" class="mail-counter" aria-live="polite">0 / 3</div>
+<div class="mail-track" role="progressbar" id="mail-progress" aria-label="Warning signs found" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><div id="mail-fill" class="mail-fill"></div></div>
+<div class="clue-status" data-status="sender"><span aria-hidden="true">○</span> Suspicious sender</div>
+<div class="clue-status" data-status="urgent"><span aria-hidden="true">○</span> Urgent deadline</div>
+<div class="clue-status" data-status="login"><span aria-hidden="true">○</span> Unexpected login request</div>
+<div class="actions"><button type="button" class="secondary" id="mail-hint-button" aria-expanded="false" aria-controls="mail-hint">Need a Hint?</button></div>
+<div id="mail-hint" class="mail-hint" hidden>Check who sent the email, whether it creates pressure to act, and what it asks you to do.</div>
+</aside>
+</div>
+<div class="actions">
+<button class="secondary" id="back-2" type="button">← Back to Screen 2</button>
+<button class="primary" id="continue-3" type="button" disabled>Continue to Screen 4 →</button>
+</div>
+<p id="screen-4-note" class="email-note" hidden>Screen 4 — What Would You Do? — will be added in our next development session.</p>
 </section>
 </main>
 
@@ -292,6 +397,7 @@ document.getElementById('retry-button').addEventListener('click',()=>{
 function showScreen(number){
  document.getElementById('screen-1').hidden=number!==1;
  document.getElementById('screen-2').hidden=number!==2;
+ document.getElementById('screen-3').hidden=number!==3;
  document.getElementById('screen-number').textContent=String(number).padStart(2,'0')+' / 05';
  document.getElementById('progress-fill').style.width=(number*20)+'%';
  document.getElementById('course-progress').setAttribute('aria-valuenow',String(number));
@@ -332,8 +438,61 @@ document.getElementById('hide-all').addEventListener('click',()=>{
  toggles.forEach(toggle=>setExpanded(toggle,false));
 });
 
-document.getElementById('continue-2').addEventListener('click',()=>{
- const note=document.getElementById('screen-3-note');
+document.getElementById('continue-2').addEventListener('click',()=>showScreen(3));
+document.getElementById('back-2').addEventListener('click',()=>showScreen(2));
+
+const foundClues=new Set();
+const clueExplanations={
+ sender:{title:'Suspicious sender identified',body:'The address uses company-login-check.example, not a verified company domain. A familiar display name such as IT Support Team does not prove who sent the message.'},
+ urgent:{title:'Urgent deadline identified',body:'A 30-minute deadline pressures you to act without checking. Attackers often use fear or urgency to influence decisions.'},
+ login:{title:'Unexpected login request identified',body:'The message asks you to enter your work credentials through an unexpected link. Do not follow it. Check independently using your normal trusted sign-in route and report the email.'}
+};
+
+document.querySelectorAll('[data-provider]').forEach(button=>{
+ button.addEventListener('click',()=>{
+  const provider=button.dataset.provider;
+  const client=document.getElementById('mail-client');
+  client.classList.toggle('outlook',provider==='outlook');
+  client.classList.toggle('gmail',provider==='gmail');
+  document.getElementById('mail-provider-title').textContent=provider==='outlook'?'Outlook / Hotmail — Inbox':'Gmail — Inbox';
+  document.querySelectorAll('[data-provider]').forEach(choice=>{
+   const selected=choice===button;
+   choice.setAttribute('aria-pressed',String(selected));
+   choice.querySelector('.mail-choice-check').textContent=selected?'✓':'';
+  });
+ });
+});
+
+document.querySelectorAll('[data-clue]').forEach(button=>{
+ button.addEventListener('click',()=>{
+  const id=button.dataset.clue;
+  foundClues.add(id);
+  button.classList.add('found');
+  const info=clueExplanations[id];
+  document.getElementById('mail-feedback-title').textContent=info.title;
+  document.getElementById('mail-feedback-body').textContent=info.body;
+  document.getElementById('mail-feedback').hidden=false;
+  document.querySelectorAll('[data-status]').forEach(status=>{
+   const isFound=foundClues.has(status.dataset.status);
+   status.classList.toggle('found',isFound);
+   status.querySelector('span').textContent=isFound?'✓':'○';
+  });
+  document.getElementById('mail-counter').textContent=foundClues.size+' / 3';
+  document.getElementById('mail-progress').setAttribute('aria-valuenow',String(foundClues.size));
+  document.getElementById('mail-fill').style.width=(foundClues.size/3*100)+'%';
+  document.getElementById('continue-3').disabled=foundClues.size!==3;
+ });
+});
+
+document.getElementById('mail-hint-button').addEventListener('click',()=>{
+ const hint=document.getElementById('mail-hint');
+ hint.hidden=!hint.hidden;
+ document.getElementById('mail-hint-button').setAttribute('aria-expanded',String(!hint.hidden));
+ document.getElementById('mail-hint-button').textContent=hint.hidden?'Need a Hint?':'Hide Hint';
+});
+
+document.getElementById('continue-3').addEventListener('click',()=>{
+ const note=document.getElementById('screen-4-note');
  note.hidden=false;
  note.setAttribute('tabindex','-1');
  note.focus();
