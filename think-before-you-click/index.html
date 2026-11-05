@@ -1,414 +1,301 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Think Before You Click | You've Got Mail!</title>
-  <style>
-    :root {
-      --navy: #14263D;
-      --teal: #087F8C;
-      --light: #F4F7FB;
-      --amber: #D97732;
-      --ink: #24374C;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--light);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--navy);
-      color: white;
-      padding: 22px max(20px, calc((100% - 980px)/2));
-    }
-
-    .header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand { font-size: 18px; font-weight: bold; }
-    .screen-number { font-size: 14px; }
-
-    .progress {
-      height: 7px;
-      background: #40566B;
-      border-radius: 10px;
-      margin-top: 16px;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      width: 20%;
-      height: 100%;
-      background: #5DD6D1;
-    }
-
-    main {
-      max-width: 850px;
-      margin: 36px auto;
-      padding: 0 20px 50px;
-    }
-
-    h1 {
-      color: var(--navy);
-      font-size: clamp(28px, 4vw, 38px);
-      margin-bottom: 8px;
-    }
-
-    .intro { font-size: 17px; margin-bottom: 25px; }
-
-    .email {
-      background: white;
-      border: 1px solid #D8E1EB;
-      border-radius: 14px;
-      padding: 26px;
-      margin-bottom: 28px;
-      box-shadow: 0 4px 18px rgba(20,38,61,.06);
-    }
-
-    .email-heading {
-      font-weight: bold;
-      color: var(--navy);
-      border-bottom: 1px solid #D8E1EB;
-      padding-bottom: 12px;
-      margin-bottom: 18px;
-    }
-
-    .email-meta { margin: 5px 0; }
-    .email-address { overflow-wrap: anywhere; }
-    .email-body { margin-top: 24px; }
-
-    .fake-link {
-      display: block;
-      width: fit-content;
-      margin: 24px auto;
-      background: var(--teal);
-      color: white;
-      padding: 12px 22px;
-      border-radius: 7px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .email-note {
-      color: #52657A;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    fieldset {
-      border: 0;
-      padding: 0;
-      margin: 0;
-      min-width: 0;
-    }
-
-    legend {
-      font-size: 21px;
-      font-weight: bold;
-      color: var(--navy);
-      margin-bottom: 14px;
-    }
-
-    .answer {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      background: white;
-      border: 2px solid #D8E1EB;
-      border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 12px;
-      cursor: pointer;
-    }
-
-    .answer:has(input:checked) {
-      border-color: var(--teal);
-      background: #E7F3F4;
-    }
-
-    .answer input {
-      margin-top: 6px;
-      accent-color: var(--teal);
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
-    button {
-      font: inherit;
-      font-weight: bold;
-      padding: 12px 22px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .primary {
-      background: var(--teal);
-      color: white;
-      border: 2px solid var(--teal);
-    }
-
-    .secondary {
-      background: white;
-      color: var(--navy);
-      border: 2px solid #B8C8D5;
-    }
-
-    button:focus-visible,
-    input:focus-visible {
-      outline: 3px solid var(--amber);
-      outline-offset: 3px;
-    }
-
-    button:disabled {
-      opacity: .5;
-      cursor: not-allowed;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .feedback {
-      background: #E7F3F4;
-      border-left: 5px solid var(--teal);
-      border-radius: 8px;
-      padding: 18px;
-      margin-top: 20px;
-    }
-
-    .feedback.warning {
-      background: #FFF4E8;
-      border-left-color: var(--amber);
-    }
-
-    .feedback h2 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      color: var(--navy);
-    }
-
-    .feedback p { margin: 0; }
-
-    .hidden { display: none !important; }
-
-    footer {
-      text-align: center;
-      color: #52657A;
-      font-size: 13px;
-      padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .email { padding: 18px; }
-      .brand { font-size: 15px; }
-      main { margin-top: 20px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Think Before You Click | Cybersecurity Awareness</title>
+<style>
+:root{--navy:#14263D;--teal:#087F8C;--light:#F4F7FB;--amber:#D97732;--ink:#24374C;--border:#D8E1EB}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--light);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}
+header{background:var(--navy);color:#fff;padding:22px max(20px,calc((100% - 980px)/2))}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:18px;font-weight:700}
+.screen-number{font-size:14px}
+.progress{height:7px;background:#40566B;border-radius:10px;margin-top:16px;overflow:hidden}
+.progress-fill{width:20%;height:100%;background:#5DD6D1;transition:width .2s}
+main{max-width:850px;margin:36px auto;padding:0 20px 50px}
+h1{color:var(--navy);font-size:clamp(28px,4vw,38px);margin:0 0 8px}
+h2{color:var(--navy)}
+.intro{font-size:17px;margin:0 0 25px}
+.email,.card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:22px;box-shadow:0 4px 18px #14263D0F}
+.email-heading{font-weight:700;color:var(--navy);border-bottom:1px solid var(--border);padding-bottom:12px;margin-bottom:18px}
+.email-meta{margin:5px 0}
+.email-address{overflow-wrap:anywhere}
+.email-body{margin-top:24px}
+.fake-link{display:block;width:fit-content;margin:24px auto;background:var(--teal);color:#fff;padding:12px 22px;border-radius:7px;font-weight:700;text-align:center}
+.email-note{color:#52657A;font-size:13px;text-align:center}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+legend{font-size:21px;font-weight:700;color:var(--navy);margin-bottom:14px}
+.answer{display:flex;align-items:flex-start;gap:12px;background:#fff;border:2px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;cursor:pointer}
+.answer:has(input:checked){border-color:var(--teal);background:#E7F3F4}
+.answer input{margin-top:6px;accent-color:var(--teal);width:18px;height:18px;flex-shrink:0}
+button{font:inherit;font-weight:700;padding:12px 22px;border-radius:8px;cursor:pointer}
+.primary{background:var(--teal);color:#fff;border:2px solid var(--teal)}
+.secondary{background:#fff;color:var(--navy);border:2px solid #B8C8D5}
+button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+button:disabled{opacity:.5;cursor:not-allowed}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.feedback{background:#E7F3F4;border-left:5px solid var(--teal);border-radius:8px;padding:18px;margin-top:20px}
+.feedback.warning{background:#FFF4E8;border-left-color:var(--amber)}
+.feedback h2{margin:0 0 8px;font-size:20px}
+.feedback p{margin:0}
+.hidden,[hidden]{display:none!important}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{padding:0;margin:0;overflow:hidden}
+.card-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;text-align:left;background:#fff;color:var(--navy);border:0;border-radius:0;padding:20px}
+.card-toggle[aria-expanded="true"]{background:#E7F3F4}
+.card-detail{padding:0 20px 20px}
+.card-detail p{margin:10px 0}
+.card-detail strong{color:var(--navy)}
+.counter{font-weight:700;color:var(--teal)}
+.note{background:#FFF4E8;border-left:5px solid var(--amber);border-radius:8px;padding:16px;margin:22px 0}
+.reminder{font-weight:700;color:var(--navy);margin-top:22px}
+footer{text-align:center;color:#52657A;font-size:13px;padding:20px}
+@media(max-width:600px){
+.email{padding:18px}
+.brand{font-size:15px}
+main{margin-top:20px}
+.cards{grid-template-columns:1fr}
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="header-row">
-      <div class="brand">🛡 Think Before You Click</div>
-      <div class="screen-number">01 / 05</div>
-    </div>
-    <div class="progress"
-         role="progressbar"
-         aria-label="Course progress"
-         aria-valuemin="0"
-         aria-valuemax="5"
-         aria-valuenow="1">
-      <div class="progress-fill"></div>
-    </div>
-  </header>
+<header>
+<div class="header-row">
+<div class="brand">🛡 Think Before You Click</div>
+<div class="screen-number" id="screen-number">01 / 05</div>
+</div>
+<div class="progress" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1" id="course-progress">
+<div class="progress-fill" id="progress-fill"></div>
+</div>
+</header>
 
-  <main>
-    <h1>You've Got Mail!</h1>
-    <p class="intro">
-      You've received an unexpected email at work.
-      Read it carefully and decide what you would do.
-    </p>
+<main>
+<!-- SCREEN 1 -->
+<section id="screen-1" aria-labelledby="heading-1">
+<h1 id="heading-1" tabindex="-1">You've Got Mail!</h1>
+<p class="intro">You've received an unexpected email at work. Read it carefully and decide what you would do.</p>
 
-    <section class="email" aria-label="Suspicious email example">
-      <div class="email-heading">✉ New Email</div>
+<div class="email" aria-label="Suspicious email example">
+<div class="email-heading">✉ New Email</div>
+<p class="email-meta"><strong>From:</strong> IT Helpdesk</p>
+<p class="email-meta email-address">helpdesk@company-account-check.example</p>
+<p class="email-meta"><strong>Subject:</strong> Urgent — Account Suspension</p>
+<div class="email-body">
+<p>Dear Employee,</p>
+<p>Your account may be suspended unless you verify your details immediately.</p>
+<p>To avoid losing access, please verify your account using the button below.</p>
+<div class="fake-link" aria-label="Example verification button, not interactive">Verify Your Account</div>
+<p class="email-note">This is a simulated email. The verification button is not active.</p>
+<p>IT Support Team</p>
+</div>
+</div>
 
-      <p class="email-meta"><strong>From:</strong> IT Helpdesk</p>
-      <p class="email-meta email-address">
-        helpdesk@company-account-check.example
-      </p>
-      <p class="email-meta">
-        <strong>Subject:</strong> Urgent — Account Suspension
-      </p>
+<form id="question-form">
+<fieldset>
+<legend>What would you do?</legend>
+<label class="answer">
+<input type="radio" name="answer" value="A">
+<span><strong>A.</strong> Click the link to verify my account.</span>
+</label>
+<label class="answer">
+<input type="radio" name="answer" value="B">
+<span><strong>B.</strong> Delete the email without reporting it.</span>
+</label>
+<label class="answer">
+<input type="radio" name="answer" value="C">
+<span><strong>C.</strong> Don't click. Report the email using the approved workplace procedure.</span>
+</label>
+</fieldset>
+<div class="actions">
+<button class="primary" type="submit">Check Answer</button>
+</div>
+</form>
 
-      <div class="email-body">
-        <p>Dear Employee,</p>
+<section id="feedback" class="feedback hidden" aria-live="polite" aria-atomic="true">
+<h2 id="feedback-title"></h2>
+<p id="feedback-text"></p>
+</section>
+<div id="next-actions" class="actions hidden">
+<button class="secondary" type="button" id="retry-button">Try Another Answer</button>
+<button class="primary" type="button" id="continue-1">Continue to Screen 2 →</button>
+</div>
+</section>
 
-        <p>
-          Your account may be suspended unless you verify
-          your details immediately.
-        </p>
+<!-- SCREEN 2 -->
+<section id="screen-2" aria-labelledby="heading-2" hidden>
+<h1 id="heading-2" tabindex="-1">What Is Phishing?</h1>
+<p class="intro"><strong>Phishing</strong> is when someone pretends to be a trustworthy person or organisation to trick you into sharing information, clicking a harmful link or opening a dangerous file.</p>
+<p>Explore the four common warning signs below. Select each card to see an explanation and workplace example.</p>
 
-        <p>
-          To avoid losing access, please verify your account
-          using the button below.
-        </p>
+<div class="actions">
+<button class="secondary" id="reveal-all" type="button">Reveal All</button>
+<button class="secondary" id="hide-all" type="button">Hide All</button>
+</div>
+<p class="counter" id="explore-counter" aria-live="polite">0 of 4 warning signs explored</p>
 
-        <div class="fake-link" aria-label="Example verification button">
-          Verify Your Account
-        </div>
-        <p class="email-note">
-          This is a simulated email. The button is not active.
-        </p>
+<div class="cards">
+<article class="card">
+<h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-sender" data-card="sender">
+<span>✉ Fake Senders</span><span aria-hidden="true">＋</span>
+</button></h2>
+<div class="card-detail" id="detail-sender" hidden>
+<p>Attackers may use familiar names or addresses that resemble a genuine organisation.</p>
+<p><strong>Workplace example:</strong> An email claims to be from IT, but its domain does not match your organisation's usual address.</p>
+</div>
+</article>
 
-        <p>IT Support Team</p>
-      </div>
-    </section>
+<article class="card">
+<h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-urgent" data-card="urgent">
+<span>⏰ Urgent Requests</span><span aria-hidden="true">＋</span>
+</button></h2>
+<div class="card-detail" id="detail-urgent" hidden>
+<p>Phishing messages may create fear or urgency so that you act before checking.</p>
+<p><strong>Workplace example:</strong> “Your account will be locked in 20 minutes unless you respond.”</p>
+</div>
+</article>
 
-    <form id="question-form">
-      <fieldset>
-        <legend>What would you do?</legend>
+<article class="card">
+<h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-links" data-card="links">
+<span>🔗 Suspicious Links</span><span aria-hidden="true">＋</span>
+</button></h2>
+<div class="card-detail" id="detail-links" hidden>
+<p>Unexpected links can take you to imitation websites designed to collect passwords or other details.</p>
+<p><strong>Workplace example:</strong> An unexpected message asks you to sign in through a link rather than your normal trusted route.</p>
+</div>
+</article>
 
-        <label class="answer">
-          <input type="radio" name="answer" value="A">
-          <span>
-            <strong>A.</strong> Click the link to verify my account.
-          </span>
-        </label>
+<article class="card">
+<h2><button class="card-toggle" type="button" aria-expanded="false" aria-controls="detail-attachments" data-card="attachments">
+<span>📎 Unexpected Attachments</span><span aria-hidden="true">＋</span>
+</button></h2>
+<div class="card-detail" id="detail-attachments" hidden>
+<p>Unexpected attachments may contain harmful content. Check with the sender using a trusted method before opening them.</p>
+<p><strong>Workplace example:</strong> A document claiming to be from HR asks you to enable macros.</p>
+</div>
+</article>
+</div>
 
-        <label class="answer">
-          <input type="radio" name="answer" value="B">
-          <span>
-            <strong>B.</strong> Delete the email without reporting it.
-          </span>
-        </label>
+<div class="note">
+<strong>Macro safety:</strong> Some documents contain macros — automated actions that can run inside a file. Criminals may use malicious macros to run harmful code. If an unexpected email asks you to enable macros, stop and verify the request through a trusted workplace channel.
+</div>
+<p class="reminder">Stop. Check. Think before you click.</p>
+<div class="actions">
+<button class="secondary" id="back-1" type="button">← Back to Screen 1</button>
+<button class="primary" id="continue-2" type="button" disabled>Continue to Screen 3 →</button>
+</div>
+<p id="screen-3-note" class="email-note" hidden>Screen 3 — Spot the Warning Signs — will be added in our next development session.</p>
+</section>
+</main>
 
-        <label class="answer">
-          <input type="radio" name="answer" value="C">
-          <span>
-            <strong>C.</strong> Don't click. Report the email using
-            the approved workplace procedure.
-          </span>
-        </label>
-      </fieldset>
+<footer>Think Before You Click · Cybersecurity Awareness</footer>
 
-      <div class="actions">
-        <button class="primary" type="submit" id="check-button">
-          Check Answer
-        </button>
-      </div>
-    </form>
+<script>
+'use strict';
 
-    <section id="feedback" class="feedback hidden"
-             aria-live="polite" aria-atomic="true">
-      <h2 id="feedback-title"></h2>
-      <p id="feedback-text"></p>
-    </section>
+const form=document.getElementById('question-form');
+const feedback=document.getElementById('feedback');
+const nextActions=document.getElementById('next-actions');
 
-    <div id="next-actions" class="actions hidden">
-      <button class="secondary" type="button" id="retry-button">
-        Try Another Answer
-      </button>
-      <button class="primary" type="button" id="continue-button">
-        Continue to Screen 2 →
-      </button>
-    </div>
-  </main>
+const responses={
+ A:{
+  title:'Be careful — this could be phishing.',
+  message:'An unexpected verification link may lead to a fake login page designed to steal your password. Always verify through a trusted workplace channel.'
+ },
+ B:{
+  title:'Safer than clicking, but incomplete.',
+  message:'Deleting the email avoids the suspicious link, but reporting it helps your IT or security team protect other employees.'
+ },
+ C:{
+  title:"Correct — that's the safest action!",
+  message:"Do not click the suspicious link. Report the email using your organisation's approved procedure. If unsure, contact IT through a trusted channel."
+ }
+};
 
-  <footer>
-    Think Before You Click · Cybersecurity Awareness
-  </footer>
+form.addEventListener('submit',event=>{
+ event.preventDefault();
+ const chosen=form.querySelector('input[name="answer"]:checked');
 
-  <script>
-    const form = document.getElementById("question-form");
-    const feedback = document.getElementById("feedback");
-    const title = document.getElementById("feedback-title");
-    const message = document.getElementById("feedback-text");
-    const nextActions = document.getElementById("next-actions");
-    const retryButton = document.getElementById("retry-button");
-    const continueButton = document.getElementById("continue-button");
+ if(!chosen){
+  const first=form.querySelector('input[name="answer"]');
+  first.setCustomValidity('Please select an answer before continuing.');
+  first.reportValidity();
+  first.setCustomValidity('');
+  return;
+ }
 
-    const responses = {
-      A: {
-        title: "Be careful — this could be phishing.",
-        message: "An unexpected verification link may lead to " +
-          "a fake login page designed to steal your password. " +
-          "Always verify through a trusted workplace channel."
-      },
-      B: {
-        title: "Safer than clicking, but incomplete.",
-        message: "Deleting the email avoids the suspicious link, " +
-          "but reporting it helps your IT or security team " +
-          "protect other employees."
-      },
-      C: {
-        title: "Correct — that's the safest action!",
-        message: "Do not click the suspicious link. Report the " +
-          "email using your organisation's approved procedure. " +
-          "If unsure, contact IT through a trusted channel."
-      }
-    };
+ const result=responses[chosen.value];
+ document.getElementById('feedback-title').textContent=result.title;
+ document.getElementById('feedback-text').textContent=result.message;
 
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
+ feedback.classList.toggle('warning',chosen.value!=='C');
+ feedback.classList.remove('hidden');
+ nextActions.classList.remove('hidden');
+ form.classList.add('hidden');
 
-      const chosen = form.querySelector(
-        'input[name="answer"]:checked'
-      );
+ document.getElementById('feedback-title').setAttribute('tabindex','-1');
+ document.getElementById('feedback-title').focus();
+});
 
-      if (!chosen) {
-        alert("Please select an answer before continuing.");
-        return;
-      }
+document.getElementById('retry-button').addEventListener('click',()=>{
+ form.reset();
+ form.classList.remove('hidden');
+ feedback.classList.add('hidden');
+ nextActions.classList.add('hidden');
+ form.querySelector('input[name="answer"]').focus();
+});
 
-      const result = responses[chosen.value];
+function showScreen(number){
+ document.getElementById('screen-1').hidden=number!==1;
+ document.getElementById('screen-2').hidden=number!==2;
+ document.getElementById('screen-number').textContent=String(number).padStart(2,'0')+' / 05';
+ document.getElementById('progress-fill').style.width=(number*20)+'%';
+ document.getElementById('course-progress').setAttribute('aria-valuenow',String(number));
+ window.scrollTo({top:0,behavior:'instant'});
+ document.getElementById('heading-'+number).focus();
+}
 
-      title.textContent = result.title;
-      message.textContent = result.message;
+document.getElementById('continue-1').addEventListener('click',()=>showScreen(2));
+document.getElementById('back-1').addEventListener('click',()=>showScreen(1));
 
-      feedback.classList.toggle(
-        "warning", chosen.value !== "C"
-      );
-      feedback.classList.remove("hidden");
-      nextActions.classList.remove("hidden");
+const explored=new Set();
+const toggles=[...document.querySelectorAll('.card-toggle')];
 
-      form.classList.add("hidden");
-      feedback.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
-      });
-    });
+function setExpanded(toggle,expanded){
+ toggle.setAttribute('aria-expanded',String(expanded));
+ document.getElementById(toggle.getAttribute('aria-controls')).hidden=!expanded;
+ toggle.querySelector('[aria-hidden]').textContent=expanded?'−':'＋';
 
-    retryButton.addEventListener("click", function() {
-      form.reset();
-      form.classList.remove("hidden");
-      feedback.classList.add("hidden");
-      nextActions.classList.add("hidden");
+ if(expanded) explored.add(toggle.dataset.card);
 
-      form.querySelector('input[name="answer"]').focus();
-    });
+ document.getElementById('explore-counter').textContent=
+  explored.size+' of 4 warning signs explored';
 
-    continueButton.addEventListener("click", function() {
-      alert(
-        "Well done! Screen 2 — What Is Phishing? " +
-        "will be added in our next development session."
-      );
-    });
-  </script>
+ document.getElementById('continue-2').disabled=explored.size!==4;
+}
+
+toggles.forEach(toggle=>toggle.addEventListener('click',()=>{
+ setExpanded(toggle,toggle.getAttribute('aria-expanded')!=='true');
+}));
+
+document.getElementById('reveal-all').addEventListener('click',()=>{
+ toggles.forEach(toggle=>setExpanded(toggle,true));
+});
+
+document.getElementById('hide-all').addEventListener('click',()=>{
+ toggles.forEach(toggle=>setExpanded(toggle,false));
+});
+
+document.getElementById('continue-2').addEventListener('click',()=>{
+ const note=document.getElementById('screen-3-note');
+ note.hidden=false;
+ note.setAttribute('tabindex','-1');
+ note.focus();
+});
+</script>
 </body>
 </html>
+
