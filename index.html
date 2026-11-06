@@ -1,261 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gita Vij-Solanki | Learning Design Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #23395d;
-      color: white;
-      padding: 55px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header h2 {
-      margin-top: 10px;
-      font-weight: normal;
-      font-size: 1.25em;
-    }
-    header p {
-      font-size: 1.05em;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-    .intro {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      align-items: stretch;
-    }
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #23395d;
-      font-size: 1.35em;
-    }
-    .card hr {
-      border: none;
-      border-top: 1px solid #e5e8ec;
-      margin: 20px 0;
-    }
-    .tag {
-      display: inline-block;
-      background: #e8f0ff;
-      color: #23395d;
-      padding: 4px 9px;
-      border-radius: 20px;
-      font-size: 0.85em;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: #23395d;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .button:hover {
-      background: #1a2b47;
-    }
-    .button.secondary {
-      background: #41658a;
-    }
-    .skills {
-      font-weight: bold;
-      color: #23395d;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #23395d;
-      color: white;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Gita Vij-Solanki's portfolio of interactive digital learning, cybersecurity awareness and assessment design.">
+<title>Gita Vij-Solanki | Digital Learning Design Portfolio</title>
+<style>
+:root{--navy:#152d4b;--navy2:#213e60;--teal:#007d85;--mint:#d9f3ef;--ink:#203149;--muted:#53677c;--line:#dbe4ed;--bg:#f5f8fb;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Segoe UI,Arial,sans-serif;line-height:1.65}a{color:#086b83}a:focus-visible{outline:3px solid #ffb84a;outline-offset:4px}header{background:var(--navy);color:#fff}nav{max-width:1140px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;gap:16px}nav strong{font-size:1.08rem}nav .links{display:flex;gap:22px;flex-wrap:wrap}nav a{color:#e6f4fb;text-decoration:none;font-size:.93rem}.hero{max-width:1140px;margin:auto;padding:75px 24px 82px;display:grid;grid-template-columns:1.5fr .8fr;gap:40px;align-items:center}.eyebrow{color:#91e0d5;text-transform:uppercase;font-size:.78rem;font-weight:800;letter-spacing:.13em}.hero h1{font-size:clamp(2.15rem,4.8vw,4rem);line-height:1.13;margin:14px 0 18px;letter-spacing:-.035em}.hero p{max-width:660px;color:#e1ebf4;font-size:1.13rem}.hero-art{border:1px solid #47617d;border-radius:24px;padding:30px;background:linear-gradient(140deg,#294c70,#15344f);text-align:center;box-shadow:0 18px 45px #081c3140}.hero-art .symbol{font-size:5rem;line-height:1.4}.hero-art p{font-size:.95rem;margin:6px 0 0}.btn{display:inline-block;background:var(--teal);color:#fff;padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:700;margin:8px 8px 0 0}.btn:hover{background:#005d66}.btn.outline{background:transparent;border:1px solid #b9d9e1}.btn.dark{background:var(--navy2)}main{max-width:1140px;margin:auto;padding:55px 24px 75px}section{margin-bottom:62px}.section-head{margin-bottom:24px}.section-head h2{font-size:clamp(1.55rem,2.7vw,2.2rem);margin:0 0 8px;letter-spacing:-.025em}.section-head p{color:var(--muted);max-width:780px;margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 8px 24px #18344c0b;display:flex;flex-direction:column}.card-body{padding:24px;display:flex;flex-direction:column;flex:1}.card h3{font-size:1.28rem;line-height:1.35;margin:7px 0}.card p{color:var(--muted);margin:8px 0 18px}.card .actions{margin-top:auto}.visual{height:165px;display:flex;align-items:center;justify-content:center;font-size:4.1rem;background:linear-gradient(130deg,#d8f4ef,#e4effd)}.visual.blue{background:linear-gradient(130deg,#d9e8ff,#e8f2f9)}.visual.gold{background:linear-gradient(130deg,#fff1d9,#e8edf9)}.tag{font-size:.73rem;letter-spacing:.07em;text-transform:uppercase;color:#006b74;font-weight:800}.feature{display:grid;grid-template-columns:1fr 1fr;gap:22px}.feature .card .visual{height:200px}.feature .card h3{font-size:1.55rem}.small-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.mini{background:#fff;border:1px solid var(--line);padding:22px;border-radius:14px}.mini h3{margin:0 0 7px;font-size:1.14rem}.mini p{color:var(--muted);margin:0 0 12px}.mini a{font-weight:700}.about{background:#e9f4f5;border-radius:20px;padding:30px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}.about h2{margin-top:0}.about p{margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:9px;align-content:start}.chips span{background:#fff;border:1px solid #c7e0e3;border-radius:50px;padding:7px 11px;font-size:.85rem;font-weight:600}.note{font-size:.88rem;color:var(--muted);margin-top:14px}footer{background:var(--navy);color:#e3edf7;padding:30px 24px;text-align:center}footer a{color:#aeece6}@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-art{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about{grid-template-columns:1fr}}@media(max-width:600px){nav{align-items:flex-start;flex-direction:column}.hero{padding:48px 24px 58px}.grid,.feature,.small-grid{grid-template-columns:1fr}main{padding-top:38px}.visual{height:140px}}
+</style>
 </head>
-
 <body>
-
 <header>
-  <h1>Gita Vij-Solanki</h1>
-  <h2>Learning Designer | Digital Learning Specialist | Curriculum Developer</h2>
-  <p>Creating accessible, engaging and interactive digital learning experiences.</p>
+<nav><strong>Gita Vij-Solanki</strong><div class="links"><a href="#featured">Featured projects</a><a href="#more">More work</a><a href="#about">About &amp; skills</a></div></nav>
+<div class="hero"><div><div class="eyebrow">Digital learning design portfolio</div><h1>Learning that builds confidence, skills and safer digital habits.</h1><p>Digital Learning Designer | Learning Technology | Cybersecurity Awareness</p><p>I create accessible, interactive learning experiences, from beginner digital skills to workplace security awareness and realistic assessments.</p><a class="btn" href="#featured">Explore my projects</a><a class="btn outline" href="https://enjoylearningbygita.com/" target="_blank" rel="noopener noreferrer">Visit my learning website ↗</a></div><div class="hero-art" aria-hidden="true"><div class="symbol">🛡️ 💻</div><strong>Design • Develop • Assess</strong><p>Interactive learning for real-world skills</p></div></div>
 </header>
-
-<div class="container">
-
-  <section class="intro">
-    <h2>Welcome to my Learning Design Portfolio</h2>
-    <p>
-      I design engaging digital learning experiences that combine instructional design,
-      curriculum development, assessment design and quality assurance.
-    </p>
-    <p>
-      My portfolio demonstrates the complete learning design process, from analysing
-      qualification specifications and creating storyboards to developing interactive
-      e-learning using Articulate Rise, AI-assisted content creation and GitHub.
-    </p>
-  </section>
-
-  <section class="cards">
-
-    <div class="card">
-      <h3>🎓 Learning Design Portfolio</h3>
-      <p>
-        Designing engaging digital learning experiences from qualification specifications
-        through to interactive e-learning.
-      </p>
-
-      <hr>
-
-      <span class="tag">Latest Project</span>
-      <p>
-        <strong>⭐ NCFE Level 3 Certificate in Digital Support</strong><br>
-        Module 1 – Understanding Data<br>
-        <em>Learning Design Showcase</em>
-      </p>
-      <a class="button"
-         href="https://share.eu.articulate.com/4F6XIXSz6L5wPulRUGaqd"
-         target="_blank">
-         View NCFE Level 3 Course
-      </a>
-
-      <hr>
-
-      <p>
-        <strong>📊 Excel for Beginners</strong><br>
-        Interactive Rise course supporting adult learners with spreadsheet skills.
-      </p>
-      <a class="button secondary"
-         href="https://share.eu.articulate.com/fkFMmgoCFfTsJKTiskSw8"
-         target="_blank">
-         Launch Excel Course
-      </a>
-
-      <br><br>
-
-      <p>
-        <strong>🖥️ Introduction to PowerPoint</strong><br>
-        Interactive Rise course supporting presentation design and digital confidence.
-      </p>
-      <a class="button secondary"
-         href="https://share.eu.articulate.com/BNbwa4F-kHINZyH6X8MHq"
-         target="_blank">
-         Launch PowerPoint Course
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>✅ Assessment Design &amp; Quality Assurance</h3>
-
-      <p>
-        Professional assessment resources designed to support learner preparation,
-        tutor delivery and quality assurance. This portfolio includes practice
-        assessments, tutor guidance, mark schemes, learner resources and
-        assessment-ready materials developed for Essential Digital Skills.
-      </p>
-
-      <hr>
-
-      <span class="tag">Featured Project</span>
-
-      <p>
-        <strong>🎉 Practice Assessment 1 – Birthday Party</strong><br>
-        A complete assessment portal including learner resources, tutor guidance,
-        mark schemes and quality assurance materials.
-      </p>
-
-      <a class="button"
-         href="practice1/"
-         target="_blank">
-         Explore Assessment Centre
-      </a>
-
-      <hr>
-
-      <span class="tag">Interactive Assessment</span>
-
-      <p>
-        <strong>💻 Interactive Mock Assessment 3</strong><br>
-        GitHub-based mock assessment designed to prepare learners for Essential
-        Digital Skills assessments through realistic interactive activities.
-      </p>
-
-      <a class="button secondary"
-         href="mock3/"
-         target="_blank">
-         View Interactive Mock Assessment
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>💻 Interactive Learning Activities</h3>
-      <p>
-        HTML-based learning activities, online forms and digital skills simulations
-        designed to support independent learner practice.
-      </p>
-      <a class="button" href="simulator/" target="_blank">
-        Launch Activities
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>🌐 Teaching Website</h3>
-      <p>
-        My wider teaching website includes learner resources, digital skills guides,
-        videos and accessible learning materials.
-      </p>
-      <a class="button" href="https://enjoylearningbygita.com" target="_blank">
-        Visit Website
-      </a>
-    </div>
-
-  </section>
-
-  <section class="intro" style="margin-top:30px;">
-    <h2>Key Skills Demonstrated</h2>
-    <p class="skills">
-      Learning Design • Curriculum Development • Articulate Rise • GitHub Pages •
-      AI-assisted Content Creation • Assessment Design • Quality Assurance •
-      Storyboarding • Accessibility • Instructional Videos • Digital Skills Teaching
-    </p>
-  </section>
-
-</div>
-
-<footer>
-  <p>Gita Vij-Solanki | Learning Design Portfolio</p>
-</footer>
-
-</body>
-</html>
+<main>
+<section id="featured"><div class="section-head"><h2>Featured projects</h2><p>Explore working examples of cybersecurity awareness, interactive digital learning and assessment design.</p></div>
+<div class="feature">
+<article class="card"><div class="visual">🛡️ ✉️</div><div class="card-body"><span class="tag">Cybersecurity awareness · Interactive course</span><h3>Think Before You Click</h3><p>A five-screen phishing awareness experience using simulated emails, workplace decisions, reporting scenarios and a scored final knowledge check.</p><div class="actions"><a class="btn" href="https://gitavsolanki.github.io/think-before-you-click/" target="_blank" rel="noopener noreferrer">Launch course ↗</a></div></div></article>
+<article class="card"><div class="visual blue">🖱️ ⌨️</div><div class="card-body"><span class="tag">Digital inclusion · Self-paced learning</span><h3>Digital Skills Basics</h3><p>A free, six-section learning pathway for beginners, including interactive mouse and keyboard practice to develop everyday computer confidence.</p><div class="actions"><a class="btn" href="https://enjoylearningbygita.com/digital-skills-basics/" target="_blank" rel="noopener noreferrer">Explore course ↗</a><a class="btn dark" href="https://enjoylearningbygita.com/mouse-basics/" target="_blank" rel="noopener noreferrer">Mouse activity ↗</a><a class="btn dark" href="https://enjoylearningbygita.com/using-a-keyboard/" target="_blank" rel="noopener noreferrer">Keyboard activity ↗</a></div></div></article>
+</div></section>
+<section id="assessments"><div class="section-head"><h2>Assessment design &amp; interactive practice</h2><p>Scenario-led learning and assessment resources supporting Essential Digital Skills practice.</p></div>
+<div class="grid">
+<article class="card"><div class="visual gold">🎉 📋</div><div class="card-body"><span class="tag">Assessment resources</span><h3>Practice Assessment 1 — Birthday Party</h3><p>A practice assessment portal with learner resources, tutor guidance and marking materials.</p><div class="actions"><a class="btn dark" href="https://gitavsolanki.github.io/practice1/" target="_blank" rel="noopener noreferrer">Explore assessment ↗</a></div></div></article>
+<article class="card"><div class="visual blue">🧩 💻</div><div class="card-body"><span class="tag">Interactive mock assessment</span><h3>Essential Digital Skills Mock 3</h3><p>A GitHub-based mock assessment designed around realistic digital tasks and independent learner practice.</p><div class="actions"><a class="btn dark" href="https://gitavsolanki.github.io/mock3/" target="_blank" rel="noopener noreferrer">Launch mock ↗</a></div></div></article>
+<article class="card"><div class="visual">🖥️ 📝</div><div class="card-body"><span class="tag">Interactive learning activities</span><h3>Digital Skills Simulations</h3><p>HTML-based activities and digital simulations designed to help learners practise tasks independently.</p><div class="actions"><a class="btn dark" href="https://gitavsolanki.github.io/simulator/" target="_blank" rel="noopener noreferrer">Explore activities ↗</a></div></div></article>
+</div></section>
+<section id="more"><div class="section-head"><h2>More learning design work</h2><p>Additional examples of course planning, curriculum development and learning technology.</p></div><div class="small-grid">
+<div class="mini"><h3>🌐 Enjoy Learning by Gita</h3><p>My WordPress learning website with free digital skills resources, guides and interactive activities.</p><a href="https://enjoylearningbygita.com/" target="_blank" rel="noopener noreferrer">Visit learning website ↗</a></div>
+<div class="mini"><h3>📚 Curriculum &amp; course design</h3><p>Experience developing Essential Digital Skills and Level 3 digital support learning materials, including work previously prototyped in Articulate Rise 360 during a trial. No inactive course links are displayed.</p></div>
+</div></section>
+<section id="about" class="about"><div><h2>About my approach</h2><p>I bring extensive experience in adult digital skills education, curriculum development and learner support to the design of practical, inclusive online learning. My portfolio focuses on real activities learners can explore, practise and complete.</p><p>I'm building on this experience through independent cybersecurity awareness projects, with a focus on phishing prevention, safer digital decisions and clear workplace learning.</p></div><div><h3>Tools &amp; capabilities</h3><div class="chips"><span>Instructional design</span><span>Assessment design</span><span>WordPress</span><span>GitHub Pages</span><span>HTML / CSS / JavaScript</span><span>Moodle content</span><span>Digital accessibility</span><span>Microsoft 365</span><span>Storyboarding</span><span>AI-assisted content development</span></div><p class="note">Previous hands-on trial experience: Articulate Rise 360 and Storyline 360.</p></div></section>
+</main>
+<footer><strong>Gita Vij-Solanki</strong><p>Digital Learning Design · Learning Technology · Cybersecurity Awareness</p><a href="https://enjoylearningbygita.com/" target="_blank" rel="noopener noreferrer">Enjoy Learning by Gita ↗</a></footer>
+</body></html>
