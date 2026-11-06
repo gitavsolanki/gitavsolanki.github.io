@@ -185,6 +185,32 @@ main{margin-top:20px}
 .status-text{font-weight:700;color:#087F8C}
 @media(max-width:650px){.steps,.objective-grid{grid-template-columns:1fr}.question-card{padding:16px}}
 
+
+/* Screen 5: visual workplace assessment simulations */
+.assessment-visual{border:1px solid #C8D7E4;border-radius:13px;overflow:hidden;margin:16px 0 22px;background:#fff;box-shadow:0 4px 16px #14263D12}
+.visual-caption{padding:9px 14px;background:#E9F1F8;color:#36516B;font-size:12px;font-weight:700;letter-spacing:.025em}
+.visual-toolbar{display:flex;align-items:center;gap:9px;padding:11px 15px;background:#F4F7FB;border-bottom:1px solid #D8E1EB;font-size:13px;color:#465B70}
+.visual-dot{width:9px;height:9px;border-radius:50%;background:#D97732;display:inline-block}
+.visual-dot:nth-child(2){background:#E7B54B}.visual-dot:nth-child(3){background:#43A68C}
+.visual-content{padding:19px 21px;overflow-wrap:anywhere}
+.visual-subject{font-weight:800;color:#14263D;font-size:18px;margin:0 0 12px}
+.visual-meta{font-size:13px;margin:5px 0;color:#45596B}
+.visual-meta strong{color:#14263D}
+.visual-rule{height:1px;background:#E0E8EF;margin:14px 0}
+.visual-content p{margin:10px 0}
+.visual-action{display:inline-block;padding:10px 17px;background:#1268B3;color:white;border-radius:7px;font-weight:700;font-size:14px;margin:10px 0}
+.visual-alert{background:#FFF0E7;border-left:4px solid #D97732;padding:10px 12px;border-radius:6px;margin:12px 0;font-weight:700;color:#7B421D}
+.visual-file{display:flex;align-items:center;gap:13px;background:#F3F6FC;border:1px solid #D5E1EE;border-radius:10px;padding:13px;margin:12px 0}
+.visual-file-icon{background:#275D9D;color:white;font-weight:800;border-radius:6px;padding:13px 9px;font-size:13px;flex-shrink:0}
+.visual-small{font-size:12px;color:#586D7E}
+.visual-browser{background:#F3F6FA;padding:10px 14px;border-bottom:1px solid #D8E1EB}
+.visual-address{background:white;border:1px solid #CAD7E3;border-radius:18px;padding:6px 12px;font-size:12px;overflow-wrap:anywhere;color:#344C62}
+.visual-login{max-width:340px;margin:12px auto;padding:22px;border:1px solid #D8E1EB;border-radius:10px;background:white;box-shadow:0 3px 12px #14263D0D}
+.visual-login-title{font-size:22px;font-weight:800;color:#14263D}
+.visual-input{padding:11px;border:1px solid #AFC0D1;border-radius:5px;margin:10px 0;color:#607488;font-size:13px}
+.visual-report{display:flex;align-items:center;gap:12px;background:#E7F3F4;border:1px solid #B6DAD7;padding:13px;border-radius:10px;margin-top:15px}
+.visual-report-icon{font-size:27px;line-height:1}
+@media(max-width:520px){.visual-content{padding:14px}.visual-subject{font-size:16px}.visual-file{align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -652,6 +678,14 @@ const questions=[
  {objective:'LO2 · Respond safely',title:'A supplier asks for new bank details. What is safest?',prompt:'An unexpected message from finance@payment-update.example says the next invoice must go to a new bank account and asks you not to telephone.',options:[['A','Update the bank details because the invoice is urgent'],['B','Verify using established supplier or finance contacts, follow the approved payment-change process and report the suspicious request'],['C','Reply to the email asking if the bank details are correct']],correct:['B'],why:'Payment diversion is a common fraud tactic. Verify changes independently using trusted contact details and established finance procedures.'},
  {objective:'LO3 · Report suspicious activity',title:'How should you report a suspicious sign-in request?',prompt:'An unfamiliar website asks for your work password. You have not entered anything or clicked its links.',options:[['A','Ignore it; reporting is only needed if you lose money'],['B','Use your employer-approved phishing or security reporting method'],['C','Send your password to IT in an email so they can investigate']],correct:['B'],why:'Report suspicious requests using your employer-approved method, even if you have not clicked or shared information. Never email your password.'}
 ];
+const assessmentVisuals=[
+ `<div class="visual-caption">SIMULATED EMAIL · LOOK FOR THREE CLUES</div><div class="visual-toolbar"><span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span><span>Inbox / Message</span></div><div class="visual-content"><div class="visual-subject">Urgent: Account verification required</div><div class="visual-meta"><strong>From:</strong> IT Helpdesk &lt;security@company-access-check.example&gt;</div><div class="visual-meta"><strong>To:</strong> You · <strong>Received:</strong> Today</div><div class="visual-rule"></div><p>Dear Employee,</p><div class="visual-alert">Your account will be disabled in 20 minutes!</div><p>Verify your identity now to avoid losing access. Enter your work password using the button below.</p><span class="visual-action">Verify Account</span><p class="visual-small">Illustration only — no active link.</p></div>`,
+ `<div class="visual-caption">SIMULATED HR EMAIL · UNEXPECTED ATTACHMENT</div><div class="visual-toolbar"><span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span><span>Inbox / HR Notice</span></div><div class="visual-content"><div class="visual-subject">Updated employee benefits — please review</div><div class="visual-meta"><strong>From:</strong> HR Benefits &lt;benefits@staff-document-check.example&gt;</div><div class="visual-rule"></div><p>Please review the attached benefits document before the end of today.</p><div class="visual-file"><span class="visual-file-icon">DOCM</span><span><strong>Employee_Benefits_Update.docm</strong><br><span class="visual-small">Macro-enabled Word document · simulated attachment</span></span></div><div class="visual-alert">To view the document, click “Enable Content” when prompted.</div><p class="visual-small">No file can be opened or downloaded here.</p></div>`,
+ `<div class="visual-caption">SIMULATED PASSWORD WARNING · MICROSOFT 365 THEME</div><div class="visual-toolbar"><span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span><span>Mail / Security notification</span></div><div class="visual-content"><div class="visual-subject">Microsoft 365: Password expires today</div><div class="visual-meta"><strong>From:</strong> Account Support &lt;support@m365-account-check.example&gt;</div><div class="visual-rule"></div><div class="visual-alert">Action required: Your password expires today.</div><p>To avoid interruption, update your password immediately.</p><span class="visual-action">Update Password</span><p class="visual-small">Training simulation — this button is not clickable.</p></div>`,
+ `<div class="visual-caption">SIMULATED SUPPLIER EMAIL · PAYMENT CHANGE</div><div class="visual-toolbar"><span class="visual-dot"></span><span class="visual-dot"></span><span class="visual-dot"></span><span>Finance / Supplier message</span></div><div class="visual-content"><div class="visual-subject">Important: New payment details for next invoice</div><div class="visual-meta"><strong>From:</strong> Accounts Team &lt;finance@payment-update.example&gt;</div><div class="visual-rule"></div><p>Hello,</p><p>Our bank details have changed. Please update your records before paying the next invoice.</p><div class="visual-file"><span class="visual-file-icon">£</span><span><strong>New bank account details</strong><br><span class="visual-small">Account details withheld in this simulation</span></span></div><div class="visual-alert">Please do not telephone — our accounts team is unavailable.</div><p>Kind regards,<br>Supplier Accounts</p></div>`,
+ `<div class="visual-caption">SIMULATED WEBSITE · SECURITY REPORTING DECISION</div><div class="visual-browser"><div class="visual-address">⚠ https://work-signin-verify.example/login</div></div><div class="visual-content" style="background:#F7FAFD"><div class="visual-login"><div class="visual-login-title">Work Account</div><p class="visual-small">Sign in to continue</p><div class="visual-input">Work email address</div><div class="visual-input">Password ·········</div><span class="visual-action">Sign in</span><p class="visual-small">This is a visual example, not a working form.</p></div><div class="visual-report"><span class="visual-report-icon" aria-hidden="true">🛡️</span><span><strong>You notice something suspicious.</strong><br>What is the safest way to report it?</span></div></div>`
+];
+
 let currentQuestion=0;
 let answers=Array.from({length:questions.length},()=>[]);
 let originalAttempt=null;
@@ -681,6 +715,7 @@ function showQuestion(i){
  questionArea.append(makeElement('div','question-label',`Question ${i+1} of 5 · ${q.objective}`));
  const heading=makeElement('h2','',q.title);heading.tabIndex=-1;questionArea.append(heading);
  questionArea.append(makeElement('p','',q.prompt));
+ const visual=makeElement('div','assessment-visual');visual.setAttribute('role','group');visual.setAttribute('aria-label',`Question ${i+1} workplace training simulation`);visual.innerHTML=assessmentVisuals[i];questionArea.append(visual);
  if(q.multi)questionArea.append(makeElement('p','status-text','Select exactly THREE answers.'));
  const fieldset=document.createElement('fieldset');const legend=makeElement('legend','',q.multi?'Choose three options':'Choose one option');fieldset.append(legend);
  q.options.forEach(([key,label])=>{
