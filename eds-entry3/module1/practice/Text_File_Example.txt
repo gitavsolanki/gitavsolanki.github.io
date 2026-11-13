@@ -1,0 +1,5 @@
+My name is: 
+My favourite food is: 
+My favourite style of music is: 
+
+Copy this text into a word-processing document, complete the sentences and save the file as Import_text_YourInitials.docx.

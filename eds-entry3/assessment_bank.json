@@ -1,0 +1,1702 @@
+{
+  "module1": [
+    {
+      "id": "M1Q01",
+      "question": "Which device is used to enter letters?",
+      "options": [
+        "Monitor",
+        "Speaker",
+        "Printer",
+        "Keyboard"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q02",
+      "question": "Which item displays information on screen?",
+      "options": [
+        "Monitor",
+        "Microphone",
+        "Mouse",
+        "Scanner"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q03",
+      "question": "What is an accessibility setting?",
+      "options": [
+        "Closing all apps",
+        "Increasing text size",
+        "Deleting the desktop",
+        "Unplugging the keyboard"
+      ],
+      "correct": 1,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q04",
+      "question": "Which search is most useful for finding library opening times?",
+      "options": [
+        "hours",
+        "books",
+        "library name opening hours",
+        "library"
+      ],
+      "correct": 2,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q05",
+      "question": "Where should you save related documents?",
+      "options": [
+        "Only in Downloads forever",
+        "Inside the Recycle Bin",
+        "As browser history",
+        "In a named folder"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q06",
+      "question": "What does .pdf commonly identify?",
+      "options": [
+        "A document file",
+        "An audio recording",
+        "An app installer",
+        "A video call"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q07",
+      "question": "What is a safe first step when an app stops responding?",
+      "options": [
+        "Turn off security tools",
+        "Wait briefly and try closing it normally",
+        "Share your password",
+        "Delete system files"
+      ],
+      "correct": 1,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q08",
+      "question": "Which action helps you find a website again?",
+      "options": [
+        "Mute the sound",
+        "Change the wallpaper",
+        "Bookmark the page",
+        "Empty the recycle bin"
+      ],
+      "correct": 2,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q09",
+      "question": "What does cloud storage mean?",
+      "options": [
+        "Files only on a USB stick",
+        "Files only on the desktop",
+        "Files in the printer",
+        "Files stored through an online service"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q10",
+      "question": "Which setting can help a learner who finds small text difficult?",
+      "options": [
+        "Display scaling",
+        "Airplane mode",
+        "Bluetooth pairing",
+        "Volume mute"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    }
+  ],
+  "module2": [
+    {
+      "id": "M2Q01",
+      "question": "What is a good first step when making a notice?",
+      "options": [
+        "Open the calculator",
+        "Change Wi-Fi settings",
+        "Create a blank document",
+        "Empty the Recycle Bin"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q02",
+      "question": "Which shortcut commonly copies selected text on Windows?",
+      "options": [
+        "Ctrl+V",
+        "Ctrl+Z",
+        "Ctrl+P",
+        "Ctrl+C"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q03",
+      "question": "What does Undo help you do?",
+      "options": [
+        "Reverse a recent change",
+        "Send an email",
+        "Add a contact",
+        "Lock the screen"
+      ],
+      "correct": 0,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q04",
+      "question": "How can you make a heading stand out?",
+      "options": [
+        "Use tiny text",
+        "Use bold and larger text",
+        "Use random spaces",
+        "Remove all spacing"
+      ],
+      "correct": 1,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q05",
+      "question": "What is the purpose of a bulleted list?",
+      "options": [
+        "Open a browser",
+        "Send a video call",
+        "Organise separate items",
+        "Change the file type"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q06",
+      "question": "Why save your document regularly?",
+      "options": [
+        "To delete old folders",
+        "To improve internet speed",
+        "To change the keyboard",
+        "To avoid losing changes"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q07",
+      "question": "Which image format is common for photographs?",
+      "options": [
+        ".jpg",
+        ".mp3",
+        ".exe",
+        ".wav"
+      ],
+      "correct": 0,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q08",
+      "question": "What should you check before using a picture?",
+      "options": [
+        "Only screen brightness",
+        "Permission and suitability",
+        "Only file size",
+        "Only colour"
+      ],
+      "correct": 1,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q09",
+      "question": "Which tool is suitable for recording a short voice note?",
+      "options": [
+        "File explorer",
+        "Web bookmark",
+        "Audio recorder",
+        "Spreadsheet chart"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q10",
+      "question": "Which is a useful document file name?",
+      "options": [
+        "Document1finalfinal.docx",
+        "????.docx",
+        "untitled",
+        "Community_Notice_Nov2026.docx"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    }
+  ],
+  "module3": [
+    {
+      "id": "M3Q01",
+      "question": "Which email field identifies the main recipient?",
+      "options": [
+        "Draft",
+        "To",
+        "Subject",
+        "Attachment"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q02",
+      "question": "What belongs in an email subject?",
+      "options": [
+        "A file extension only",
+        "The full message",
+        "A short description of the message",
+        "Your account password"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q03",
+      "question": "Which folder usually contains messages you have sent?",
+      "options": [
+        "Inbox",
+        "Trash",
+        "Spam",
+        "Sent"
+      ],
+      "correct": 3,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q04",
+      "question": "What is an attachment?",
+      "options": [
+        "A file sent with a message",
+        "A saved contact",
+        "A video-call camera",
+        "A website address"
+      ],
+      "correct": 0,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q05",
+      "question": "Why check the recipient address before sending?",
+      "options": [
+        "To change the file name",
+        "To avoid sending to the wrong person",
+        "To increase screen size",
+        "To improve battery life"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q06",
+      "question": "What is a sensible email greeting?",
+      "options": [
+        "PASSWORD",
+        "!!!",
+        "Hello Sam,",
+        "SEND NOW"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q07",
+      "question": "What does Mute do in a video call?",
+      "options": [
+        "Ends the internet connection",
+        "Deletes the meeting",
+        "Turns on screen sharing",
+        "Turns off your microphone"
+      ],
+      "correct": 3,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q08",
+      "question": "What should you do before sharing your screen?",
+      "options": [
+        "Close private information",
+        "Read your password aloud",
+        "Share all open tabs",
+        "Disable your screen lock"
+      ],
+      "correct": 0,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q09",
+      "question": "What is a digital footprint?",
+      "options": [
+        "A keyboard shortcut",
+        "Information left by online activity",
+        "A mouse pointer",
+        "A printer setting"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q10",
+      "question": "When emailing several people who should not see each other's addresses, which field may help?",
+      "options": [
+        "Reply",
+        "Draft",
+        "Bcc",
+        "Subject"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    }
+  ],
+  "module4": [
+    {
+      "id": "M4Q01",
+      "question": "Which is an example of an online transaction?",
+      "options": [
+        "Booking a service online",
+        "Moving the mouse",
+        "Changing font size",
+        "Opening a folder"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q02",
+      "question": "What does an asterisk beside a form field often mean?",
+      "options": [
+        "The field is hidden",
+        "The field is required",
+        "The field is deleted",
+        "The field is a link"
+      ],
+      "correct": 1,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q03",
+      "question": "Which entry is a correctly formatted example email address?",
+      "options": [
+        "alex@example",
+        "alex example.org",
+        "alex@example.org",
+        "alex.example.org"
+      ],
+      "correct": 2,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q04",
+      "question": "Why review a form before submitting?",
+      "options": [
+        "To increase screen brightness",
+        "To open another app",
+        "To change the desktop",
+        "To correct mistakes"
+      ],
+      "correct": 3,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q05",
+      "question": "What is a verification code used for?",
+      "options": [
+        "Confirming an action or identity",
+        "Changing font colour",
+        "Deleting cookies",
+        "Opening a picture"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q06",
+      "question": "What should you check in an online basket?",
+      "options": [
+        "Only the number of images",
+        "Item, quantity and total price",
+        "Only page colour",
+        "Only the logo size"
+      ],
+      "correct": 1,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q07",
+      "question": "What is a delivery charge?",
+      "options": [
+        "A browser bookmark",
+        "A file type",
+        "An added cost for delivery",
+        "A password reset"
+      ],
+      "correct": 2,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q08",
+      "question": "What should you do if a payment page looks suspicious?",
+      "options": [
+        "Enter card details quickly",
+        "Ignore browser warnings",
+        "Share the link widely",
+        "Stop and check the seller independently"
+      ],
+      "correct": 3,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q09",
+      "question": "Which detail should you never share in response to an unexpected call?",
+      "options": [
+        "One-time banking security code",
+        "A public library address",
+        "A published opening time",
+        "A product name"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q10",
+      "question": "What is the final step before confirming a purchase?",
+      "options": [
+        "Turn off the device",
+        "Review the order and total",
+        "Close the screen immediately",
+        "Delete the basket history"
+      ],
+      "correct": 1,
+      "topic": "Module 4"
+    }
+  ],
+  "module5": [
+    {
+      "id": "M5Q01",
+      "question": "Which information should you avoid posting publicly?",
+      "options": [
+        "A public museum name",
+        "A published event time",
+        "A general hobby",
+        "Your home address"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q02",
+      "question": "Which password is the strongest example?",
+      "options": [
+        "River!Lantern7Coffee",
+        "password123",
+        "12345678",
+        "qwerty"
+      ],
+      "correct": 0,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q03",
+      "question": "What is phishing?",
+      "options": [
+        "A video format",
+        "An attempt to trick you into revealing information",
+        "A way to enlarge text",
+        "A printer error"
+      ],
+      "correct": 1,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q04",
+      "question": "Which is a warning sign of a scam message?",
+      "options": [
+        "Normal spelling",
+        "A familiar greeting",
+        "Urgent demand for a password",
+        "Clear reference to a trusted source"
+      ],
+      "correct": 2,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q05",
+      "question": "What should you do with a suspicious link?",
+      "options": [
+        "Click to check quickly",
+        "Forward it to contacts",
+        "Enter details immediately",
+        "Avoid clicking and verify independently"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q06",
+      "question": "Why lock your device when leaving it?",
+      "options": [
+        "To stop others accessing it",
+        "To make it charge faster",
+        "To improve sound",
+        "To save a bookmark"
+      ],
+      "correct": 0,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q07",
+      "question": "Which connection is preferable for sensitive online banking?",
+      "options": [
+        "A stranger's hotspot",
+        "A trusted secure connection",
+        "Unknown public Wi-Fi",
+        "An open shared network"
+      ],
+      "correct": 1,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q08",
+      "question": "What can you do about abusive online content?",
+      "options": [
+        "Share it publicly",
+        "Give out your password",
+        "Report or block it and seek support",
+        "Reply with insults"
+      ],
+      "correct": 2,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q09",
+      "question": "What helps reduce discomfort when using a screen?",
+      "options": [
+        "Never taking breaks",
+        "Sitting very close",
+        "Working in darkness",
+        "Regular breaks and suitable posture"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q10",
+      "question": "Which is a sensible way to protect personal data?",
+      "options": [
+        "Check privacy settings",
+        "Reuse one password everywhere",
+        "Post your date of birth publicly",
+        "Share account codes"
+      ],
+      "correct": 0,
+      "topic": "Module 5"
+    }
+  ],
+  "mid1": [
+    {
+      "id": "M1Q01",
+      "question": "Which device is used to enter letters?",
+      "options": [
+        "Monitor",
+        "Speaker",
+        "Printer",
+        "Keyboard"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q02",
+      "question": "Which item displays information on screen?",
+      "options": [
+        "Monitor",
+        "Microphone",
+        "Mouse",
+        "Scanner"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q03",
+      "question": "What is an accessibility setting?",
+      "options": [
+        "Closing all apps",
+        "Increasing text size",
+        "Deleting the desktop",
+        "Unplugging the keyboard"
+      ],
+      "correct": 1,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q04",
+      "question": "Which search is most useful for finding library opening times?",
+      "options": [
+        "hours",
+        "books",
+        "library name opening hours",
+        "library"
+      ],
+      "correct": 2,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q05",
+      "question": "Where should you save related documents?",
+      "options": [
+        "Only in Downloads forever",
+        "Inside the Recycle Bin",
+        "As browser history",
+        "In a named folder"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q06",
+      "question": "What does .pdf commonly identify?",
+      "options": [
+        "A document file",
+        "An audio recording",
+        "An app installer",
+        "A video call"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q07",
+      "question": "What is a safe first step when an app stops responding?",
+      "options": [
+        "Turn off security tools",
+        "Wait briefly and try closing it normally",
+        "Share your password",
+        "Delete system files"
+      ],
+      "correct": 1,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q08",
+      "question": "Which action helps you find a website again?",
+      "options": [
+        "Mute the sound",
+        "Change the wallpaper",
+        "Bookmark the page",
+        "Empty the recycle bin"
+      ],
+      "correct": 2,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q09",
+      "question": "What does cloud storage mean?",
+      "options": [
+        "Files only on a USB stick",
+        "Files only on the desktop",
+        "Files in the printer",
+        "Files stored through an online service"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q10",
+      "question": "Which setting can help a learner who finds small text difficult?",
+      "options": [
+        "Display scaling",
+        "Airplane mode",
+        "Bluetooth pairing",
+        "Volume mute"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M2Q01",
+      "question": "What is a good first step when making a notice?",
+      "options": [
+        "Open the calculator",
+        "Change Wi-Fi settings",
+        "Create a blank document",
+        "Empty the Recycle Bin"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q03",
+      "question": "What does Undo help you do?",
+      "options": [
+        "Reverse a recent change",
+        "Send an email",
+        "Add a contact",
+        "Lock the screen"
+      ],
+      "correct": 0,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q05",
+      "question": "What is the purpose of a bulleted list?",
+      "options": [
+        "Open a browser",
+        "Send a video call",
+        "Organise separate items",
+        "Change the file type"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q07",
+      "question": "Which image format is common for photographs?",
+      "options": [
+        ".jpg",
+        ".mp3",
+        ".exe",
+        ".wav"
+      ],
+      "correct": 0,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q09",
+      "question": "Which tool is suitable for recording a short voice note?",
+      "options": [
+        "File explorer",
+        "Web bookmark",
+        "Audio recorder",
+        "Spreadsheet chart"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    }
+  ],
+  "mid2": [
+    {
+      "id": "M2Q02",
+      "question": "Which shortcut commonly copies selected text on Windows?",
+      "options": [
+        "Ctrl+V",
+        "Ctrl+Z",
+        "Ctrl+P",
+        "Ctrl+C"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q04",
+      "question": "How can you make a heading stand out?",
+      "options": [
+        "Use tiny text",
+        "Use bold and larger text",
+        "Use random spaces",
+        "Remove all spacing"
+      ],
+      "correct": 1,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q06",
+      "question": "Why save your document regularly?",
+      "options": [
+        "To delete old folders",
+        "To improve internet speed",
+        "To change the keyboard",
+        "To avoid losing changes"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q08",
+      "question": "What should you check before using a picture?",
+      "options": [
+        "Only screen brightness",
+        "Permission and suitability",
+        "Only file size",
+        "Only colour"
+      ],
+      "correct": 1,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q10",
+      "question": "Which is a useful document file name?",
+      "options": [
+        "Document1finalfinal.docx",
+        "????.docx",
+        "untitled",
+        "Community_Notice_Nov2026.docx"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M3Q01",
+      "question": "Which email field identifies the main recipient?",
+      "options": [
+        "Draft",
+        "To",
+        "Subject",
+        "Attachment"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q02",
+      "question": "What belongs in an email subject?",
+      "options": [
+        "A file extension only",
+        "The full message",
+        "A short description of the message",
+        "Your account password"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q03",
+      "question": "Which folder usually contains messages you have sent?",
+      "options": [
+        "Inbox",
+        "Trash",
+        "Spam",
+        "Sent"
+      ],
+      "correct": 3,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q04",
+      "question": "What is an attachment?",
+      "options": [
+        "A file sent with a message",
+        "A saved contact",
+        "A video-call camera",
+        "A website address"
+      ],
+      "correct": 0,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q05",
+      "question": "Why check the recipient address before sending?",
+      "options": [
+        "To change the file name",
+        "To avoid sending to the wrong person",
+        "To increase screen size",
+        "To improve battery life"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q06",
+      "question": "What is a sensible email greeting?",
+      "options": [
+        "PASSWORD",
+        "!!!",
+        "Hello Sam,",
+        "SEND NOW"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q07",
+      "question": "What does Mute do in a video call?",
+      "options": [
+        "Ends the internet connection",
+        "Deletes the meeting",
+        "Turns on screen sharing",
+        "Turns off your microphone"
+      ],
+      "correct": 3,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q08",
+      "question": "What should you do before sharing your screen?",
+      "options": [
+        "Close private information",
+        "Read your password aloud",
+        "Share all open tabs",
+        "Disable your screen lock"
+      ],
+      "correct": 0,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q09",
+      "question": "What is a digital footprint?",
+      "options": [
+        "A keyboard shortcut",
+        "Information left by online activity",
+        "A mouse pointer",
+        "A printer setting"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q10",
+      "question": "When emailing several people who should not see each other's addresses, which field may help?",
+      "options": [
+        "Reply",
+        "Draft",
+        "Bcc",
+        "Subject"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M4Q01",
+      "question": "Which is an example of an online transaction?",
+      "options": [
+        "Booking a service online",
+        "Moving the mouse",
+        "Changing font size",
+        "Opening a folder"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q02",
+      "question": "What does an asterisk beside a form field often mean?",
+      "options": [
+        "The field is hidden",
+        "The field is required",
+        "The field is deleted",
+        "The field is a link"
+      ],
+      "correct": 1,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q03",
+      "question": "Which entry is a correctly formatted example email address?",
+      "options": [
+        "alex@example",
+        "alex example.org",
+        "alex@example.org",
+        "alex.example.org"
+      ],
+      "correct": 2,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q04",
+      "question": "Why review a form before submitting?",
+      "options": [
+        "To increase screen brightness",
+        "To open another app",
+        "To change the desktop",
+        "To correct mistakes"
+      ],
+      "correct": 3,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q05",
+      "question": "What is a verification code used for?",
+      "options": [
+        "Confirming an action or identity",
+        "Changing font colour",
+        "Deleting cookies",
+        "Opening a picture"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    }
+  ],
+  "mock1": [
+    {
+      "id": "M1Q02",
+      "question": "Which item displays information on screen?",
+      "options": [
+        "Monitor",
+        "Microphone",
+        "Mouse",
+        "Scanner"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q04",
+      "question": "Which search is most useful for finding library opening times?",
+      "options": [
+        "hours",
+        "books",
+        "library name opening hours",
+        "library"
+      ],
+      "correct": 2,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q06",
+      "question": "What does .pdf commonly identify?",
+      "options": [
+        "A document file",
+        "An audio recording",
+        "An app installer",
+        "A video call"
+      ],
+      "correct": 0,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M2Q02",
+      "question": "Which shortcut commonly copies selected text on Windows?",
+      "options": [
+        "Ctrl+V",
+        "Ctrl+Z",
+        "Ctrl+P",
+        "Ctrl+C"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q04",
+      "question": "How can you make a heading stand out?",
+      "options": [
+        "Use tiny text",
+        "Use bold and larger text",
+        "Use random spaces",
+        "Remove all spacing"
+      ],
+      "correct": 1,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q06",
+      "question": "Why save your document regularly?",
+      "options": [
+        "To delete old folders",
+        "To improve internet speed",
+        "To change the keyboard",
+        "To avoid losing changes"
+      ],
+      "correct": 3,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M3Q02",
+      "question": "What belongs in an email subject?",
+      "options": [
+        "A file extension only",
+        "The full message",
+        "A short description of the message",
+        "Your account password"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q04",
+      "question": "What is an attachment?",
+      "options": [
+        "A file sent with a message",
+        "A saved contact",
+        "A video-call camera",
+        "A website address"
+      ],
+      "correct": 0,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q06",
+      "question": "What is a sensible email greeting?",
+      "options": [
+        "PASSWORD",
+        "!!!",
+        "Hello Sam,",
+        "SEND NOW"
+      ],
+      "correct": 2,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M4Q02",
+      "question": "What does an asterisk beside a form field often mean?",
+      "options": [
+        "The field is hidden",
+        "The field is required",
+        "The field is deleted",
+        "The field is a link"
+      ],
+      "correct": 1,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q04",
+      "question": "Why review a form before submitting?",
+      "options": [
+        "To increase screen brightness",
+        "To open another app",
+        "To change the desktop",
+        "To correct mistakes"
+      ],
+      "correct": 3,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q06",
+      "question": "What should you check in an online basket?",
+      "options": [
+        "Only the number of images",
+        "Item, quantity and total price",
+        "Only page colour",
+        "Only the logo size"
+      ],
+      "correct": 1,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M5Q02",
+      "question": "Which password is the strongest example?",
+      "options": [
+        "River!Lantern7Coffee",
+        "password123",
+        "12345678",
+        "qwerty"
+      ],
+      "correct": 0,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q04",
+      "question": "Which is a warning sign of a scam message?",
+      "options": [
+        "Normal spelling",
+        "A familiar greeting",
+        "Urgent demand for a password",
+        "Clear reference to a trusted source"
+      ],
+      "correct": 2,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q06",
+      "question": "Why lock your device when leaving it?",
+      "options": [
+        "To stop others accessing it",
+        "To make it charge faster",
+        "To improve sound",
+        "To save a bookmark"
+      ],
+      "correct": 0,
+      "topic": "Module 5"
+    }
+  ],
+  "mock2": [
+    {
+      "id": "M1Q01",
+      "question": "Which device is used to enter letters?",
+      "options": [
+        "Monitor",
+        "Speaker",
+        "Printer",
+        "Keyboard"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q05",
+      "question": "Where should you save related documents?",
+      "options": [
+        "Only in Downloads forever",
+        "Inside the Recycle Bin",
+        "As browser history",
+        "In a named folder"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q09",
+      "question": "What does cloud storage mean?",
+      "options": [
+        "Files only on a USB stick",
+        "Files only on the desktop",
+        "Files in the printer",
+        "Files stored through an online service"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M2Q01",
+      "question": "What is a good first step when making a notice?",
+      "options": [
+        "Open the calculator",
+        "Change Wi-Fi settings",
+        "Create a blank document",
+        "Empty the Recycle Bin"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q05",
+      "question": "What is the purpose of a bulleted list?",
+      "options": [
+        "Open a browser",
+        "Send a video call",
+        "Organise separate items",
+        "Change the file type"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q09",
+      "question": "Which tool is suitable for recording a short voice note?",
+      "options": [
+        "File explorer",
+        "Web bookmark",
+        "Audio recorder",
+        "Spreadsheet chart"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M3Q01",
+      "question": "Which email field identifies the main recipient?",
+      "options": [
+        "Draft",
+        "To",
+        "Subject",
+        "Attachment"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q05",
+      "question": "Why check the recipient address before sending?",
+      "options": [
+        "To change the file name",
+        "To avoid sending to the wrong person",
+        "To increase screen size",
+        "To improve battery life"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q09",
+      "question": "What is a digital footprint?",
+      "options": [
+        "A keyboard shortcut",
+        "Information left by online activity",
+        "A mouse pointer",
+        "A printer setting"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M4Q01",
+      "question": "Which is an example of an online transaction?",
+      "options": [
+        "Booking a service online",
+        "Moving the mouse",
+        "Changing font size",
+        "Opening a folder"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q05",
+      "question": "What is a verification code used for?",
+      "options": [
+        "Confirming an action or identity",
+        "Changing font colour",
+        "Deleting cookies",
+        "Opening a picture"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q09",
+      "question": "Which detail should you never share in response to an unexpected call?",
+      "options": [
+        "One-time banking security code",
+        "A public library address",
+        "A published opening time",
+        "A product name"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M5Q01",
+      "question": "Which information should you avoid posting publicly?",
+      "options": [
+        "A public museum name",
+        "A published event time",
+        "A general hobby",
+        "Your home address"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q05",
+      "question": "What should you do with a suspicious link?",
+      "options": [
+        "Click to check quickly",
+        "Forward it to contacts",
+        "Enter details immediately",
+        "Avoid clicking and verify independently"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q09",
+      "question": "What helps reduce discomfort when using a screen?",
+      "options": [
+        "Never taking breaks",
+        "Sitting very close",
+        "Working in darkness",
+        "Regular breaks and suitable posture"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    }
+  ],
+  "final": [
+    {
+      "id": "M1Q01",
+      "question": "Which device is used to enter letters?",
+      "options": [
+        "Monitor",
+        "Speaker",
+        "Printer",
+        "Keyboard"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q03",
+      "question": "What is an accessibility setting?",
+      "options": [
+        "Closing all apps",
+        "Increasing text size",
+        "Deleting the desktop",
+        "Unplugging the keyboard"
+      ],
+      "correct": 1,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q05",
+      "question": "Where should you save related documents?",
+      "options": [
+        "Only in Downloads forever",
+        "Inside the Recycle Bin",
+        "As browser history",
+        "In a named folder"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q07",
+      "question": "What is a safe first step when an app stops responding?",
+      "options": [
+        "Turn off security tools",
+        "Wait briefly and try closing it normally",
+        "Share your password",
+        "Delete system files"
+      ],
+      "correct": 1,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M1Q09",
+      "question": "What does cloud storage mean?",
+      "options": [
+        "Files only on a USB stick",
+        "Files only on the desktop",
+        "Files in the printer",
+        "Files stored through an online service"
+      ],
+      "correct": 3,
+      "topic": "Module 1"
+    },
+    {
+      "id": "M2Q01",
+      "question": "What is a good first step when making a notice?",
+      "options": [
+        "Open the calculator",
+        "Change Wi-Fi settings",
+        "Create a blank document",
+        "Empty the Recycle Bin"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q03",
+      "question": "What does Undo help you do?",
+      "options": [
+        "Reverse a recent change",
+        "Send an email",
+        "Add a contact",
+        "Lock the screen"
+      ],
+      "correct": 0,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q05",
+      "question": "What is the purpose of a bulleted list?",
+      "options": [
+        "Open a browser",
+        "Send a video call",
+        "Organise separate items",
+        "Change the file type"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q07",
+      "question": "Which image format is common for photographs?",
+      "options": [
+        ".jpg",
+        ".mp3",
+        ".exe",
+        ".wav"
+      ],
+      "correct": 0,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M2Q09",
+      "question": "Which tool is suitable for recording a short voice note?",
+      "options": [
+        "File explorer",
+        "Web bookmark",
+        "Audio recorder",
+        "Spreadsheet chart"
+      ],
+      "correct": 2,
+      "topic": "Module 2"
+    },
+    {
+      "id": "M3Q01",
+      "question": "Which email field identifies the main recipient?",
+      "options": [
+        "Draft",
+        "To",
+        "Subject",
+        "Attachment"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q03",
+      "question": "Which folder usually contains messages you have sent?",
+      "options": [
+        "Inbox",
+        "Trash",
+        "Spam",
+        "Sent"
+      ],
+      "correct": 3,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q05",
+      "question": "Why check the recipient address before sending?",
+      "options": [
+        "To change the file name",
+        "To avoid sending to the wrong person",
+        "To increase screen size",
+        "To improve battery life"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q07",
+      "question": "What does Mute do in a video call?",
+      "options": [
+        "Ends the internet connection",
+        "Deletes the meeting",
+        "Turns on screen sharing",
+        "Turns off your microphone"
+      ],
+      "correct": 3,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M3Q09",
+      "question": "What is a digital footprint?",
+      "options": [
+        "A keyboard shortcut",
+        "Information left by online activity",
+        "A mouse pointer",
+        "A printer setting"
+      ],
+      "correct": 1,
+      "topic": "Module 3"
+    },
+    {
+      "id": "M4Q01",
+      "question": "Which is an example of an online transaction?",
+      "options": [
+        "Booking a service online",
+        "Moving the mouse",
+        "Changing font size",
+        "Opening a folder"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q03",
+      "question": "Which entry is a correctly formatted example email address?",
+      "options": [
+        "alex@example",
+        "alex example.org",
+        "alex@example.org",
+        "alex.example.org"
+      ],
+      "correct": 2,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q05",
+      "question": "What is a verification code used for?",
+      "options": [
+        "Confirming an action or identity",
+        "Changing font colour",
+        "Deleting cookies",
+        "Opening a picture"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q07",
+      "question": "What is a delivery charge?",
+      "options": [
+        "A browser bookmark",
+        "A file type",
+        "An added cost for delivery",
+        "A password reset"
+      ],
+      "correct": 2,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M4Q09",
+      "question": "Which detail should you never share in response to an unexpected call?",
+      "options": [
+        "One-time banking security code",
+        "A public library address",
+        "A published opening time",
+        "A product name"
+      ],
+      "correct": 0,
+      "topic": "Module 4"
+    },
+    {
+      "id": "M5Q01",
+      "question": "Which information should you avoid posting publicly?",
+      "options": [
+        "A public museum name",
+        "A published event time",
+        "A general hobby",
+        "Your home address"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q03",
+      "question": "What is phishing?",
+      "options": [
+        "A video format",
+        "An attempt to trick you into revealing information",
+        "A way to enlarge text",
+        "A printer error"
+      ],
+      "correct": 1,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q05",
+      "question": "What should you do with a suspicious link?",
+      "options": [
+        "Click to check quickly",
+        "Forward it to contacts",
+        "Enter details immediately",
+        "Avoid clicking and verify independently"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q07",
+      "question": "Which connection is preferable for sensitive online banking?",
+      "options": [
+        "A stranger's hotspot",
+        "A trusted secure connection",
+        "Unknown public Wi-Fi",
+        "An open shared network"
+      ],
+      "correct": 1,
+      "topic": "Module 5"
+    },
+    {
+      "id": "M5Q09",
+      "question": "What helps reduce discomfort when using a screen?",
+      "options": [
+        "Never taking breaks",
+        "Sitting very close",
+        "Working in darkness",
+        "Regular breaks and suitable posture"
+      ],
+      "correct": 3,
+      "topic": "Module 5"
+    }
+  ]
+}

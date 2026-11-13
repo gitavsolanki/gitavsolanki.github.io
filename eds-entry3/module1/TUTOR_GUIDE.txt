@@ -1,0 +1,34 @@
+TUTOR GUIDE — MODULE 1: USING DEVICES AND HANDLING INFORMATION
+
+REFERENCE
+Gateway Qualifications Essential Digital Skills Entry Level 3 specification, Appendix 1, skill statements 1–4 (pages 26–32), and supplied Unit 1 teaching resources.
+
+LESSON MAPPING
+Welcome: course navigation, foundation digital skills and learner readiness.
+Lesson 1: Statement 1 — hardware, software, operating systems and applications; adapted from Gateway Unit 1 Tutor Activities 1–2 / Quiz 1 topic.
+Lesson 2: Statement 1 — locate applications and apply system/accessibility settings; Gateway Tutor Activity 3 and Learner Activities 3–4 topics.
+Lesson 3: Statement 2 — browser controls, hyperlinks, searches and bookmarks; Gateway Tutor Activities 4–5 / Learner Activities 5–7 topics.
+Lesson 4: Statement 3 — files, file types, naming, folders, local/remote storage; Gateway Tutor Activities 6–7 / Learner Activities 8–9 topics.
+Lesson 5: Statement 4 — recognise problems, try safe solutions and seek help; Gateway Tutor Activity 8 / Quiz 2 topics.
+Challenge: integrates statements 1–4. Includes original practical tasks; not an awarding-body assessment.
+
+SUGGESTED DELIVERY
+Week 1: Foundation and lesson 1, identify devices.
+Week 2: Lesson 2, supervised settings and accessibility practice.
+Week 3: Lesson 3, live web search and bookmarks.
+Week 4: Lesson 4, file/folder practice.
+Week 5: Lesson 5, integrated challenge and formative feedback.
+
+DIFFERENTIATION
+Support: tutor demonstrations, paired rehearsal, reading aloud, glossary explanation and reduced steps.
+Extension: compare two browsers, create a second folder, distinguish local and cloud storage, explain more troubleshooting scenarios.
+Accessibility: keyboard-operable questions; visible focus, responsive layout, reduced-motion support, accessible labels. Learners may use built-in zoom and screen readers.
+
+ASSESSMENT / EVIDENCE
+Quizzes are formative only. Ask learners to demonstrate settings, browser navigation, a saved bookmark, created folder, opened and saved file, and a troubleshooting explanation. Record evidence according to centre policies. Do not use this package as an official Gateway live assessment.
+
+QUALITY CHECK
+Open index.html, navigate through all 7 screens, complete and retry each quiz, use keyboard Tab/Enter, download practice files, check progress, reload and verify saved progress, test on a narrow/mobile viewport.
+
+SOURCE/RIGHTS
+This package uses original text and original questions inspired by topic coverage in supplied Gateway materials. It does not redistribute the supplied copyrighted documents, images, PowerPoint quiz or official assessment tasks. Check the latest awarding-body specification and your centre's requirements before delivery.
